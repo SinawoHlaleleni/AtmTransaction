@@ -1,18 +1,16 @@
 package ATMtrans.factory;
 
-import ATMtrans.domain.atmTran;
+import ATMtrans.domain.AtmTran;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class atmTranFactoryTest {
+public class AtmTranFactoryTest {
 
     @Test
     public void getAtmTran() {
 
         String type = "Statement";
-        atmTran a = atmTranFactory.getAtmTran(type);
+        AtmTran a = AtmTranFactory.getAtmTran(type);
         System.out.println(a);
         Assert.assertNotNull(a.getTransId());
     }
