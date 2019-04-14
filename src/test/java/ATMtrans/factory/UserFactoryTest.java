@@ -13,7 +13,7 @@ public class UserFactoryTest {
 
 
         String username = "SinawoHlaleleni";
-        String password = "940825SZHN";
+        String password = "12345SZHN";
         User s = UserFactory.getUser(username,password);
         System.out.println(s);
         Assert.assertNotNull(s.getUserId());
