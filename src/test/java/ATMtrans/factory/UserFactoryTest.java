@@ -12,9 +12,9 @@ public class UserFactoryTest {
     public void getUser() {
 
 
-        String Fname = "Sinawo";
-        String Lname = "Hlaleleni";
-        User s = UserFactory.getUser(Fname,Lname);
+        String username = "SinawoHlaleleni";
+        String password = "940825SZHN";
+        User s = UserFactory.getUser(username,password);
         System.out.println(s);
         Assert.assertNotNull(s.getUserId());
     }

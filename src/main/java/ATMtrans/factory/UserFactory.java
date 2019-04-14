@@ -5,10 +5,10 @@ import ATMtrans.util.Misc;
 
 public class UserFactory {
 
-    public static User getUser(String firstName, String lastName) {
+    public static User getUser(String userName, String userPassword) {
         return new User.Builder()
-                .userFirstName(firstName)
-                .userLastName(lastName)
+                .userName(userName)
+                .userPassword(userPassword)
                 .userId(Misc.generateId())
                 .build();
     }

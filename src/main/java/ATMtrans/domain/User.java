@@ -5,33 +5,33 @@ import java.util.Set;
 public class User {
 
 
-    private String userId, userFirstName, userLastName;
+    private String userId, userName, userPassword;
     private Set<AtmTran> transactions;
 
     private User(){}
 
     private User(Builder builder) {
         this.userId = builder.userId;
-        this.userFirstName = builder.userFirstName;
-        this.userLastName = builder.userLastName;
+        this.userName = builder.userName;
+        this.userPassword = builder.userPassword;
     }
 
     public String getUserId() {
         return userId;
     }
 
-    public String getUserFirstName() {
-        return userFirstName;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getUserLastName() {
-        return userLastName;
+    public String getUserPassword() {
+        return userPassword;
     }
 
 
     public static class Builder {
 
-        private String userId, userFirstName, userLastName;
+        private String userId, userName, userPassword;
         private Set<AtmTran> transactions;
 
         public Builder userId( String userId) {
@@ -39,13 +39,13 @@ public class User {
             return this;
         }
 
-        public Builder userFirstName( String userFirstName) {
-            this.userFirstName = userFirstName;
+        public Builder userName( String userName) {
+            this.userName = userName;
             return this;
         }
 
-        public Builder userLastName( String userLastName) {
-            this.userLastName = userLastName;
+        public Builder userPassword( String userPassword) {
+            this.userPassword = userPassword;
             return this;
         }
 
@@ -60,8 +60,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "userId='" + userId + '\'' +
-                ", userFirstName='" + userFirstName + '\'' +
-                ", userLastName='" + userLastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 ", transactions=" + transactions +
                 '}';
     }
