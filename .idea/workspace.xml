@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="class add">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/BalanceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/DepositFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/UserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/WithdrawalFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/BalanceFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/DepositFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/UserFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/WithdrawalFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SinawoHlal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SinawoHlal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/atmTran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/AtmTran.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/balance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/withdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Withdrawal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/atmTranFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factory/AtmTranFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/atmTranFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factory/AtmTranFactoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,37 +21,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factory/DepositFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factory/DepositFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="31" />
-              <folding>
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="15" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -93,14 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factory/WithdrawalFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factory/WithdrawalFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -110,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -140,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/factory/DepositFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Withdrawal.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/factory/WithdrawalFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/factory/WithdrawalFactoryTest.java" />
       </list>
     </option>
   </component>
@@ -263,7 +226,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555192684532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555279908062" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -363,12 +326,20 @@
       <updated>1554894294599</updated>
       <workItem from="1554894300537" duration="4503000" />
       <workItem from="1555179596667" duration="6665000" />
-      <workItem from="1555274744532" duration="5002000" />
+      <workItem from="1555274744532" duration="5322000" />
     </task>
+    <task id="LOCAL-00001" summary="class add">
+      <created>1555279996880</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555279996880</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16170000" />
+    <option name="totallyTimeSpent" value="16490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -517,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factory/DepositFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -564,11 +528,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factory/WithdrawalFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factory/DepositFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factory/WithdrawalFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
