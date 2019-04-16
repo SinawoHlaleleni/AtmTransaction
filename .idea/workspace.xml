@@ -1,56 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="class add1">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Fixed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Fixed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Savings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/account/Savings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/Airtime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/Airtime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/CashLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/CashLimit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/CashTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/CashTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/Electricity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/atmInfor/Electricity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/cardless/CardlessWithdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/cardless/CardlessWithdrawal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/cardless/Ewallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/cardless/Ewallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/AtmTran.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/AtmTran.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Withdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/domain/Withdrawal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/AirtimeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/AirtimeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/AtmFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/AtmFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/CashTransferFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/CashTransferFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/ElectricityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/ElectricityFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/TopupFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryAtmInfor/TopupFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryBankInfor/BankFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryBankInfor/BankFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryBankInfor/BranchFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryBankInfor/BranchFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/CardlessServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/CardlessServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/CardlessWithdrawalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/CardlessWithdrawalFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/EwalletFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/EwalletFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/factoryOrders/DebitOrderFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/CreditOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/CreditOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/DebitOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/DebitOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/StopOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/orders/StopOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/AccountFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/StatementFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/StatementFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/AirtimeFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/AirtimeFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/AtmFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/AtmFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/CashLimitFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/CashLimitFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/CashTransferFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/CashTransferFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/ElectricityFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/ElectricityFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/TopupFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/TopupFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryBankInfor/BankFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryBankInfor/BankFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryBankInfor/BranchFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryBankInfor/BranchFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryCardless/CardlessWithdrawalFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryCardless/CardlessWithdrawalFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryCardless/EwalletFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryCardless/EwalletFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/AtmTranFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/DepositFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/DepositFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/UserFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/UserFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/WithdrawalFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/WithdrawalFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/CreditOrderFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/CreditOrderFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/DebitOrderFactoryTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,44 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/CheckFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/FixedFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/SavingsFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/StatementFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -195,54 +110,6 @@
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="factoryAccount" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -253,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555435127820" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555435139726" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -359,7 +226,7 @@
       <workItem from="1555354277170" duration="14053000" />
       <workItem from="1555369539017" duration="1015000" />
       <workItem from="1555414588758" duration="376000" />
-      <workItem from="1555425210893" duration="9289000" />
+      <workItem from="1555425210893" duration="9542000" />
     </task>
     <task id="LOCAL-00001" summary="class add">
       <created>1555279996880</created>
@@ -438,17 +305,44 @@
       <option name="project" value="LOCAL" />
       <updated>1555427857406</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="class add1">
+      <created>1555435065739</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555435065739</updated>
+    </task>
+    <task id="LOCAL-00013" summary="class add1">
+      <created>1555435123518</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555435123518</updated>
+    </task>
+    <task id="LOCAL-00014" summary="class add1">
+      <created>1555435134160</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555435134160</updated>
+    </task>
+    <task id="LOCAL-00015" summary="class add">
+      <created>1555435150843</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555435150843</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42876000" />
+    <option name="totallyTimeSpent" value="43129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31316188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31316188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -479,7 +373,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31316188" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31316188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -498,7 +392,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.58756137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -514,9 +408,9 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="class add" />
     <MESSAGE value="class add1" />
-    <option name="LAST_COMMIT_MESSAGE" value="class add1" />
+    <MESSAGE value="class add" />
+    <option name="LAST_COMMIT_MESSAGE" value="class add" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryCardless/CardlessWithdrawalFactory.java">
@@ -665,17 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="method#amount#0;class#Builder#0;class#Balance#0" />
-            <element signature="method#toString#0;class#Builder#0;class#Balance#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/AtmTranFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -722,23 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Deposit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="method#Deposit#0;class#Deposit#0" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="method#toString#0;class#Deposit#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,10 +763,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/CheckFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/StatementFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Deposit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="method#Deposit#0;class#Deposit#0" />
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="method#toString#0;class#Deposit#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/Balance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="method#amount#0;class#Builder#0;class#Balance#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/SavingsFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -911,17 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/SavingsFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/CheckFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/StatementFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
