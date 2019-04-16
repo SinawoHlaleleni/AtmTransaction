@@ -10,8 +10,7 @@ public class FixedFactoryTest {
 
     @Test
     public void getAmount() {
-
-        Fixed s = FixedFactory.getAmount(0.00);
+        Fixed s = FixedFactory.getAmount(500.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
     }

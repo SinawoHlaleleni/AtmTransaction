@@ -10,7 +10,7 @@ public class StatementFactoryTest {
 
     @Test
     public void getAccount() {
-        String type = "...";
+        String type = "Monthly";
         Statement a = StatementFactory.getAccount(type);
         System.out.println(a);
         Assert.assertNotNull(a.getId());

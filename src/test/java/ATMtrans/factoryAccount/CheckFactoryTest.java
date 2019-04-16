@@ -10,8 +10,7 @@ public class CheckFactoryTest {
 
     @Test
     public void getAmount() {
-
-        Check s = CheckFactory.getAmount(0.00);
+        Check s = CheckFactory.getAmount(300.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
     }
