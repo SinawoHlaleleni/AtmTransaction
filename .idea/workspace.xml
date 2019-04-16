@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
+    <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="class add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -103,6 +103,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,17 +111,34 @@
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555435139726" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555435221538" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -226,7 +244,8 @@
       <workItem from="1555354277170" duration="14053000" />
       <workItem from="1555369539017" duration="1015000" />
       <workItem from="1555414588758" duration="376000" />
-      <workItem from="1555425210893" duration="9542000" />
+      <workItem from="1555425210893" duration="10006000" />
+      <workItem from="1555437189073" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="class add">
       <created>1555279996880</created>
@@ -333,16 +352,23 @@
       <option name="project" value="LOCAL" />
       <updated>1555435150843</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="class add">
+      <created>1555435212036</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555435212036</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43129000" />
+    <option name="totallyTimeSpent" value="43960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31316188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31770045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -502,13 +528,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/DebitOrderFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/DebitOrderFactoryTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryOrders/StopOrderFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -530,13 +550,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryOrders/DebitOrderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryOrders/DebitOrderFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryOrders/StopOrderFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -559,13 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/AtmTranFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryDomain/AtmTranFactoryTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/AtmTran.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -651,13 +659,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/AccountFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAccount/AccountFactoryTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/factoryAtmInfor/AirtimeFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
