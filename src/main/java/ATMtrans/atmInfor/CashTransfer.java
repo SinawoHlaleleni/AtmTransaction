@@ -1,5 +1,7 @@
 package ATMtrans.atmInfor;
 
+import static javafx.scene.input.KeyCode.R;
+
 public class CashTransfer {
 
     private String Id, num;
@@ -54,7 +56,7 @@ public class CashTransfer {
             return "Builder{" +
                     "Id='" + Id + '\'' +
                     ", num='" + num + '\'' +
-                    ", Amount=" + Amount +
+                    ", Amount= R" + Amount +
                     '}';
         }
     }

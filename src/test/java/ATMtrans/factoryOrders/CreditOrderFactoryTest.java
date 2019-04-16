@@ -11,7 +11,7 @@ public class CreditOrderFactoryTest {
     @Test
     public void getAmount() {
 
-        CreditOrder s = CreditOrderFactory.getAmount(0.00);
+        CreditOrder s = CreditOrderFactory.getAmount(10.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
     }

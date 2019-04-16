@@ -33,7 +33,7 @@ public class CardlessWithdrawal {
     @Override
     public String toString() {
         return "Deposit{" +
-                "amount=" + amount +
+                "amount=R" + amount +
                 '}';
     }
 }

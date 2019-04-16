@@ -1,8 +1,7 @@
 package ATMtrans.domain;
 
-public class Deposit {
+public class Deposit implements AtmTran {
     private double amount = 0;
-
     private Deposit() {
     }
 

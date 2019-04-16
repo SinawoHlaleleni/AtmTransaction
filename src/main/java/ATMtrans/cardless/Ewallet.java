@@ -54,7 +54,7 @@ public class Ewallet {
             return "Builder{" +
                     "Id='" + Id + '\'' +
                     ", num='" + num + '\'' +
-                    ", Amount=" + Amount +
+                    ", Amount=R" + Amount +
                     '}';
         }
     }

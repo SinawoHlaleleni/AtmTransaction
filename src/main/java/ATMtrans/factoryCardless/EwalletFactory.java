@@ -8,7 +8,7 @@ public class EwalletFactory {
     public static  Ewallet getAmount(double tAmount) {
         return new  Ewallet.Builder()
                 .Amount(tAmount)
-                .num("...")
+                .num("0736072671")
                 .Id(Misc.generateId())
                 .build();
     }

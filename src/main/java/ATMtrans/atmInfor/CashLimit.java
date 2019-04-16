@@ -43,7 +43,7 @@ public class CashLimit {
         public String toString() {
             return "Builder{" +
                     "Id='" + Id + '\'' +
-                    ", Amount=" + Amount +
+                    ", Amount=R " + Amount +
                     '}';
         }
     }}

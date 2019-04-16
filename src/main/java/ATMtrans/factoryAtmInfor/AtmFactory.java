@@ -7,7 +7,7 @@ public class AtmFactory {
 
     public static Atm getType(String Type) {
         return new Atm.Builder()
-                .Type("...")
+                .Type("ABSA")
                 .Id(Misc.generateId())
                 .build();
     }

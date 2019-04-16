@@ -10,7 +10,7 @@ public class CashTransferFactoryTest {
 
     @Test
     public void getAmount() {
-        CashTransfer s = CashTransferFactory.getAmount(0.00);
+        CashTransfer s = CashTransferFactory.getAmount(15.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
     }

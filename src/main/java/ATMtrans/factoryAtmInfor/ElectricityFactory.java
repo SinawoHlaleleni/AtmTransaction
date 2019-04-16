@@ -8,7 +8,7 @@ public class ElectricityFactory {
     public static Electricity getAmount(double tAmount) {
         return new Electricity.Builder()
                 .Amount(tAmount)
-                .MeterNum("...")
+                .MeterNum("0135769543")
                 .Id(Misc.generateId())
                 .build();
     }

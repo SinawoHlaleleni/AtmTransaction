@@ -10,7 +10,7 @@ public class BranchFactoryTest {
 
     @Test
     public void getName() {
-        Branch s = BranchFactory.getName("Nobuhle branch");
+        Branch s = BranchFactory.getName("CNR ABSA branch");
         System.out.println(s);
         Assert.assertNotNull(s.getName());
 

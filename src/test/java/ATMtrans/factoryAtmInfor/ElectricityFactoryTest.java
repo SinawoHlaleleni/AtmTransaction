@@ -10,7 +10,7 @@ public class ElectricityFactoryTest {
 
     @Test
     public void getAmount() {
-        Electricity s = ElectricityFactory.getAmount(0.00);
+        Electricity s = ElectricityFactory.getAmount(30.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
 

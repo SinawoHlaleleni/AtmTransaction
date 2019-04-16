@@ -1,6 +1,6 @@
 package ATMtrans.account;
 
-public class Fixed {
+public class Fixed implements Account{
     private double amount = 0;
 
     private Fixed(){}
@@ -30,7 +30,7 @@ public class Fixed {
         @Override
         public String toString() {
             return "Builder{" +
-                    "amount=" + amount +
+                    "amount=R" + amount +
                     '}';
         }
     }

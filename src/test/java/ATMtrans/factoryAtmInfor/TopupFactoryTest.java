@@ -11,7 +11,7 @@ public class TopupFactoryTest {
     @Test
     public void getType() {
 
-        Topup s = TopupFactory.getType("...");
+        Topup s = TopupFactory.getType("SMS");
         System.out.println(s);
         Assert.assertNotNull(s.getType());
     }

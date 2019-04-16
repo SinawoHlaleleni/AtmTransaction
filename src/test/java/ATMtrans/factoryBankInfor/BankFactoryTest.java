@@ -11,7 +11,7 @@ public class BankFactoryTest {
     @Test
     public void getName() {
 
-        Bank s = BankFactory.getName("Capitec");
+        Bank s = BankFactory.getName("ABSA");
         System.out.println(s);
         Assert.assertNotNull(s.getName());
     }

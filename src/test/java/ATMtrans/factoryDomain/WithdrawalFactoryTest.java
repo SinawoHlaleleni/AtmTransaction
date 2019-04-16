@@ -9,7 +9,7 @@ public class WithdrawalFactoryTest {
     @Test
     public void getAmount() {
 
-       Withdrawal s = WithdrawalFactory.getAmount(0.00);
+       Withdrawal s = WithdrawalFactory.getAmount(50.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
 

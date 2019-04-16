@@ -1,8 +1,7 @@
 package ATMtrans.domain;
 
 import javafx.util.Builder;
-
-public class Balance {
+public class Balance implements AtmTran {
 
     private double amount = 5000;
 
@@ -33,7 +32,7 @@ private Balance(){}
     @Override
     public String toString() {
         return "Balance{" +
-                "amount=" + amount +
+                "amount=R" + amount +
                 '}';
     }
 }}

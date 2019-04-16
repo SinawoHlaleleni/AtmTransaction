@@ -11,7 +11,7 @@ public class CashLimitFactoryTest {
     @Test
     public void getAmount() {
 
-        CashLimit s = CashLimitFactory.getAmount(0.00);
+        CashLimit s = CashLimitFactory.getAmount(3000.00);
         System.out.println(s);
         Assert.assertNotNull(s.getId());
 

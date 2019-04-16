@@ -7,7 +7,7 @@ public class TopupFactory {
 
     public static Topup getType(String Type) {
         return new Topup.Builder()
-                .Type("...")
+                .Type("SMS")
                 .Id(Misc.generateId())
                 .build();
     }

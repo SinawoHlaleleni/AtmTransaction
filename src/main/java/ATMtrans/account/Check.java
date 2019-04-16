@@ -1,6 +1,6 @@
 package ATMtrans.account;
 
-public class Check {
+public class Check implements Account{
 
     private double amount = 0;
 
@@ -31,7 +31,7 @@ public class Check {
         @Override
         public String toString() {
             return "Builder{" +
-                    "amount=" + amount +
+                    "amount=R" + amount +
                     '}';
         }
     }

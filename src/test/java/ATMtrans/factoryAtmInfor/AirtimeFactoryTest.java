@@ -10,8 +10,7 @@ public class AirtimeFactoryTest {
 
     @Test
     public void getAmount() {
-
-        Airtime s = AirtimeFactory.getAmount(0.00);
+        Airtime s = AirtimeFactory.getAmount(15.00);
         System.out.println(s);
         Assert.assertNotNull(s.gettAmount());
     }

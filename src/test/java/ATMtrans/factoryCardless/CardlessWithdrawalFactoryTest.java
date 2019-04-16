@@ -11,7 +11,7 @@ public class CardlessWithdrawalFactoryTest {
     @Test
     public void getAmount() {
 
-        CardlessWithdrawal s = CardlessWithdrawalFactory.getAmount(0.00);
+        CardlessWithdrawal s = CardlessWithdrawalFactory.getAmount(350.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
     }

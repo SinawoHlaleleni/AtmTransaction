@@ -7,7 +7,7 @@ public class CardlessServiceFactory {
 
     public static CardlessService getType(String Type) {
         return new CardlessService.Builder()
-                .Type("...")
+                .Type("0052")
                 .Id(Misc.generateId())
                 .build();
     }

@@ -7,7 +7,7 @@ public class BranchFactory {
 
     public static Branch getName(String Name) {
         return new Branch.Builder()
-                .Name("Cnr cptn")
+                .Name("CNR ABSA branch")
                 .Id(Misc.generateId())
                 .build();
     }

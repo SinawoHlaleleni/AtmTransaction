@@ -54,7 +54,7 @@ public class Airtime {
             return "Builder{" +
                     "tId='" + tId + '\'' +
                     ", tType='" + tType + '\'' +
-                    ", tAmount=" + tAmount +
+                    ", tAmount=R" + tAmount +
                     '}';
         }
     }

@@ -4,7 +4,6 @@ import java.util.Set;
 
 public class User {
 
-
     private String userId, userName, userPassword;
     private Set<AtmTran> transactions;
 

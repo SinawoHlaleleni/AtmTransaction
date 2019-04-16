@@ -1,6 +1,6 @@
 package ATMtrans.orders;
 
-public class StopOrder {
+public class StopOrder implements DebitOrders {
 
     private double amount = 0;
 
@@ -26,14 +26,16 @@ public class StopOrder {
         }
 
         public StopOrder build() {
-            return new StopOrder(this);
+            return new StopOrder(this) {
+
+            };
         }
     }
 
     @Override
     public String toString() {
         return "Deposit{" +
-                "amount=" + amount +
+                "amount=R" + amount +
                 '}';
     }
 }

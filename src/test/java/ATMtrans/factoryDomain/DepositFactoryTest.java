@@ -8,7 +8,7 @@ public class DepositFactoryTest {
 
     @Test
     public void getAmount() {
-        Deposit s = DepositFactory.getAmount(0.00);
+        Deposit s = DepositFactory.getAmount(100.00);
         System.out.println(s);
         Assert.assertNotNull(s.getAmount());
 

@@ -1,6 +1,6 @@
 package ATMtrans.orders;
 
-public class CreditOrder {
+public class CreditOrder implements DebitOrders {
 
     private double amount = 0;
 
@@ -26,14 +26,16 @@ public class CreditOrder {
         }
 
         public CreditOrder build() {
-            return new CreditOrder(this);
+            return new CreditOrder(this) {
+
+            };
         }
     }
 
     @Override
     public String toString() {
         return "Deposit{" +
-                "amount=" + amount +
+                "amount=R" + amount +
                 '}';
     }
 }

@@ -10,8 +10,7 @@ public class AtmFactoryTest {
 
     @Test
     public void getType() {
-
-        Atm s = AtmFactory.getType("...");
+        Atm s = AtmFactory.getType("ABSA");
         System.out.println(s);
         Assert.assertNotNull(s.getType());
     }

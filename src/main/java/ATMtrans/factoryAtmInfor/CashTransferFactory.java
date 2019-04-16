@@ -8,7 +8,7 @@ public class CashTransferFactory {
     public static CashTransfer getAmount(double tAmount) {
         return new CashTransfer.Builder()
                 .Amount(tAmount)
-                .num("...")
+                .num("0736072671")
                 .Id(Misc.generateId())
                 .build();
     }

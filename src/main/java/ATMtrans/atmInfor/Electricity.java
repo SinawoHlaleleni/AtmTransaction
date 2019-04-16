@@ -55,7 +55,7 @@ public class Electricity {
             return "Builder{" +
                     "Id='" + Id + '\'' +
                     ", MeterNum='" + MeterNum + '\'' +
-                    ", Amount=" + Amount +
+                    ", Amount=R" + Amount +
                     '}';
         }
     }

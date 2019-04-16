@@ -1,6 +1,7 @@
 package ATMtrans.factoryCardless;
 
 import ATMtrans.cardless.CardlessWithdrawal;
+import ATMtrans.util.Misc;
 
 public class CardlessWithdrawalFactory {
 

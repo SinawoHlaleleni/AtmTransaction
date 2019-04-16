@@ -1,12 +1,11 @@
 package ATMtrans.domain;
 
-public class Withdrawal {
+public class Withdrawal implements AtmTran {
 
     private double amount = 0;
 
     private Withdrawal() {
     }
-
     private Withdrawal(Builder builder) {
         this.amount = builder.amount;
     }
@@ -19,12 +18,10 @@ public class Withdrawal {
 
         private double amount;
 
-
         public Builder amount(double amount) {
             this.amount = amount;
             return this;
         }
-
         public Withdrawal build() {
             return new Withdrawal(this);
         }
@@ -32,7 +29,7 @@ public class Withdrawal {
         @Override
         public String toString() {
             return "Builder{" +
-                    "amount=" + amount +
+                    "amount=R" + amount +
                     '}';
         }
     }
