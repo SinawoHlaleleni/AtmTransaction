@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  <h4>Domain problem: ATM</h4>
  The atm transaction should keep the system simple since there’s fraud out there so my 
@@ -20,3 +21,9 @@
 
 
 
+=======
+# AtmTransaction
+The atm transaction will be first have logins for the user
+which is cardless and you can use it without using your card
+And then you can run your transaction but this one will be based in transactions which are Balance,Withdawal and Deposit
+>>>>>>> 4c59a6dc1f1c7612db01143d0368f82bbba65663
