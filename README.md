@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
  <h4>Domain problem: ATM</h4>
  The atm transaction should keep the system simple since there’s fraud out there so my 
