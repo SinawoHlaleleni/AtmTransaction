@@ -1,4 +1,10 @@
 package ATMtrans.repository.repositoryAccount;
 
-public class FlexibleRepository {
+import ATMtrans.domain.account.Flexible;
+import ATMtrans.repository.IRepository.IRepository;
+
+import java.util.Set;
+
+public interface FlexibleRepository extends IRepository<Flexible,String> {
+    Set<Flexible> getAll();
 }

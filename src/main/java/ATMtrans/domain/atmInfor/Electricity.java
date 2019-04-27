@@ -3,7 +3,7 @@ package ATMtrans.domain.atmInfor;
 public class Electricity {
 
     private String Id, MeterNum;
-    private double Amount;
+    private static double Amount;
 
     private Electricity() {
     }
@@ -16,7 +16,7 @@ public class Electricity {
         return MeterNum;
     }
 
-    public double getAmount() {
+    public static double getAmount() {
         return Amount;
     }
 

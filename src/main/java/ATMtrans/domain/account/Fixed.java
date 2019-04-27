@@ -1,7 +1,7 @@
 package ATMtrans.domain.account;
 
 public class Fixed implements Account{
-    private double amount = 0;
+    private static double amount = 0;
 
     private Fixed(){}
 

@@ -1,6 +1,7 @@
 package ATMtrans.factoryDomain;
 
-import ATMtrans.domain.Withdrawal;
+import ATMtrans.domain.atmTransies.Withdrawal;
+import ATMtrans.factoryDomain.factoryAtmTransies.WithdrawalFactory;
 import org.junit.Assert;
 import org.junit.Test;
 

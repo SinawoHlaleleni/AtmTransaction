@@ -1,6 +1,6 @@
-package ATMtrans.factoryDomain;
+package ATMtrans.factoryDomain.factoryAtmTransies;
 
-import ATMtrans.domain.Deposit;
+import ATMtrans.domain.atmTransies.Deposit;
 
 public class DepositFactory {
 

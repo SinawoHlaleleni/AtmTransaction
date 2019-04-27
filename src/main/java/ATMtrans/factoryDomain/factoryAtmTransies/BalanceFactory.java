@@ -1,6 +1,6 @@
-package ATMtrans.factoryDomain;
+package ATMtrans.factoryDomain.factoryAtmTransies;
 
-import ATMtrans.domain.Balance;
+import ATMtrans.domain.atmTransies.Balance;
 
 public class BalanceFactory {
 

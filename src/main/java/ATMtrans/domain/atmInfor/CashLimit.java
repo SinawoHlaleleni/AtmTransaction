@@ -3,7 +3,7 @@ package ATMtrans.domain.atmInfor;
 public class CashLimit {
 
     private String Id ;
-    private double Amount;
+    private static double Amount;
 
     private CashLimit (){}
 
@@ -11,7 +11,7 @@ public class CashLimit {
         return Id;
     }
 
-    public double getAmount() {
+    public static double getAmount() {
         return Amount;
     }
 

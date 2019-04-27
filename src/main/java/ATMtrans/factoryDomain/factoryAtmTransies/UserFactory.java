@@ -1,6 +1,6 @@
-package ATMtrans.factoryDomain;
+package ATMtrans.factoryDomain.factoryAtmTransies;
 
-import ATMtrans.domain.User;
+import ATMtrans.domain.atmTransies.User;
 import ATMtrans.util.Misc;
 
 public class UserFactory {

@@ -2,7 +2,8 @@ package ATMtrans.domain.account;
 
 public class Statement {
 
-    private String id, type;
+    private static String id;
+    private static String type;
 
     private Statement (){}
 
@@ -12,11 +13,11 @@ public class Statement {
         this.type=builder.type;
     }
 
-    public String getId() {
+    public static String getId() {
         return id;
     }
 
-    public String getType() {
+    public static String getType() {
         return type;
     }
 

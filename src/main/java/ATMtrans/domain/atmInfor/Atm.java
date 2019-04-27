@@ -2,7 +2,8 @@ package ATMtrans.domain.atmInfor;
 
 public class Atm {
 
-    private String Id, Type;
+    private String Id;
+    private static String Type;
 
 
     private Atm() {
@@ -12,7 +13,7 @@ public class Atm {
         return Id;
     }
 
-    public String getType() {
+    public static String getType() {
         return Type;
     }
 

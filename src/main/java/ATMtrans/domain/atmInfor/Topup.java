@@ -2,7 +2,8 @@ package ATMtrans.domain.atmInfor;
 
 public class Topup {
 
-    private String Id, Type;
+    private String Id;
+    private static String Type;
 
 
     private Topup (){}
@@ -11,7 +12,7 @@ public class Topup {
         return Id;
     }
 
-    public String getType() {
+    public static String getType() {
         return Type;
     }
 

@@ -1,6 +1,7 @@
 package ATMtrans.factoryDomain;
 
-import ATMtrans.domain.Deposit;
+import ATMtrans.domain.atmTransies.Deposit;
+import ATMtrans.factoryDomain.factoryAtmTransies.DepositFactory;
 import org.junit.Assert;
 import org.junit.Test;
 

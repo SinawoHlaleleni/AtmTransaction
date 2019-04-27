@@ -1,6 +1,7 @@
 package ATMtrans.factoryDomain;
 
-import ATMtrans.domain.Balance;
+import ATMtrans.domain.atmTransies.Balance;
+import ATMtrans.factoryDomain.factoryAtmTransies.BalanceFactory;
 import org.junit.Assert;
 import org.junit.Test;
 

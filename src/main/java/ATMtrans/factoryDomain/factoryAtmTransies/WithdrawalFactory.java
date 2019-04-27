@@ -1,6 +1,6 @@
-package ATMtrans.factoryDomain;
+package ATMtrans.factoryDomain.factoryAtmTransies;
 
-import ATMtrans.domain.Withdrawal;
+import ATMtrans.domain.atmTransies.Withdrawal;
 
 public class WithdrawalFactory {
 

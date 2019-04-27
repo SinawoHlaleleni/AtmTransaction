@@ -3,7 +3,7 @@ package ATMtrans.domain.atmInfor;
 public class Airtime {
 
     private String tId, tType;
-    private double tAmount;
+    private static double tAmount;
 
     private Airtime (){}
 
@@ -15,7 +15,7 @@ public class Airtime {
         return tType;
     }
 
-    public double gettAmount() {
+    public static double gettAmount() {
         return tAmount;
     }
 

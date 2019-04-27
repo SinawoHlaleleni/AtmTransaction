@@ -1,4 +1,10 @@
 package ATMtrans.repository.repositoryAccount;
 
-public class SavingsRepository {
+import ATMtrans.domain.account.Savings;
+import ATMtrans.repository.IRepository.IRepository;
+
+import java.util.Set;
+
+public interface SavingsRepository extends IRepository<Savings,String> {
+    Set<Savings> getAll();
 }

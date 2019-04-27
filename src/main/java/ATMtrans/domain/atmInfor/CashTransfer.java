@@ -3,7 +3,7 @@ package ATMtrans.domain.atmInfor;
 public class CashTransfer {
 
     private String Id, num;
-    private double Amount;
+    private static double Amount;
 
     private CashTransfer (){}
 
@@ -15,7 +15,7 @@ public class CashTransfer {
         return num;
     }
 
-    public double getAmount() {
+    public static double getAmount() {
         return Amount;
     }
 

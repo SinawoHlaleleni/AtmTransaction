@@ -1,6 +1,7 @@
 package ATMtrans.factoryDomain;
 
-import ATMtrans.domain.User;
+import ATMtrans.domain.atmTransies.User;
+import ATMtrans.factoryDomain.factoryAtmTransies.UserFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
