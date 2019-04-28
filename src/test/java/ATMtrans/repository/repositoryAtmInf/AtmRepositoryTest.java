@@ -29,10 +29,10 @@ public class AtmRepositoryTest {
         assertEquals("ABSA",atm.getType());
     }
 
-    @Test//(dependsOnMethods = "create")
+    @Test //(dependsOnMethods = "create")
     public void read()throws Exception{
         Atm readAtm = atmR.read(type);
-        assertEquals("Absa",readAtm.getType());
+        assertEquals("ABSA",readAtm.getType());
 
     }
     @Test
