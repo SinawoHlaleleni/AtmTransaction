@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmInf/AtmRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmInf/AtmRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,10 +15,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmInf/AtmRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
+            <state relative-caret-position="425">
               <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmTransies/UserRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="257">
+              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state relative-caret-position="-107">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/atmTransiesImpl/WithdrawalRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/atmTransiesImpl/BalanceRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmTransies/UserRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmInf/AtmRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java" />
       </list>
     </option>
   </component>
@@ -240,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556471011785" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556471958229" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -279,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AtmRepositoryTest.delete">
+  <component name="RunManager" selected="JUnit.BankRepositoryTest.delete">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -306,16 +306,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtmRepositoryTest.Update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankRepositoryTest.Update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ATMtrans.repository.repositoryAtmInf.*" />
+          <option name="PATTERN" value="ATMtrans.repository.repositoryBankInfor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryAtmInf" />
-      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryAtmInf.AtmRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryBankInfor" />
+      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryBankInfor.BankRepositoryTest" />
       <option name="METHOD_NAME" value="Update" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -323,16 +323,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtmRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ATMtrans.repository.repositoryAtmInf.*" />
+          <option name="PATTERN" value="ATMtrans.repository.repositoryBankInfor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryAtmInf" />
-      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryAtmInf.AtmRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryBankInfor" />
+      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryBankInfor.BankRepositoryTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -340,16 +340,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtmRepositoryTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankRepositoryTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ATMtrans.repository.repositoryAtmInf.*" />
+          <option name="PATTERN" value="ATMtrans.repository.repositoryBankInfor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryAtmInf" />
-      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryAtmInf.AtmRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryBankInfor" />
+      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryBankInfor.BankRepositoryTest" />
       <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -357,16 +357,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtmRepositoryTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankRepositoryTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ATMtrans.repository.repositoryAtmInf.*" />
+          <option name="PATTERN" value="ATMtrans.repository.repositoryBankInfor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryAtmInf" />
-      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryAtmInf.AtmRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryBankInfor" />
+      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryBankInfor.BankRepositoryTest" />
       <option name="METHOD_NAME" value="read" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -374,7 +374,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRepositoryTest.Update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRepositoryTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
         <pattern>
@@ -384,7 +384,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ATMtrans.repository.repositoryAtmTransies" />
       <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.repositoryAtmTransies.UserRepositoryTest" />
-      <option name="METHOD_NAME" value="Update" />
+      <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -417,11 +417,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AtmRepositoryTest.delete" />
-        <item itemvalue="JUnit.AtmRepositoryTest.Update" />
-        <item itemvalue="JUnit.AtmRepositoryTest.read" />
-        <item itemvalue="JUnit.AtmRepositoryTest.create" />
-        <item itemvalue="JUnit.UserRepositoryTest.Update" />
+        <item itemvalue="JUnit.BankRepositoryTest.delete" />
+        <item itemvalue="JUnit.BankRepositoryTest.Update" />
+        <item itemvalue="JUnit.BankRepositoryTest.read" />
+        <item itemvalue="JUnit.BankRepositoryTest.create" />
+        <item itemvalue="JUnit.UserRepositoryTest.delete" />
       </list>
     </recent_temporary>
   </component>
@@ -457,7 +457,7 @@
       <workItem from="1556370532617" duration="749000" />
       <workItem from="1556381050021" duration="317000" />
       <workItem from="1556456026284" duration="33000" />
-      <workItem from="1556470119761" duration="1196000" />
+      <workItem from="1556470119761" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="class add">
       <created>1555279996880</created>
@@ -620,22 +620,17 @@
       <option name="project" value="LOCAL" />
       <updated>1556370868393</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="class add">
+      <created>1556471435631</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1556471435631</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserRepositoryTest_create - 2019.04.27 at 13h 05m 01s.xml">
-      <configuration name="UserRepositoryTest.create" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_read - 2019.04.27 at 13h 06m 12s.xml">
-      <configuration name="UserRepositoryTest.read" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_read - 2019.04.27 at 13h 13m 30s.xml">
-      <configuration name="UserRepositoryTest.read" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_read - 2019.04.27 at 13h 13m 43s.xml">
-      <configuration name="UserRepositoryTest.read" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserRepositoryTest_Update - 2019.04.27 at 13h 15m 33s.xml">
       <configuration name="UserRepositoryTest.Update" configurationId="JUnit" />
     </history-entry>
@@ -651,9 +646,24 @@
     <history-entry file="AtmRepositoryTest_delete - 2019.04.28 at 18h 03m 47s.xml">
       <configuration name="AtmRepositoryTest.delete" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserRepositoryTest_delete - 2019.04.28 at 18h 11m 08s.xml">
+      <configuration name="UserRepositoryTest.delete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankRepositoryTest_create - 2019.04.28 at 18h 13m 06s.xml">
+      <configuration name="BankRepositoryTest.create" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankRepositoryTest_read - 2019.04.28 at 18h 15m 15s.xml">
+      <configuration name="BankRepositoryTest.read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankRepositoryTest_read - 2019.04.28 at 18h 16m 44s.xml">
+      <configuration name="BankRepositoryTest.read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankRepositoryTest_Update - 2019.04.28 at 18h 19m 01s.xml">
+      <configuration name="BankRepositoryTest.Update" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97205000" />
+    <option name="totallyTimeSpent" value="97755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -668,7 +678,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1140,23 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmTransies/UserRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/Test.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1169,8 +1162,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmInf/AtmRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="425">
           <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryAtmTransies/UserRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/repository/repositoryBankInfor/BankRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>

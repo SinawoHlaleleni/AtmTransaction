@@ -30,7 +30,7 @@ public class BankRepositoryTest {
     @Test//(dependsOnMethods = "create")
     public void read()throws Exception{
         Bank readBank = bankR.read(name);
-        assertEquals("Absa",readBank.getName());
+        assertEquals("ABSA",readBank.getName());
 
     }
     @Test
