@@ -43,7 +43,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account read(Double aDouble) {
-        return this.repository.delete(aDouble);
+        return this.repository.read(aDouble);
     }
 }
 
