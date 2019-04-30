@@ -14,18 +14,16 @@ public class CheckRepositoryImpl implements CheckRepository {
     private Map<Double, Check> checkTable;
 
     private CheckRepositoryImpl() {
-        checkTable = new HashMap<Double, Check>();
+        checkTable = new HashMap<>();
     }
 
     public static CheckRepository getRepository(){
         if (repository == null) repository = new CheckRepositoryImpl();
         return repository;
     }
-
-
     @Override
     public Set<Check> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -45,9 +43,8 @@ public class CheckRepositoryImpl implements CheckRepository {
 
     @Override
     public Account delete(String s) {
-        checkTable.remove(s);
-
-        return null;
+        //checkTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

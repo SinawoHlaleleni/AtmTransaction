@@ -14,7 +14,7 @@ public class CardlessServiceRepositoryImpl implements CardlessServiceRepository 
     private Map<String, CardlessService> CardlessServiceTable;
 
     private CardlessServiceRepositoryImpl() {
-        CardlessServiceTable = new HashMap<String,CardlessService>();
+        CardlessServiceTable = new HashMap<>();
     }
 
     public static CardlessServiceRepository getRepository(){
@@ -25,7 +25,7 @@ public class CardlessServiceRepositoryImpl implements CardlessServiceRepository 
 
     @Override
     public Set<CardlessService> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -47,9 +47,9 @@ public class CardlessServiceRepositoryImpl implements CardlessServiceRepository 
 
     @Override
     public Account delete(Double aDouble) {
-        CardlessServiceTable.remove(aDouble);
+       // CardlessServiceTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

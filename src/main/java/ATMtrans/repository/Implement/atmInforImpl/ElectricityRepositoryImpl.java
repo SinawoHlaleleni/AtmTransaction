@@ -13,7 +13,7 @@ public class ElectricityRepositoryImpl implements ElectricityRepository {
     private Map<Double,Electricity> ElectricityTable;
 
     private ElectricityRepositoryImpl() {
-        ElectricityTable = new HashMap<Double, Electricity>();
+        ElectricityTable = new HashMap<>();
     }
 
     public static ElectricityRepository getRepository() {
@@ -23,7 +23,7 @@ public class ElectricityRepositoryImpl implements ElectricityRepository {
 
     @Override
     public Set<Electricity> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,9 +46,9 @@ public class ElectricityRepositoryImpl implements ElectricityRepository {
 
     @Override
     public Account delete(String s) {
-        ElectricityTable.remove(s);
+        //ElectricityTable.remove(s);
 
-        return null;
+        return this.delete(s);
     }
 
     @Override

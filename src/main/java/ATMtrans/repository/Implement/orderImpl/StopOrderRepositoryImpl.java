@@ -13,7 +13,7 @@ public class StopOrderRepositoryImpl implements StopOrderRepository {
     private Map<Double, StopOrder> StopOrderTable;
 
     private StopOrderRepositoryImpl() {
-        StopOrderTable = new HashMap<Double,StopOrder>();
+        StopOrderTable = new HashMap<>();
     }
 
     public static StopOrderRepository getRepository(){
@@ -23,7 +23,7 @@ public class StopOrderRepositoryImpl implements StopOrderRepository {
 
     @Override
     public Set<StopOrder> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -42,9 +42,8 @@ public class StopOrderRepositoryImpl implements StopOrderRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        StopOrderTable.remove(aDouble);
-
-        return null;
+        //StopOrderTable.remove(aDouble);
+        return this.delete(aDouble);
     }
 
     @Override

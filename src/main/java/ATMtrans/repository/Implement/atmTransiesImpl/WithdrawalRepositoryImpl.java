@@ -14,7 +14,7 @@ public class WithdrawalRepositoryImpl implements WithdrawalRepository {
     private Map<Double, Withdrawal> WithdrawalTable;
 
     private WithdrawalRepositoryImpl() {
-        WithdrawalTable = new HashMap<Double, Withdrawal>();
+        WithdrawalTable = new HashMap<>();
     }
 
     public static WithdrawalRepository getRepository(){
@@ -24,7 +24,7 @@ public class WithdrawalRepositoryImpl implements WithdrawalRepository {
 
     @Override
     public Set<Withdrawal> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,9 +46,9 @@ public class WithdrawalRepositoryImpl implements WithdrawalRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        WithdrawalTable.remove(aDouble);
+        //WithdrawalTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

@@ -13,7 +13,7 @@ public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepos
     private Map<Double, CardlessWithdrawal> CardlessWithdrawalTable;
 
     private CardlessWithdrawalRepositoryImpl() {
-        CardlessWithdrawalTable = new HashMap<Double,CardlessWithdrawal>();
+        CardlessWithdrawalTable = new HashMap<>();
     }
 
     public static CardlessWithdrawalRepository getRepository(){
@@ -23,7 +23,7 @@ public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepos
 
     @Override
     public Set<CardlessWithdrawal> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -42,9 +42,8 @@ public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepos
 
     @Override
     public Account delete(Double aDouble) {
-        CardlessWithdrawalTable.remove(aDouble);
-
-        return null;
+       // CardlessWithdrawalTable.remove(aDouble);
+        return this.delete(aDouble);
     }
 
     @Override

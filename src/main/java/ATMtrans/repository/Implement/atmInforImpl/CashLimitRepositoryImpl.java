@@ -14,7 +14,7 @@ public class CashLimitRepositoryImpl implements CashLimitRepository {
     private Map<Double, CashLimit> CashLimitTable;
 
     private CashLimitRepositoryImpl() {
-        CashLimitTable = new HashMap<Double, CashLimit>();
+        CashLimitTable = new HashMap<>();
     }
 
     public static CashLimitRepository getRepository(){
@@ -42,9 +42,9 @@ public class CashLimitRepositoryImpl implements CashLimitRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        CashLimitTable.remove(aDouble);
+        //CashLimitTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override
@@ -56,6 +56,6 @@ public class CashLimitRepositoryImpl implements CashLimitRepository {
     @Override
     public Set<CashLimit> getAll()
     {
-        return null;
+        return this.getAll();
     }
 }

@@ -13,7 +13,7 @@ public class AtmTranRepositoryImpl implements AtmTranRepository {
     private Map<Double, AtmTran> AtmTranTable;
 
     private AtmTranRepositoryImpl() {
-        AtmTranTable = new HashMap<Double, AtmTran>();
+        AtmTranTable = new HashMap<>();
     }
 
     public static AtmTranRepository getRepository(){
@@ -23,7 +23,7 @@ public class AtmTranRepositoryImpl implements AtmTranRepository {
 
     @Override
     public Set<AtmTran> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -45,9 +45,9 @@ public class AtmTranRepositoryImpl implements AtmTranRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        AtmTranTable.remove(aDouble);
+        //AtmTranTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

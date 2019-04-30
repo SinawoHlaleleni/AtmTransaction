@@ -13,7 +13,7 @@ public class AtmRepositoryImpl implements AtmRepository {
     private Map<String, Atm> AtmTable;
 
     private AtmRepositoryImpl() {
-        AtmTable = new HashMap<String, Atm>();
+        AtmTable = new HashMap<>();
     }
 
     public static AtmRepository getRepository(){
@@ -21,10 +21,9 @@ public class AtmRepositoryImpl implements AtmRepository {
         return repository;
     }
 
-
     @Override
     public Set<Atm> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -32,7 +31,6 @@ public class AtmRepositoryImpl implements AtmRepository {
         AtmTable.put(Atm.getType(),atm);
         Atm atm1 = AtmTable.get(Atm.getType());
         return atm1;
-
     }
 
     @Override
@@ -40,14 +38,13 @@ public class AtmRepositoryImpl implements AtmRepository {
         AtmTable.put(Atm.getType(),atm);
         Atm atm1 = AtmTable.get(Atm.getType());
         return atm1;
-
     }
 
     @Override
     public Account delete(String s) {
-        AtmTable.remove(s);
+        //AtmTable.remove(s);
 
-        return null;
+        return this.delete(s);
     }
 
     @Override

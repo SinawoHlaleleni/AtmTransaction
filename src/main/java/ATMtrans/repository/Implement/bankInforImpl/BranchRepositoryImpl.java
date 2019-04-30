@@ -13,7 +13,7 @@ public class BranchRepositoryImpl implements BranchRepository {
     private Map<String, Branch> BranchTable;
 
     private BranchRepositoryImpl() {
-        BranchTable = new HashMap<String, Branch>();
+        BranchTable = new HashMap<>();
     }
 
     public static BranchRepository getRepository(){
@@ -23,7 +23,7 @@ public class BranchRepositoryImpl implements BranchRepository {
 
     @Override
     public Set<Branch> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,8 +44,8 @@ public class BranchRepositoryImpl implements BranchRepository {
 
     @Override
     public Account delete(String s) {
-        BranchTable.remove(s);
-        return null;
+        //BranchTable.remove(s);
+        return this.delete(s);
     }
     @Override
     public Branch read(String s)

@@ -13,7 +13,7 @@ public class CashTranferRepositoryImpl implements CashTranferRepository {
     private Map<Double, CashTransfer> CashTransferTable;
 
     private CashTranferRepositoryImpl() {
-        CashTransferTable = new HashMap<Double, CashTransfer>();
+        CashTransferTable = new HashMap<>();
     }
 
     public static CashTranferRepository getRepository(){
@@ -23,7 +23,7 @@ public class CashTranferRepositoryImpl implements CashTranferRepository {
 
     @Override
     public Set<CashTransfer> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,9 +44,9 @@ public class CashTranferRepositoryImpl implements CashTranferRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        CashTransferTable.remove(aDouble);
+        //CashTransferTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

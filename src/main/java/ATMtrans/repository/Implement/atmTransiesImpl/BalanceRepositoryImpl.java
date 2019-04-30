@@ -14,7 +14,7 @@ public class BalanceRepositoryImpl implements BalanceRepository {
     private Map<Double, Balance> BalanceTable;
 
     private BalanceRepositoryImpl() {
-        BalanceTable = new HashMap<Double, Balance>();
+        BalanceTable = new HashMap<>();
     }
 
     public static BalanceRepository getRepository(){
@@ -24,7 +24,7 @@ public class BalanceRepositoryImpl implements BalanceRepository {
 
     @Override
     public Set<Balance> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -45,8 +45,8 @@ public class BalanceRepositoryImpl implements BalanceRepository {
     @Override
     public Account delete(Double aDouble) {
 
-        BalanceTable.remove(aDouble);
-        return null;
+       // BalanceTable.remove(aDouble);
+        return this.delete(aDouble);
     }
 
     @Override

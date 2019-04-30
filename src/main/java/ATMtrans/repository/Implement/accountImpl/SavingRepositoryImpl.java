@@ -14,7 +14,7 @@ public class SavingRepositoryImpl implements SavingsRepository {
     private Map<Double, Savings> SavingsTable;
 
     private SavingRepositoryImpl() {
-        SavingsTable = new HashMap<Double, Savings>();
+        SavingsTable = new HashMap<>();
     }
 
     public static SavingRepositoryImpl getRepository(){
@@ -24,7 +24,7 @@ public class SavingRepositoryImpl implements SavingsRepository {
 
     @Override
     public Set<Savings> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,8 +44,8 @@ public class SavingRepositoryImpl implements SavingsRepository {
 
     @Override
     public Account delete(String s) {
-        SavingsTable.remove(s);
-        return null;
+        //SavingsTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

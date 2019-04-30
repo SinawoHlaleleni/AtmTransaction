@@ -14,7 +14,7 @@ public class DebitOrderRepositoryImpl implements DebitOrderRepository {
     private Map<Double, DebitOrders> DebitOrderTable;
 
     private DebitOrderRepositoryImpl() {
-        DebitOrderTable = new HashMap<Double,DebitOrders>();
+        DebitOrderTable = new HashMap<>();
     }
 
     public static DebitOrderRepository getRepository(){
@@ -23,7 +23,7 @@ public class DebitOrderRepositoryImpl implements DebitOrderRepository {
     }
     @Override
     public Set<DebitOrders> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -43,9 +43,8 @@ public class DebitOrderRepositoryImpl implements DebitOrderRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        DebitOrderTable.remove(aDouble);
-
-        return null;
+        //DebitOrderTable.remove(aDouble);
+        return this.delete(aDouble);
     }
 
     @Override

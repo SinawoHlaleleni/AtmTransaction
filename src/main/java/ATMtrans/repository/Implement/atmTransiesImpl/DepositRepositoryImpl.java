@@ -13,7 +13,7 @@ public class DepositRepositoryImpl implements DepositRepository {
     private Map<Double, Deposit> depositTable;
 
     private DepositRepositoryImpl() {
-        depositTable = new HashMap<Double, Deposit>();
+        depositTable = new HashMap<>();
     }
 
     public static DepositRepository getRepository(){
@@ -23,7 +23,7 @@ public class DepositRepositoryImpl implements DepositRepository {
 
     @Override
     public Set<Deposit> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -43,9 +43,9 @@ public class DepositRepositoryImpl implements DepositRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        depositTable.remove(aDouble);
+       // depositTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

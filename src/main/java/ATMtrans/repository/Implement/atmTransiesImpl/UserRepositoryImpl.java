@@ -13,7 +13,7 @@ public class UserRepositoryImpl implements UserRepository {
     private HashMap<String, User> UserTable;
 
     private UserRepositoryImpl() {
-        UserTable = new HashMap<String, User>();
+        UserTable = new HashMap<>();
     }
 
     public static UserRepository getRepository(){
@@ -45,9 +45,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Account delete(String s) {
-        UserTable.remove(s);
-
-        return null;
+        //UserTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

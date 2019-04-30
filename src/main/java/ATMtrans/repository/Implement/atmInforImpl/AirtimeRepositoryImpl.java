@@ -14,7 +14,7 @@ public class AirtimeRepositoryImpl implements AirtimeRepository {
     private Map<Double, Airtime> AirtimeTable;
 
     private AirtimeRepositoryImpl() {
-        AirtimeTable = new HashMap<Double, Airtime>();
+        AirtimeTable = new HashMap<>();
     }
 
     public static AirtimeRepository getRepository(){
@@ -24,7 +24,7 @@ public class AirtimeRepositoryImpl implements AirtimeRepository {
 
     @Override
     public Set<Airtime> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,9 +44,9 @@ public class AirtimeRepositoryImpl implements AirtimeRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        AirtimeTable.remove(aDouble);
+       // AirtimeTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

@@ -14,7 +14,7 @@ public class StatementRepositoryImpl implements StatementRepository {
     private Map<String, Statement> StatementTable;
 
     private StatementRepositoryImpl() {
-        StatementTable = new HashMap<String, Statement>();
+        StatementTable = new HashMap<>();
     }
 
     public static StatementRepository getRepository(){
@@ -24,7 +24,7 @@ public class StatementRepositoryImpl implements StatementRepository {
 
     @Override
     public Set<Statement> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,9 +44,9 @@ public class StatementRepositoryImpl implements StatementRepository {
 
     @Override
     public Account delete(String s) {
-        StatementTable.remove(s);
+        //StatementTable.remove(s);
 
-        return null;
+        return this.delete(s);
     }
 
     @Override

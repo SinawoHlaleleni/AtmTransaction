@@ -14,7 +14,7 @@ public class EwalletRepositoryImpl implements EwalletRepository {
     private Map<Double, Ewallet> EwalletTable;
 
     private EwalletRepositoryImpl() {
-        EwalletTable = new HashMap<Double,Ewallet>();
+        EwalletTable = new HashMap<>();
     }
 
     public static EwalletRepository getRepository(){
@@ -24,7 +24,7 @@ public class EwalletRepositoryImpl implements EwalletRepository {
 
     @Override
     public Set<Ewallet> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -44,9 +44,9 @@ public class EwalletRepositoryImpl implements EwalletRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        EwalletTable.remove(aDouble);
+       // EwalletTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

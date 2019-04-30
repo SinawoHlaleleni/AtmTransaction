@@ -14,7 +14,7 @@ public class FixedRepositoryImpl implements FixedRepository {
     private Map<Double, Fixed> fixedTable;
 
     private FixedRepositoryImpl() {
-        fixedTable = new HashMap<Double, Fixed>();
+        fixedTable = new HashMap<>();
     }
 
     public static FixedRepository getRepository(){
@@ -22,11 +22,9 @@ public class FixedRepositoryImpl implements FixedRepository {
         return repository;
     }
 
-
-
     @Override
     public Set<Fixed> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,9 +44,8 @@ public class FixedRepositoryImpl implements FixedRepository {
 
     @Override
     public Account delete(String s) {
-        fixedTable.remove(s);
-
-        return null;
+        //fixedTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

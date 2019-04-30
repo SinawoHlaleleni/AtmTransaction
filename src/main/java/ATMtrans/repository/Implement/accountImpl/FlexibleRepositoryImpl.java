@@ -14,7 +14,7 @@ public class FlexibleRepositoryImpl implements FlexibleRepository {
     private Map<Double, Flexible> FlexibleTable;
 
     private FlexibleRepositoryImpl() {
-        FlexibleTable = new HashMap<Double, Flexible>();
+        FlexibleTable = new HashMap<>();
     }
 
     public static FlexibleRepository getRepository(){
@@ -24,7 +24,7 @@ public class FlexibleRepositoryImpl implements FlexibleRepository {
 
     @Override
     public Set<Flexible> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,8 +46,8 @@ public class FlexibleRepositoryImpl implements FlexibleRepository {
 
     @Override
     public Account delete(String s) {
-        FlexibleTable.remove(s);
-        return null;
+        //FlexibleTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

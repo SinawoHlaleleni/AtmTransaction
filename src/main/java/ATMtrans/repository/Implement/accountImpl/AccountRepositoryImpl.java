@@ -13,7 +13,7 @@ public class AccountRepositoryImpl implements AccountRepository {
     private Map<Double, Account> accountTable;
 
     private AccountRepositoryImpl() {
-        accountTable = new HashMap<Double, Account>();
+        accountTable = new HashMap<>();
     }
 
     public static AccountRepository getRepository(){
@@ -42,9 +42,8 @@ public class AccountRepositoryImpl implements AccountRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        accountTable.remove(aDouble);
-
-        return null;
+        //accountTable.remove(aDouble);
+        return this.delete(aDouble);
     }
 
     @Override

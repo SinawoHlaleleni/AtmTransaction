@@ -14,7 +14,7 @@ public class CreditOrderRepositoryImpl implements CreditOrderRepository {
     private Map<Double, CreditOrder> CreditOrderTable;
 
     private CreditOrderRepositoryImpl() {
-        CreditOrderTable = new HashMap<Double,CreditOrder>();
+        CreditOrderTable = new HashMap<>();
     }
 
     public static CreditOrderRepository getRepository(){
@@ -25,7 +25,7 @@ public class CreditOrderRepositoryImpl implements CreditOrderRepository {
 
     @Override
     public Set<CreditOrder> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,9 +46,9 @@ public class CreditOrderRepositoryImpl implements CreditOrderRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        CreditOrderTable.remove(aDouble);
+        //CreditOrderTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override

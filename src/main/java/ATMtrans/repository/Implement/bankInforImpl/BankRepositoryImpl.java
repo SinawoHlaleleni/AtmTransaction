@@ -14,7 +14,7 @@ public class BankRepositoryImpl implements BankRepository {
     private Map<String, Bank> BankTable;
 
     private BankRepositoryImpl() {
-        BankTable = new HashMap<String, Bank>();
+        BankTable = new HashMap<>();
     }
 
     public static BankRepository getRepository(){
@@ -23,7 +23,7 @@ public class BankRepositoryImpl implements BankRepository {
     }
     @Override
     public Set<Bank> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -40,9 +40,8 @@ public class BankRepositoryImpl implements BankRepository {
     }
     @Override
     public Account delete(String s) {
-        BankTable.remove(s);
-
-        return null;
+       // BankTable.remove(s);
+        return this.delete(s);
     }
 
     @Override

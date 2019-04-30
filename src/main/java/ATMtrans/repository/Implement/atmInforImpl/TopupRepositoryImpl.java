@@ -14,7 +14,7 @@ public class TopupRepositoryImpl implements TopupRepository {
     private Map<String, Topup> TopupTable;
 
     private TopupRepositoryImpl() {
-        TopupTable = new HashMap<String, Topup>();
+        TopupTable = new HashMap<>();
     }
 
     public static TopupRepository getRepository(){
@@ -24,7 +24,7 @@ public class TopupRepositoryImpl implements TopupRepository {
 
     @Override
     public Set<Topup> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -46,9 +46,9 @@ public class TopupRepositoryImpl implements TopupRepository {
 
     @Override
     public Account delete(Double aDouble) {
-        TopupTable.remove(aDouble);
+        //TopupTable.remove(aDouble);
 
-        return null;
+        return this.delete(aDouble);
     }
 
     @Override
