@@ -1,4 +1,10 @@
 package ATMtrans.service.cardlessService;
 
-public class CardlessSerService {
+import ATMtrans.domain.cardless.CardlessService;
+import ATMtrans.service.IService.IService;
+
+import java.util.Set;
+
+public interface CardlessSerService extends IService <CardlessService,Double> {
+    Set<CardlessService> getAll();
 }

@@ -1,10 +1,10 @@
 package ATMtrans.repository.Implement.atmTransiesImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmTransies.User;
 import ATMtrans.repository.repositoryAtmTransies.UserRepository;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class UserRepositoryImpl implements UserRepository {
@@ -44,9 +44,10 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         UserTable.remove(s);
 
+        return null;
     }
 
     @Override

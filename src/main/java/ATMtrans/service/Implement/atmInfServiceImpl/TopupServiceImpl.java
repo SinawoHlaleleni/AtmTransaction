@@ -1,4 +1,46 @@
 package ATMtrans.service.Implement.atmInfServiceImpl;
 
-public class TopupServiceImpl {
+import ATMtrans.domain.atmInfor.Topup;
+import ATMtrans.repository.Implement.atmInforImpl.TopupRepositoryImpl;
+import ATMtrans.repository.repositoryAtmInf.TopupRepository;
+import ATMtrans.service.atmInfService.TopupService;
+
+import java.util.Set;
+
+public class TopupServiceImpl implements TopupService {
+
+    public static TopupServiceImpl service = null;
+    private TopupRepository repository;
+    private TopupServiceImpl(){
+        this.repository= TopupRepositoryImpl.getRepository();
+    }
+    public TopupService getService(){
+        if(service == null) service = new TopupServiceImpl();
+        return service;
+    }
+
+    @Override
+    public Set<Topup> getAll() {
+        return this.repository.getAll();
+    }
+
+    @Override
+    public Topup create(Topup topup) {
+        return this.repository.create(topup);
+    }
+
+    @Override
+    public Topup update(Topup topup) {
+        return this.repository.update(topup);
+    }
+
+    @Override
+    public void delete(Double aDouble) {
+    repository.delete(aDouble);
+    }
+
+    @Override
+    public Topup read(Double aDouble) {
+        return this.repository.read(aDouble);
+    }
 }

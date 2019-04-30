@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.accountImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Check;
 import ATMtrans.repository.repositoryAccount.CheckRepository;
 
@@ -43,9 +44,10 @@ public class CheckRepositoryImpl implements CheckRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         checkTable.remove(s);
 
+        return null;
     }
 
     @Override

@@ -23,7 +23,7 @@ public class AccountRepositoryImpl implements AccountRepository {
 
     @Override
     public Set<Account> getAll() {
-        return null;
+        return this.getAll();
     }
 
     @Override
@@ -41,9 +41,10 @@ public class AccountRepositoryImpl implements AccountRepository {
     }
 
     @Override
-    public void delete(Double aDouble) {
+    public Account delete(Double aDouble) {
         accountTable.remove(aDouble);
 
+        return null;
     }
 
     @Override

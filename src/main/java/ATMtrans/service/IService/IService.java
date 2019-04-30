@@ -1,4 +1,4 @@
-package ATMtrans.service;
+package ATMtrans.service.IService;
 
 public interface IService <T, ID> {
 

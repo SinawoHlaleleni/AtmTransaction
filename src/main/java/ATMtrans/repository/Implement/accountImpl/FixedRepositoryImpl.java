@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.accountImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Fixed;
 import ATMtrans.repository.repositoryAccount.FixedRepository;
 
@@ -44,9 +45,10 @@ public class FixedRepositoryImpl implements FixedRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         fixedTable.remove(s);
 
+        return null;
     }
 
     @Override

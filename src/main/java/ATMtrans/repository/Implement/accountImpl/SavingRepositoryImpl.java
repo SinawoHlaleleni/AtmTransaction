@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.accountImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Savings;
 import ATMtrans.repository.repositoryAccount.SavingsRepository;
 
@@ -42,8 +43,9 @@ public class SavingRepositoryImpl implements SavingsRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         SavingsTable.remove(s);
+        return null;
     }
 
     @Override

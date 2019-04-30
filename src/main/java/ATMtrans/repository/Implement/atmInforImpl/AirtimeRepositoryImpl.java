@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.atmInforImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmInfor.Airtime;
 import ATMtrans.repository.repositoryAtmInf.AirtimeRepository;
 
@@ -42,9 +43,10 @@ public class AirtimeRepositoryImpl implements AirtimeRepository {
     }
 
     @Override
-    public void delete(Double aDouble) {
+    public Account delete(Double aDouble) {
         AirtimeTable.remove(aDouble);
 
+        return null;
     }
 
     @Override

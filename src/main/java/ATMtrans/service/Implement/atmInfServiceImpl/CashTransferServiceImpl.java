@@ -1,4 +1,46 @@
 package ATMtrans.service.Implement.atmInfServiceImpl;
 
-public class CashTransferServiceImpl {
+import ATMtrans.domain.atmInfor.CashTransfer;
+import ATMtrans.repository.Implement.atmInforImpl.CashTranferRepositoryImpl;
+import ATMtrans.repository.repositoryAtmInf.CashTranferRepository;
+import ATMtrans.service.atmInfService.CashTransferService;
+
+import java.util.Set;
+
+public class CashTransferServiceImpl  implements CashTransferService {
+
+    public static CashTransferServiceImpl service = null;
+    private CashTranferRepository repository;
+    private CashTransferServiceImpl(){
+        this.repository= CashTranferRepositoryImpl.getRepository();
+    }
+    public CashTransferService getService(){
+        if(service == null) service = new CashTransferServiceImpl();
+        return service;
+    }
+
+    @Override
+    public Set<CashTransfer> getAll() {
+        return this.repository.getAll();
+    }
+
+    @Override
+    public CashTransfer create(CashTransfer cashTransfer) {
+        return this.repository.create(cashTransfer);
+    }
+
+    @Override
+    public CashTransfer update(CashTransfer cashTransfer) {
+        return this.repository.update(cashTransfer);
+    }
+
+    @Override
+    public void delete(Double aDouble) {
+        repository.delete(aDouble);
+    }
+
+    @Override
+    public CashTransfer read(Double aDouble) {
+        return this.repository.read(aDouble);
+    }
 }

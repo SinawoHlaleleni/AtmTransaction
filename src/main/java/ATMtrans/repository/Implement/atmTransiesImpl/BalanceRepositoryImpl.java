@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.atmTransiesImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmTransies.Balance;
 import ATMtrans.repository.repositoryAtmTransies.BalanceRepository;
 
@@ -42,9 +43,10 @@ public class BalanceRepositoryImpl implements BalanceRepository {
     }
 
     @Override
-    public void delete(Double aDouble) {
+    public Account delete(Double aDouble) {
 
         BalanceTable.remove(aDouble);
+        return null;
     }
 
     @Override

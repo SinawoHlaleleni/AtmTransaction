@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.accountImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Flexible;
 import ATMtrans.repository.repositoryAccount.FlexibleRepository;
 
@@ -44,8 +45,9 @@ public class FlexibleRepositoryImpl implements FlexibleRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         FlexibleTable.remove(s);
+        return null;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.atmInforImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmInfor.Atm;
 import ATMtrans.repository.repositoryAtmInf.AtmRepository;
 
@@ -43,9 +44,10 @@ public class AtmRepositoryImpl implements AtmRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         AtmTable.remove(s);
 
+        return null;
     }
 
     @Override

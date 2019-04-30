@@ -1,4 +1,10 @@
 package ATMtrans.service.atmInfService;
 
-public class CashLimitService {
+import ATMtrans.domain.atmInfor.CashLimit;
+import ATMtrans.service.IService.IService;
+
+import java.util.Set;
+
+public interface CashLimitService extends IService <CashLimit,Double> {
+    Set<CashLimit> getAll();
 }

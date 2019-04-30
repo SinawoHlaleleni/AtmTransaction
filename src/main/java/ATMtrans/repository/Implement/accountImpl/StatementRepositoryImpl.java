@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.accountImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Statement;
 import ATMtrans.repository.repositoryAccount.StatementRepository;
 
@@ -42,9 +43,10 @@ public class StatementRepositoryImpl implements StatementRepository {
     }
 
     @Override
-    public void delete(String s) {
+    public Account delete(String s) {
         StatementTable.remove(s);
 
+        return null;
     }
 
     @Override

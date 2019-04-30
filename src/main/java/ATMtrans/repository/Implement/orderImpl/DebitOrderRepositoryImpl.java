@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.orderImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.orders.DebitOrders;
 import ATMtrans.repository.repositoryOrder.DebitOrderRepository;
 
@@ -41,9 +42,10 @@ public class DebitOrderRepositoryImpl implements DebitOrderRepository {
     }
 
     @Override
-    public void delete(Double aDouble) {
+    public Account delete(Double aDouble) {
         DebitOrderTable.remove(aDouble);
 
+        return null;
     }
 
     @Override

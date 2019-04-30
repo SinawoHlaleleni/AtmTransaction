@@ -1,9 +1,11 @@
 package ATMtrans.repository.IRepository;
 
+import ATMtrans.domain.account.Account;
+
 public interface IRepository<T, ID> {
 
    T create(T t);
     T update(T t);
-    void delete(ID id);
+    Account delete(ID id);
     T read(ID id);
 }

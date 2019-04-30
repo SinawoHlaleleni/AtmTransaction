@@ -1,5 +1,6 @@
 package ATMtrans.repository.Implement.atmInforImpl;
 
+import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmInfor.CashTransfer;
 import ATMtrans.repository.repositoryAtmInf.CashTranferRepository;
 
@@ -42,9 +43,10 @@ public class CashTranferRepositoryImpl implements CashTranferRepository {
     }
 
     @Override
-    public void delete(Double aDouble) {
+    public Account delete(Double aDouble) {
         CashTransferTable.remove(aDouble);
 
+        return null;
     }
 
     @Override
