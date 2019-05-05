@@ -5,7 +5,7 @@ import ATMtrans.util.Misc;
 
 public class StatementFactory {
 
-    public static Statement getAccount(String accType){
+    public static Statement getType(String accType){
 
         return new Statement.Builder()
                 .id(Misc.generateId())

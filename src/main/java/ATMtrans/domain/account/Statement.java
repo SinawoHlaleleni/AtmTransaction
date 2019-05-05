@@ -1,5 +1,10 @@
 package ATMtrans.domain.account;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Statement {
 
     private static String id;
@@ -44,6 +49,19 @@ public class Statement {
                     "id='" + id + '\'' +
                     ", type='" + type + '\'' +
                     '}';
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Statement statement = (Statement) obj;
+            return statement.equals(((Statement) obj).getType());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(type);
         }
     }
 }

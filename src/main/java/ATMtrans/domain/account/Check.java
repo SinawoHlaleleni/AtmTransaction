@@ -1,5 +1,10 @@
 package ATMtrans.domain.account;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Check implements Account{
 
     private double amount = 0;
@@ -34,5 +39,17 @@ public class Check implements Account{
                     "amount=R" + amount +
                     '}';
         }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Check check = (Check) obj;
+            return check.equals(((Check) obj).getAmount());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(amount);        }
     }
     }

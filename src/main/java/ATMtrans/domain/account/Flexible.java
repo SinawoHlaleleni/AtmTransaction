@@ -1,5 +1,10 @@
 package ATMtrans.domain.account;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Flexible {
 
     private double amount = 0;
@@ -35,5 +40,22 @@ public class Flexible {
                     "amount=R" + amount +
                     '}';
         }
+
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Flexible flexible = (Flexible) obj;
+            return flexible.equals(((Flexible) obj).getAmount());
+        }
+
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(amount);
+        }
+
+
     }
 }

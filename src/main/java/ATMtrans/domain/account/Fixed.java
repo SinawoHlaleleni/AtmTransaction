@@ -1,6 +1,12 @@
 package ATMtrans.domain.account;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Fixed implements Account{
+
     private static double amount = 0;
 
     private Fixed(){}
@@ -32,6 +38,19 @@ public class Fixed implements Account{
             return "Builder{" +
                     "amount=R" + amount +
                     '}';
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Fixed fixed = (Fixed)obj;
+            return fixed.equals(((Fixed) obj).getAmount());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(amount);
         }
     }
     }
