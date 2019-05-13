@@ -1,7 +1,9 @@
 package ATMtrans.controller.bankInforController;
 
 import ATMtrans.domain.atmTransies.User;
+import ATMtrans.domain.bankInfor.Bank;
 import ATMtrans.factory.factoryAtmTransies.UserFactory;
+import ATMtrans.factory.factoryBankInfor.BankFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +21,10 @@ public class BankControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private String baseURL="http://localhost:8080/Atm";
+    private String baseURL="http://localhost:8080/Bank";
 
     @Test
-    public void testGetAllUser() {
+    public void testGetAllBanks() {
        /* HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
         ResponseEntity<String>respense = restTemplate.exchange(baseURL + "all",
@@ -30,39 +32,39 @@ public class BankControllerTest {
         assertNotNull(respense.getBody());*/
     }
     @Test
-    public void testGetUserById(){
-        User user = restTemplate.getForObject( baseURL + "/user/1",
-                User.class);
-        System.out.println(user.getUserId());
-        assertNotNull( user );
+    public void testGetBankNames(){
+        Bank bank = restTemplate.getForObject( baseURL + "/bank/1",
+                Bank.class);
+        System.out.println(bank.getId());
+        assertNotNull( bank );
     }
 
     @Test
-    public void testCreateUser(){
-        User user = UserFactory.getUser( "Sinawo94", "Snw974" );
-        ResponseEntity<User> postResponse = restTemplate.postForEntity( baseURL +"/create",user,User.class );
+    public void testCreateBank(){
+        Bank bank = BankFactory.getName( "Standard Bank" );
+        ResponseEntity<Bank> postResponse = restTemplate.postForEntity( baseURL +"/create",bank,Bank.class );
         assertNotNull( postResponse );
         assertNotNull( postResponse.getBody() );
     }
 
     @Test
-    public void testUpdatedUser(){
+    public void testUpdatedBank(){
         int id = 1;
-        User user = restTemplate.getForObject( baseURL + "/user/" + id, User.class );
-        restTemplate.put( baseURL + "/AnotherBankName" + id, user );
-        User updatedUser = restTemplate.getForObject( baseURL + "/user/" + id, User.class );
-        assertNotNull( updatedUser );
+        Bank bank = restTemplate.getForObject( baseURL + "/bank/" + id, Bank.class );
+        restTemplate.put( baseURL + "/AnotherBankName" + id, bank );
+        Bank updatedBank = restTemplate.getForObject( baseURL + "/bank/" + id, Bank.class );
+        assertNotNull( updatedBank );
     }
 
 
     @Test
-    public void testDeleteUserDetails(){
+    public void testDeleteBankDetails(){
         int id = 2;
-        User user = restTemplate.getForObject( baseURL + "/UserId/" + id, User.class );
-        assertNotNull( user );
-        restTemplate.delete( baseURL + "/users/" + id );
+        Bank bank = restTemplate.getForObject( baseURL + "/BankId/" + id, Bank.class );
+        assertNotNull( bank );
+        restTemplate.delete( baseURL + "/bank/" + id );
         try{
-            user = restTemplate.getForObject( baseURL + "/UserDetails/"+ id, User.class);
+            bank = restTemplate.getForObject( baseURL + "/BankDetails/"+ id, Bank.class);
         }catch (final HttpClientErrorException e){
             assertEquals( e.getStatusCode(), HttpStatus.NOT_FOUND );
         }
