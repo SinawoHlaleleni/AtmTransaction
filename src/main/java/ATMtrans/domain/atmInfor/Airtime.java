@@ -1,5 +1,11 @@
 package ATMtrans.domain.atmInfor;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
+
 public class Airtime {
 
     private String tId, tType;
@@ -26,29 +32,36 @@ public class Airtime {
         this.tAmount=builder.tAmount;
     }
 
-    public static class Builder{
+    public static class Builder {
         private String tId, tType;
         private double tAmount;
 
-        public Builder tId(String tId){
-            this.tId=tId;
+        public Builder tId(String tId) {
+            this.tId = tId;
             return this;
         }
 
-        public Builder tType (String tType){
-            this.tType= tType;
+        public Builder tType(String tType) {
+            this.tType = tType;
             return this;
         }
 
-        public Builder tAmount (double tAmount){
-            this.tAmount= tAmount;
+        public Builder tAmount(double tAmount) {
+            this.tAmount = tAmount;
             return this;
         }
 
-        public Airtime build(){
+        public Builder copy(Airtime airtime){
+            this.tId = airtime.tId;
+            this.tType = airtime.tType;
+            this.tAmount = airtime.tAmount;
+            return this;
+        }
+
+        public Airtime build() {
             return new Airtime(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -57,8 +70,18 @@ public class Airtime {
                     ", tAmount=R" + tAmount +
                     '}';
         }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Airtime airtime = (Airtime) obj;
+            return airtime.equals(((Airtime) obj).gettAmount());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(tAmount);        }
+
     }
 
-
-
-}

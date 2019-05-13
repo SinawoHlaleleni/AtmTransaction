@@ -30,24 +30,27 @@ public class Flexible {
             return this;
         }
 
+        public Builder copy(Flexible flexible){
+            this.amount = flexible.amount;
+            return this;
+        }
+
         public Flexible build() {
             return new Flexible(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
                     "amount=R" + amount +
                     '}';
         }
-
-
         @Override
         public boolean equals(Object obj) {
             if(this ==obj)return true;
             if(obj == null|| getClass() !=obj.getClass()) return false;
             Flexible flexible = (Flexible) obj;
-            return flexible.equals(((Flexible) obj).getAmount());
+            return flexible.equals(flexible.amount);
         }
 
 
@@ -58,4 +61,3 @@ public class Flexible {
 
 
     }
-}

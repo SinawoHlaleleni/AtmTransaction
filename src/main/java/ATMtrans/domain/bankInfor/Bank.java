@@ -1,10 +1,15 @@
 package ATMtrans.domain.bankInfor;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Bank {
 
     private String Id, Name;
 
-    private Bank() {
+    public Bank() {
     }
 
     public String getId() {
@@ -34,11 +39,16 @@ public class Bank {
             this.Name = Name;
             return this;
         }
+        public Builder copy(Bank bank){
+            this.Id = bank.Id;
+            this.Name = bank.Name;
+            return this;
+        }
 
         public Bank build() {
             return new Bank(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -46,5 +56,16 @@ public class Bank {
                     ", Name='" + Name + '\'' +
                     '}';
         }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        Bank bank = (Bank) obj;
+        return bank.equals(bank.Id);
     }
-}
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Name);        }
+
+    }

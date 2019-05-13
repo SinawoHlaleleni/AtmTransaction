@@ -26,23 +26,29 @@ public class Statement {
         return type;
     }
 
-    public static class Builder{
+    public static class Builder {
         private String id, type;
 
-        public Builder id(String id){
-            this.id=id;
+        public Builder id(String id) {
+            this.id = id;
             return this;
         }
 
-        public Builder type (String type){
-            this.id=id;
+        public Builder type(String type) {
+            this.id = id;
             return this;
         }
 
-        public Statement build(){
+        public Builder copy(Statement statement){
+            this.id = statement.id;
+            this.type = statement.type;
+            return this;
+        }
+
+        public Statement build() {
             return new Statement(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -56,7 +62,7 @@ public class Statement {
             if(this ==obj)return true;
             if(obj == null|| getClass() !=obj.getClass()) return false;
             Statement statement = (Statement) obj;
-            return statement.equals(((Statement) obj).getType());
+            return statement.equals(statement.id);
         }
 
         @Override
@@ -64,4 +70,3 @@ public class Statement {
             return Objects.hash(type);
         }
     }
-}

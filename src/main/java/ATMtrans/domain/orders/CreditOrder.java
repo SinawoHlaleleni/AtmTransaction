@@ -1,5 +1,10 @@
 package ATMtrans.domain.orders;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class CreditOrder implements DebitOrders {
 
     private double amount = 0;
@@ -25,11 +30,13 @@ public class CreditOrder implements DebitOrders {
             return this;
         }
 
-        public CreditOrder build() {
-            return new CreditOrder(this) {
-
-            };
+        public Builder copy(CreditOrder creditOrder){
+            this.amount = creditOrder.amount;
+            return this;
         }
+
+        public CreditOrder build() {
+            return new CreditOrder(this);}
     }
 
     @Override
@@ -38,4 +45,16 @@ public class CreditOrder implements DebitOrders {
                 "amount=R" + amount +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        CreditOrder creditOrder = (CreditOrder) obj;
+        return creditOrder.equals(creditOrder.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
 }

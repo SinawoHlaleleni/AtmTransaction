@@ -1,5 +1,10 @@
 package ATMtrans.domain.atmInfor;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class CashLimit {
 
     private String Id ;
@@ -35,10 +40,16 @@ public class CashLimit {
             return this;
         }
 
+        public Builder copy(CashLimit cashLimit){
+            this.Id = cashLimit.Id;
+            this.Amount = cashLimit.Amount;
+            return this;
+        }
+
         public CashLimit build() {
             return new CashLimit(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -46,4 +57,16 @@ public class CashLimit {
                     ", Amount=R " + Amount +
                     '}';
         }
-    }}
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            CashLimit cashLimit = (CashLimit) obj;
+            return cashLimit.equals(cashLimit.Id);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(Amount);        }
+
+    }

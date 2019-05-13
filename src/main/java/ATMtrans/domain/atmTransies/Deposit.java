@@ -1,5 +1,10 @@
 package ATMtrans.domain.atmTransies;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Deposit implements AtmTran {
     private double amount = 0;
     private Deposit() {
@@ -23,6 +28,10 @@ public class Deposit implements AtmTran {
             return this;
         }
 
+        public Builder copy(Deposit deposit){
+            this.amount = deposit.amount;
+            return this;
+        }
         public Deposit build() {
             return new Deposit(this);
         }
@@ -34,4 +43,16 @@ public class Deposit implements AtmTran {
                 "amount=" + amount +
                 '}';
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        Deposit deposit = (Deposit) obj;
+        return deposit.equals(deposit.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
+
 }

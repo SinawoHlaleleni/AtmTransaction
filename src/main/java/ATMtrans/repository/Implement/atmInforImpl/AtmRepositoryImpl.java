@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class AtmRepositoryImpl implements AtmRepository {
+
     public static AtmRepositoryImpl repository = null;
     private Map<String, Atm> AtmTable;
 

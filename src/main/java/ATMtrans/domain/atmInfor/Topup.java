@@ -1,5 +1,10 @@
 package ATMtrans.domain.atmInfor;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class Topup {
 
     private String Id;
@@ -35,11 +40,16 @@ public class Topup {
             this.Type = Type;
             return this;
         }
+        public Builder copy(Topup topup){
+            this.Id = topup.Id;
+            this.Type = topup.Type;
+            return this;
+        }
 
         public Topup build() {
             return new Topup(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -47,5 +57,17 @@ public class Topup {
                     ", Type='" + Type + '\'' +
                     '}';
         }
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            Topup topup = (Topup) obj;
+            return topup.equals(topup.Id);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(Type);        }
+
     }
-    }
+

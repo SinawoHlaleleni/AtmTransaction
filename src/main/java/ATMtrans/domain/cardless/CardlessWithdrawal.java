@@ -1,5 +1,10 @@
 package ATMtrans.domain.cardless;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class CardlessWithdrawal {
 
     private double amount = 0;
@@ -24,6 +29,10 @@ public class CardlessWithdrawal {
             this.amount = amount;
             return this;
         }
+        public Builder copy(CardlessWithdrawal cardlessWithdrawal){
+            this.amount = cardlessWithdrawal.amount;
+            return this;
+        }
 
         public CardlessWithdrawal build() {
             return new CardlessWithdrawal(this);
@@ -36,4 +45,16 @@ public class CardlessWithdrawal {
                 "amount=R" + amount +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        CardlessWithdrawal cardlessWithdrawal = (CardlessWithdrawal) obj;
+        return cardlessWithdrawal.equals(cardlessWithdrawal.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
 }

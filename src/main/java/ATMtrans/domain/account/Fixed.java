@@ -29,10 +29,15 @@ public class Fixed implements Account{
             return this;
         }
 
+        public Builder copy(Fixed fixed){
+            this.amount = fixed.amount;
+            return this;
+        }
+
         public Fixed build() {
             return new Fixed(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -53,4 +58,4 @@ public class Fixed implements Account{
             return Objects.hash(amount);
         }
     }
-    }
+

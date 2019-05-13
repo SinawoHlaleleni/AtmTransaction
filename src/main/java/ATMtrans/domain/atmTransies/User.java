@@ -1,15 +1,19 @@
 package ATMtrans.domain.atmTransies;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import java.util.Objects;
 import java.util.Set;
 
-public class User /*implements comparable<User>*/ {
+@EntityScan
+public class User {
 
     private String userId;
     private static String userName;
     private String userPassword;
     private Set<AtmTran> transactions;
 
-    private User(){}
+    public User() {
+    }
 
     private User(Builder builder) {
         this.userId = builder.userId;
@@ -35,22 +39,27 @@ public class User /*implements comparable<User>*/ {
         private String userId, userName, userPassword;
         private Set<AtmTran> transactions;
 
-        public Builder userId( String userId) {
+        public Builder userId(String userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder userName( String userName) {
+        public Builder userName(String userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder userPassword( String userPassword) {
+        public Builder userPassword(String userPassword) {
             this.userPassword = userPassword;
             return this;
         }
 
-
+        public Builder copy(User user){
+            this.userId = user.userId;
+            this.userName = user.userName;
+            this.userPassword = user.userPassword;
+            return this;
+        }
 
         public User build() {
             return new User(this);
@@ -67,5 +76,17 @@ public class User /*implements comparable<User>*/ {
                 ", transactions=" + transactions +
                 '}';
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        User user = (User) obj;
+        return user.equals(user.userId);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(userName);        }
 }
+
+

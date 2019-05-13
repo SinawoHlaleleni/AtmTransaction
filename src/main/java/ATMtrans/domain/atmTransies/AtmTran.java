@@ -1,7 +1,8 @@
 package ATMtrans.domain.atmTransies;
-import javafx.util.Builder;
+//import javafx.util.Builder;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import java.util.Scanner;
+@EntityScan
 public interface AtmTran  {
 
     double getAmount();

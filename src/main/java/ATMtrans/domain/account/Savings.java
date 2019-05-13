@@ -29,11 +29,15 @@ public class Savings implements Account {
             this.amount = amount;
             return this;
         }
+        public Builder copy(Savings savings){
+            this.amount = savings.amount;
+            return this;
+        }
 
         public Savings build() {
             return new Savings(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -46,7 +50,7 @@ public class Savings implements Account {
             if(this ==obj)return true;
             if(obj == null|| getClass() !=obj.getClass()) return false;
             Savings savings = (Savings) obj;
-            return savings.equals(((Savings) obj).getAmount());
+            return savings.equals(savings.amount);
         }
 
         @Override
@@ -54,4 +58,3 @@ public class Savings implements Account {
             return Objects.hash(amount);
         }
     }
-}

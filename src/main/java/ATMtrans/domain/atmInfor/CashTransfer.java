@@ -1,5 +1,10 @@
 package ATMtrans.domain.atmInfor;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class CashTransfer {
 
     private String Id, num;
@@ -44,11 +49,17 @@ public class CashTransfer {
             this.Amount = Amount;
             return this;
         }
+        public Builder copy(CashTransfer cashTransfer){
+            this.Id = cashTransfer.Id;
+            this.num = cashTransfer.num;
+            this.Amount = cashTransfer.Amount;
+            return this;
+        }
 
         public CashTransfer build() {
             return new CashTransfer(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -57,5 +68,17 @@ public class CashTransfer {
                     ", Amount= R" + Amount +
                     '}';
         }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this ==obj)return true;
+            if(obj == null|| getClass() !=obj.getClass()) return false;
+            CashTransfer cashTransfer = (CashTransfer) obj;
+            return cashTransfer.equals(cashTransfer.Id);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(Amount);        }
     }
-    }
+

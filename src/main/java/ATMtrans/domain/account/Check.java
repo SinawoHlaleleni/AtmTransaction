@@ -29,10 +29,15 @@ public class Check implements Account{
             return this;
         }
 
+        public Builder copy(Check check){
+            this.amount = check.amount;
+            return this;
+        }
+
         public Check build() {
             return new Check(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -52,4 +57,4 @@ public class Check implements Account{
         public int hashCode() {
             return Objects.hash(amount);        }
     }
-    }
+

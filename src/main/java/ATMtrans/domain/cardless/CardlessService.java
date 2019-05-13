@@ -1,5 +1,10 @@
 package ATMtrans.domain.cardless;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Objects;
+
+@EntityScan
 public class CardlessService {
 
     private String Id, Type;
@@ -36,10 +41,16 @@ public class CardlessService {
             return this;
         }
 
+        public Builder copy(CardlessService cardlessService){
+            this.Id = cardlessService.Id;
+            this.Type = cardlessService.Type;
+            return this;
+        }
+
         public CardlessService build() {
             return new CardlessService(this);
         }
-
+    }
         @Override
         public String toString() {
             return "Builder{" +
@@ -47,6 +58,18 @@ public class CardlessService {
                     ", Type='" + Type + '\'' +
                     '}';
         }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        CardlessService cardlessService = (CardlessService) obj;
+        return cardlessService.equals(cardlessService.Id);
     }
-}
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Type);        }
+    }
+
 
