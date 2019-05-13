@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmInforController;
 
 import ATMtrans.domain.atmInfor.CashTransfer;
-import ATMtrans.factoryDomain.factoryAtmInfor.CashTransferFactory;
+import ATMtrans.factory.factoryAtmInfor.CashTransferFactory;
 import ATMtrans.service.Implement.atmInfServiceImpl.CashTransferServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmTransiesController;
 
 import ATMtrans.domain.atmTransies.User;
-import ATMtrans.factoryDomain.factoryAtmTransies.UserFactory;
+import ATMtrans.factory.factoryAtmTransies.UserFactory;
 import ATMtrans.service.Implement.atmTransiesServiceImpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

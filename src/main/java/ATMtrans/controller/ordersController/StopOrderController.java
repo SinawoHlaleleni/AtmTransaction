@@ -1,7 +1,7 @@
 package ATMtrans.controller.ordersController;
 
 import ATMtrans.domain.orders.StopOrder;
-import ATMtrans.factoryDomain.factoryOrders.StopOrderFactory;
+import ATMtrans.factory.factoryOrders.StopOrderFactory;
 import ATMtrans.service.Implement.orderServiceImpl.StopOrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

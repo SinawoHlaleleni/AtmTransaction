@@ -1,7 +1,7 @@
 package ATMtrans.controller.cardlessController;
 
 import ATMtrans.domain.cardless.Ewallet;
-import ATMtrans.factoryDomain.factoryCardless.EwalletFactory;
+import ATMtrans.factory.factoryCardless.EwalletFactory;
 import ATMtrans.service.Implement.cardlessInforServiceImpl.EwalletServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

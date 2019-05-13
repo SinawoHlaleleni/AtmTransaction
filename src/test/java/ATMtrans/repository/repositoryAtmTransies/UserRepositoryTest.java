@@ -1,13 +1,11 @@
 package ATMtrans.repository.repositoryAtmTransies;
 
 import ATMtrans.domain.atmTransies.User;
-import ATMtrans.factoryDomain.factoryAtmTransies.UserFactory;
+import ATMtrans.factory.factoryAtmTransies.UserFactory;
 import ATMtrans.repository.Implement.atmTransiesImpl.UserRepositoryImpl;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Map;
 
 import static org.junit.Assert.*;
 

@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmTransiesController;
 
 import ATMtrans.domain.atmTransies.Withdrawal;
-import ATMtrans.factoryDomain.factoryAtmTransies.WithdrawalFactory;
+import ATMtrans.factory.factoryAtmTransies.WithdrawalFactory;
 import ATMtrans.service.Implement.atmTransiesServiceImpl.WithdrawalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

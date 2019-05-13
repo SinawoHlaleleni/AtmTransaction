@@ -1,7 +1,7 @@
 package ATMtrans.controller.bankInforController;
 
 import ATMtrans.domain.bankInfor.Branch;
-import ATMtrans.factoryDomain.factoryBankInfor.BranchFactory;
+import ATMtrans.factory.factoryBankInfor.BranchFactory;
 import ATMtrans.service.Implement.bankServiceImpl.BranchServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

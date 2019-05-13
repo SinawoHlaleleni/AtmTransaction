@@ -1,7 +1,7 @@
 package ATMtrans.repository.repositoryAtmInf;
 
 import ATMtrans.domain.atmInfor.Atm;
-import ATMtrans.factoryDomain.factoryAtmInfor.AtmFactory;
+import ATMtrans.factory.factoryAtmInfor.AtmFactory;
 import ATMtrans.repository.Implement.atmInforImpl.AtmRepositoryImpl;
 import org.junit.Before;
 import org.junit.Test;

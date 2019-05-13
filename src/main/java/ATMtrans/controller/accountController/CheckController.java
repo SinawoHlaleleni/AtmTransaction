@@ -1,7 +1,7 @@
 package ATMtrans.controller.accountController;
 
 import ATMtrans.domain.account.Check;
-import ATMtrans.factoryDomain.factoryAccount.CheckFactory;
+import ATMtrans.factory.factoryAccount.CheckFactory;
 import ATMtrans.service.Implement.accountServiceImpl.CheckServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

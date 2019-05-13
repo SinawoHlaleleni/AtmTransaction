@@ -1,7 +1,7 @@
 package ATMtrans.controller.ordersController;
 
 import ATMtrans.domain.orders.CreditOrder;
-import ATMtrans.factoryDomain.factoryOrders.CreditOrderFactory;
+import ATMtrans.factory.factoryOrders.CreditOrderFactory;
 import ATMtrans.service.Implement.orderServiceImpl.CreditOrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

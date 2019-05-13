@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmInforController;
 
 import ATMtrans.domain.atmInfor.Airtime;
-import ATMtrans.factoryDomain.factoryAtmInfor.AirtimeFactory;
+import ATMtrans.factory.factoryAtmInfor.AirtimeFactory;
 import ATMtrans.service.Implement.atmInfServiceImpl.AirtimeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

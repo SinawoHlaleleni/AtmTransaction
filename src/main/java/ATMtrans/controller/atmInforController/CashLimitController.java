@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmInforController;
 
 import ATMtrans.domain.atmInfor.CashLimit;
-import ATMtrans.factoryDomain.factoryAtmInfor.CashLimitFactory;
+import ATMtrans.factory.factoryAtmInfor.CashLimitFactory;
 import ATMtrans.service.Implement.atmInfServiceImpl.CashLimitServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

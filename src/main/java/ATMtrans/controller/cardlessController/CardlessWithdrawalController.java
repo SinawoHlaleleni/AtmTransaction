@@ -1,7 +1,7 @@
 package ATMtrans.controller.cardlessController;
 
 import ATMtrans.domain.cardless.CardlessWithdrawal;
-import ATMtrans.factoryDomain.factoryCardless.CardlessWithdrawalFactory;
+import ATMtrans.factory.factoryCardless.CardlessWithdrawalFactory;
 import ATMtrans.service.Implement.cardlessInforServiceImpl.CardlessWithdrawalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

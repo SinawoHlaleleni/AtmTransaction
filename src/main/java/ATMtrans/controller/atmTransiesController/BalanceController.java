@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmTransiesController;
 
 import ATMtrans.domain.atmTransies.Balance;
-import ATMtrans.factoryDomain.factoryAtmTransies.BalanceFactory;
+import ATMtrans.factory.factoryAtmTransies.BalanceFactory;
 import ATMtrans.service.Implement.atmTransiesServiceImpl.BalanceServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
