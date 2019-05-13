@@ -7,9 +7,9 @@ import org.junit.Test;
 public class StatementFactoryTest {
 
     @Test
-    public void getAccount() {
+    public void getStatement() {
         String type = "Monthly";
-        Statement a = StatementFactory.getAccount(type);
+        Statement a = StatementFactory.getType(type);
         System.out.println(a);
         Assert.assertNotNull(a.getId());
 
