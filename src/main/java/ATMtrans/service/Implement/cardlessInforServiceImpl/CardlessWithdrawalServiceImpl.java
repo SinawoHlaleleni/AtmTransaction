@@ -6,9 +6,10 @@ import ATMtrans.repository.Implement.cardlessImpl.CardlessWithdrawalRepositoryIm
 import ATMtrans.repository.repositoryCardless.CardlessWithdrawalRepository;
 import ATMtrans.service.cardlessService.CardlessSerService;
 import ATMtrans.service.cardlessService.CardlessWithdrawalService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CardlessWithdrawalServiceImpl implements CardlessWithdrawalService {
 
     public static CardlessWithdrawalServiceImpl service = null;
@@ -18,7 +19,7 @@ public class CardlessWithdrawalServiceImpl implements CardlessWithdrawalService 
         this.repository = CardlessWithdrawalRepositoryImpl.getRepository();
     }
 
-    public CardlessWithdrawalService getService() {
+    public static CardlessWithdrawalServiceImpl getService() {
         if (service == null) service = new CardlessWithdrawalServiceImpl();
         return service;
     }

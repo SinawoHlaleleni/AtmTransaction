@@ -4,17 +4,20 @@ import ATMtrans.domain.account.Flexible;
 import ATMtrans.repository.Implement.accountImpl.FlexibleRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.FlexibleRepository;
 import ATMtrans.service.accountService.FlexibleService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class FlexibleServiceImpl implements FlexibleService {
 
     public static FlexibleServiceImpl service = null;
+
     private FlexibleRepository repository;
     private FlexibleServiceImpl(){
         this.repository= FlexibleRepositoryImpl.getRepository();
     }
-    public FlexibleService getService(){
+
+    public static FlexibleServiceImpl getService(){
         if(service == null) service = new FlexibleServiceImpl();
         return service;
     }

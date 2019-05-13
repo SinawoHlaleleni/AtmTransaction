@@ -4,17 +4,19 @@ import ATMtrans.domain.account.Savings;
 import ATMtrans.repository.Implement.accountImpl.SavingRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.SavingsRepository;
 import ATMtrans.service.accountService.SavingsService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class SavingsServiceImpl implements SavingsService {
 
     public static SavingsServiceImpl service = null;
     private SavingsRepository repository;
+
     private SavingsServiceImpl(){
         this.repository= SavingRepositoryImpl.getRepository();
     }
-    public SavingsService getService(){
+    public static SavingsServiceImpl getService(){
         if(service == null) service = new SavingsServiceImpl();
         return service;
     }

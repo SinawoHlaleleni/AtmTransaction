@@ -12,6 +12,7 @@ import java.util.Set;
 @RequestMapping("ATMtrans/check")
 
 public class CheckController {
+
 @Autowired
     private CheckServiceImpl service;
 

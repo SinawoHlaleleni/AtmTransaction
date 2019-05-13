@@ -4,17 +4,19 @@ import ATMtrans.domain.atmTransies.Withdrawal;
 import ATMtrans.repository.Implement.atmTransiesImpl.WithdrawalRepositoryImpl;
 import ATMtrans.repository.repositoryAtmTransies.WithdrawalRepository;
 import ATMtrans.service.atmTransiesService.WithdrawalService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class WithdrawalServiceImpl implements WithdrawalService {
 
     public static WithdrawalServiceImpl service = null;
     private WithdrawalRepository repository;
+
     private WithdrawalServiceImpl(){
         this.repository= WithdrawalRepositoryImpl.getRepository();
     }
-    public WithdrawalService getService(){
+    public static WithdrawalServiceImpl getService(){
         if(service == null) service = new WithdrawalServiceImpl();
         return service;
     }

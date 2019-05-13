@@ -4,17 +4,19 @@ import ATMtrans.domain.atmTransies.Balance;
 import ATMtrans.repository.Implement.atmTransiesImpl.BalanceRepositoryImpl;
 import ATMtrans.repository.repositoryAtmTransies.BalanceRepository;
 import ATMtrans.service.atmTransiesService.BalanceService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class BalanceServiceImpl implements BalanceService {
 
     public static BalanceServiceImpl service = null;
     private BalanceRepository repository;
+
     private BalanceServiceImpl(){
         this.repository= BalanceRepositoryImpl.getRepository();
     }
-    public BalanceService getService(){
+    public static BalanceServiceImpl getService(){
         if(service == null) service = new BalanceServiceImpl();
         return service;
     }

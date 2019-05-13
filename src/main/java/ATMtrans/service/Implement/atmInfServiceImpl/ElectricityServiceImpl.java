@@ -11,11 +11,12 @@ public class ElectricityServiceImpl implements ElectricityService {
 
     public static ElectricityServiceImpl service = null;
     private ElectricityRepository repository;
+
     private ElectricityServiceImpl(){
         this.repository= ElectricityRepositoryImpl.getRepository();
     }
 
-    public ElectricityService getService(){
+    public static ElectricityServiceImpl getService(){
         if(service == null) service = new ElectricityServiceImpl();
         return service;
     }

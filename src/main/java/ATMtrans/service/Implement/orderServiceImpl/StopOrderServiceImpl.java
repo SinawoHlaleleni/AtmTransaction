@@ -4,17 +4,19 @@ import ATMtrans.domain.orders.StopOrder;
 import ATMtrans.repository.Implement.orderImpl.StopOrderRepositoryImpl;
 import ATMtrans.repository.repositoryOrder.StopOrderRepository;
 import ATMtrans.service.orderService.StopOrderService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class StopOrderServiceImpl implements StopOrderService {
 
     public static StopOrderServiceImpl service = null;
     private StopOrderRepository repository;
+
     private StopOrderServiceImpl(){
         this.repository= StopOrderRepositoryImpl.getRepository();
     }
-    public StopOrderService getService(){
+    public static StopOrderServiceImpl getService(){
         if(service == null) service = new StopOrderServiceImpl();
         return service;
     }

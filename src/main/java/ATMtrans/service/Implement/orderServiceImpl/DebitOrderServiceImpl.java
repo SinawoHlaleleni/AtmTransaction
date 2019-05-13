@@ -4,17 +4,19 @@ import ATMtrans.domain.orders.DebitOrders;
 import ATMtrans.repository.Implement.orderImpl.DebitOrderRepositoryImpl;
 import ATMtrans.repository.repositoryOrder.DebitOrderRepository;
 import ATMtrans.service.orderService.DebitOrderService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class DebitOrderServiceImpl implements DebitOrderService {
 
     public static DebitOrderServiceImpl service = null;
     private DebitOrderRepository repository;
+
     private DebitOrderServiceImpl(){
         this.repository= DebitOrderRepositoryImpl.getRepository();
     }
-    public DebitOrderService getService(){
+    public static DebitOrderServiceImpl getService(){
         if(service == null) service = new DebitOrderServiceImpl();
         return service;
     }

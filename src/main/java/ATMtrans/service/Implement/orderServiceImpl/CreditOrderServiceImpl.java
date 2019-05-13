@@ -4,17 +4,19 @@ import ATMtrans.domain.orders.CreditOrder;
 import ATMtrans.repository.Implement.orderImpl.CreditOrderRepositoryImpl;
 import ATMtrans.repository.repositoryOrder.CreditOrderRepository;
 import ATMtrans.service.orderService.CreditOrderService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CreditOrderServiceImpl implements CreditOrderService {
 
     public static CreditOrderServiceImpl service = null;
     private CreditOrderRepository repository;
+
     private CreditOrderServiceImpl(){
         this.repository= CreditOrderRepositoryImpl.getRepository();
     }
-    public CreditOrderService getService(){
+    public static CreditOrderServiceImpl getService(){
         if(service == null) service = new CreditOrderServiceImpl();
         return service;
     }

@@ -4,16 +4,19 @@ import ATMtrans.domain.account.Fixed;
 import ATMtrans.repository.Implement.accountImpl.FixedRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.FixedRepository;
 import ATMtrans.service.accountService.FixedService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class FixedServiceImpl implements FixedService {
     public static FixedServiceImpl service = null;
     private FixedRepository repository;
+
     private FixedServiceImpl(){
         this.repository= FixedRepositoryImpl.getRepository();
     }
-    public FixedService getService(){
+
+    public static FixedServiceImpl getService(){
         if(service == null) service = new FixedServiceImpl();
         return service;
     }

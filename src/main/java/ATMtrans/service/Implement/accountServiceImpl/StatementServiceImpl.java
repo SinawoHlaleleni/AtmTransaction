@@ -4,17 +4,19 @@ import ATMtrans.domain.account.Statement;
 import ATMtrans.repository.Implement.accountImpl.StatementRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.StatementRepository;
 import ATMtrans.service.accountService.StatementService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class StatementServiceImpl implements StatementService {
 
     public static StatementServiceImpl service = null;
     private StatementRepository repository;
+
     private StatementServiceImpl(){
         this.repository= StatementRepositoryImpl.getRepository();
     }
-    public StatementService getService(){
+    public static StatementServiceImpl getService(){
         if(service == null) service = new StatementServiceImpl();
         return service;
     }

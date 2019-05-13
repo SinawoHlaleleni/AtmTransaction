@@ -4,17 +4,19 @@ import ATMtrans.domain.atmTransies.AtmTran;
 import ATMtrans.repository.Implement.atmTransiesImpl.AtmTranRepositoryImpl;
 import ATMtrans.repository.repositoryAtmTransies.AtmTranRepository;
 import ATMtrans.service.atmTransiesService.AtmTranService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class AtmTranServiceImpl implements AtmTranService {
 
     public static AtmTranServiceImpl service = null;
     private AtmTranRepository repository;
+
     private AtmTranServiceImpl(){
         this.repository= AtmTranRepositoryImpl.getRepository();
     }
-    public AtmTranService getService(){
+    public static AtmTranServiceImpl getService(){
         if(service == null) service = new AtmTranServiceImpl();
         return service;
     }

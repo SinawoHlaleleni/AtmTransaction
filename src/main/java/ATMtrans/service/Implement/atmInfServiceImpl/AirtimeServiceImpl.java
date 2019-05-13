@@ -4,17 +4,19 @@ import ATMtrans.domain.atmInfor.Airtime;
 import ATMtrans.repository.Implement.atmInforImpl.AirtimeRepositoryImpl;
 import ATMtrans.repository.repositoryAtmInf.AirtimeRepository;
 import ATMtrans.service.atmInfService.AirtimeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class AirtimeServiceImpl implements AirtimeService {
 
     public static AirtimeServiceImpl service = null;
     private AirtimeRepository repository;
+
     private AirtimeServiceImpl(){
         this.repository= AirtimeRepositoryImpl.getRepository();
     }
-    public AirtimeService getService(){
+    public static AirtimeServiceImpl getService(){
         if(service == null) service = new AirtimeServiceImpl();
         return service;
     }

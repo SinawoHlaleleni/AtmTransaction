@@ -4,17 +4,19 @@ import ATMtrans.domain.atmInfor.Topup;
 import ATMtrans.repository.Implement.atmInforImpl.TopupRepositoryImpl;
 import ATMtrans.repository.repositoryAtmInf.TopupRepository;
 import ATMtrans.service.atmInfService.TopupService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class TopupServiceImpl implements TopupService {
 
     public static TopupServiceImpl service = null;
     private TopupRepository repository;
+
     private TopupServiceImpl(){
         this.repository= TopupRepositoryImpl.getRepository();
     }
-    public TopupService getService(){
+    public static TopupServiceImpl getService(){
         if(service == null) service = new TopupServiceImpl();
         return service;
     }

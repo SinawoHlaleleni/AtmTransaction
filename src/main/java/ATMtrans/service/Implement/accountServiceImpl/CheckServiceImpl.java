@@ -4,17 +4,19 @@ import ATMtrans.domain.account.Check;
 import ATMtrans.repository.Implement.accountImpl.CheckRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.CheckRepository;
 import ATMtrans.service.accountService.CheckService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CheckServiceImpl implements CheckService {
 
     public static CheckServiceImpl service = null;
     private CheckRepository repository;
+
     private CheckServiceImpl(){
         this.repository=CheckRepositoryImpl.getRepository();
     }
-    public CheckService getService(){
+    public static CheckServiceImpl getService(){
         if(service == null) service = new CheckServiceImpl();
         return service;
     }

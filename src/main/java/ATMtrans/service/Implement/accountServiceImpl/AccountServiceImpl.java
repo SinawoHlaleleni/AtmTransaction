@@ -4,12 +4,12 @@ import ATMtrans.domain.account.Account;
 import ATMtrans.repository.Implement.accountImpl.AccountRepositoryImpl;
 import ATMtrans.repository.repositoryAccount.AccountRepository;
 import ATMtrans.service.accountService.AccountService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
+@Service
 
 public class AccountServiceImpl implements AccountService {
-
-
 
     public static AccountServiceImpl service = null;
     private AccountRepository repository;
@@ -17,7 +17,8 @@ public class AccountServiceImpl implements AccountService {
     private AccountServiceImpl() {
        this.repository= AccountRepositoryImpl.getRepository();
     }
-    public AccountService getService(){
+
+    public static AccountServiceImpl getService(){
         if(service == null) service = new AccountServiceImpl();
         return service;
     }

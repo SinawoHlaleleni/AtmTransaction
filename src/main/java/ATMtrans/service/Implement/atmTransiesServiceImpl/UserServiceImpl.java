@@ -4,17 +4,19 @@ import ATMtrans.domain.atmTransies.User;
 import ATMtrans.repository.Implement.atmTransiesImpl.UserRepositoryImpl;
 import ATMtrans.repository.repositoryAtmTransies.UserRepository;
 import ATMtrans.service.atmTransiesService.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class UserServiceImpl implements UserService {
 
     public static UserServiceImpl service = null;
     private UserRepository repository;
+
     private UserServiceImpl(){
         this.repository= UserRepositoryImpl.getRepository();
     }
-    public UserService getService(){
+    public static UserServiceImpl getService(){
         if(service == null) service = new UserServiceImpl();
         return service;
     }

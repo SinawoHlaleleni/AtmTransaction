@@ -4,17 +4,19 @@ import ATMtrans.domain.atmInfor.CashLimit;
 import ATMtrans.repository.Implement.atmInforImpl.CashLimitRepositoryImpl;
 import ATMtrans.repository.repositoryAtmInf.CashLimitRepository;
 import ATMtrans.service.atmInfService.CashLimitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CashLimitServiceImpl implements CashLimitService {
 
     public static CashLimitServiceImpl service = null;
     private CashLimitRepository repository;
+
     private CashLimitServiceImpl(){
         this.repository= CashLimitRepositoryImpl.getRepository();
     }
-    public CashLimitService getService(){
+    public static CashLimitServiceImpl getService(){
         if(service == null) service = new CashLimitServiceImpl();
         return service;
     }

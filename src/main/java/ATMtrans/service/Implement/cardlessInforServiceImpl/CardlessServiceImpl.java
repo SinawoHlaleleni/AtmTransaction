@@ -4,17 +4,19 @@ import ATMtrans.domain.cardless.CardlessService;
 import ATMtrans.repository.Implement.cardlessImpl.CardlessServiceRepositoryImpl;
 import ATMtrans.repository.repositoryCardless.CardlessServiceRepository;
 import ATMtrans.service.cardlessService.CardlessSerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CardlessServiceImpl implements CardlessSerService {
 
     public static CardlessServiceImpl service = null;
     private CardlessServiceRepository repository;
+
     private CardlessServiceImpl(){
         this.repository= CardlessServiceRepositoryImpl.getRepository();
     }
-    public CardlessServiceImpl getService(){
+    public static CardlessServiceImpl getService(){
         if(service == null) service = new CardlessServiceImpl();
         return service;
     }

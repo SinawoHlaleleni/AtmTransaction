@@ -4,17 +4,19 @@ import ATMtrans.domain.bankInfor.Bank;
 import ATMtrans.repository.Implement.bankInforImpl.BankRepositoryImpl;
 import ATMtrans.repository.repositoryBankInfor.BankRepository;
 import ATMtrans.service.bankInforService.BankService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class BankServiceImpl implements BankService {
 
     public static BankServiceImpl service = null;
     private BankRepository repository;
+
     private BankServiceImpl(){
         this.repository= BankRepositoryImpl.getRepository();
     }
-    public BankService getService(){
+    public static BankServiceImpl getService(){
         if(service == null) service = new BankServiceImpl();
         return service;
     }
