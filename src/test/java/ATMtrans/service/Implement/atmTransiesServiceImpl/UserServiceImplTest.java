@@ -1,7 +1,8 @@
-package ATMtrans.repository.Implement.atmTransiesImpl;
+package ATMtrans.service.Implement.atmTransiesServiceImpl;
 
 import ATMtrans.domain.atmTransies.User;
 import ATMtrans.factory.factoryAtmTransies.UserFactory;
+import ATMtrans.repository.Implement.atmTransiesImpl.UserRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -12,7 +13,7 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class UserRepositoryImplTest {
+public class UserServiceImplTest {
 
     private UserRepositoryImpl repository;
     private User user;
@@ -27,35 +28,33 @@ public class UserRepositoryImplTest {
     }
 
     @Test
-    public void d_getAll() {
-        Set<User> all =this.repository.getAll();
-        System.out.println("In getall,all = " + all);
+    public void getAll() {
+        Set<User> user =this.repository.getAll();
+        System.out.println("In getall,all = " + user);
     }
 
     @Test
     public void create() {
         User created = this.repository.create(this.user);
-        System.out.println("the create, to be done =" + created);
-        d_getAll();
-        Assert.assertSame(created, this.user);
+        System.out.println("the create, done =" + created);
+        Assert.assertNotNull(created);
+        Assert.assertNotSame(created, this.user);
     }
 
     @Test
     public void update() {
-        String newUserName = "Unused user name";
-        User user = new User.Builder().copy(getSaved()).userId(newUserName).build();
-        System.out.println("the updates,to be done = " + user );
-        User updated= this.repository.update(user);
-        System.out.println("the updates, done = " + updated );
+        String newUserName = "ABSAs";
+        User updated = new User.Builder().copy(getSaved()).userId(newUserName).build();
+        System.out.println("the update, done = " + updated );
+        this.repository.update(updated);
         Assert.assertSame(newUserName,updated.getUserId());
-        d_getAll();
     }
 
     @Test
     public void delete() {
         User saved = getSaved();
         this.repository.delete(saved.getUserId());
-        d_getAll();
+        getAll();
 
     }
 
@@ -63,10 +62,8 @@ public class UserRepositoryImplTest {
     public void read() {
 
         User saved = getSaved();
-        System.out.println("the read, done = " + saved.getUserId() );
         User read = this.repository.read(saved.getUserId());
         System.out.println("the read, read = " + read);
-        d_getAll();
-        Assert.assertEquals(saved,read);
+        Assert.assertSame(read,saved);
     }
 }
