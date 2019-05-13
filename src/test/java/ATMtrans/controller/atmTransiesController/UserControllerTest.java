@@ -21,7 +21,7 @@ public class UserControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private String baseURL="http://localhost:8080/Atm";
+    private String baseURL="http://localhost:8080/User";
 
     @Test
     public void testGetAllUser() {
