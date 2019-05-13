@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,14 +24,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            <state relative-caret-position="509">
+              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/atmTransies/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -52,7 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/atmTransiesImpl/AtmTranRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/atmTransiesImpl/DepositRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/atmTransiesImpl/BalanceRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/repository/Implement/orderImpl/StopOrderRepositoryImpl.java" />
@@ -103,6 +120,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/factory/factoryAccount/StatementFactoryTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java" />
       </list>
     </option>
   </component>
@@ -178,7 +196,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="atmInfor" type="462c0819:PsiDirectoryNode" />
+              <item name="atmTransies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
@@ -220,6 +238,16 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="atmInforController" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="atmTransiesController" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -230,7 +258,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557787496823" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557789512860" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -687,7 +715,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557787505493</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="class add">
+      <created>1557789528746</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1557789528746</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -723,7 +758,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139407000" />
+    <option name="totallyTimeSpent" value="140344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -819,8 +854,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="class add" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryDomain/factoryAtmInfor/AtmFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/factoryDomain/factoryAtmInfor/AirtimeFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/controller/atmInforController/AirtimeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1173,11 +1206,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="509">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/domain/atmTransies/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
         </state>
       </provider>
     </entry>
