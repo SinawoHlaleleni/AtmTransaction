@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AtmControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BankControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/AtmServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmTransiesServiceImpl/UserServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/bankServiceImpl/BankServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/atmInforImpl/AtmRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/atmInforImpl/AtmRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/atmTransiesImpl/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/atmTransiesImpl/UserRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/bankInforImpl/BankRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/repository/Implement/bankInforImpl/BankRepositoryImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,101 +140,6 @@
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="atmInforImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="atmTransiesImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="bankInforImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -254,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557782987855" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557785322227" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -487,7 +383,7 @@
       <workItem from="1557085852416" duration="9457000" />
       <workItem from="1557165179306" duration="1143000" />
       <workItem from="1557183461294" duration="27000" />
-      <workItem from="1557774160351" duration="10548000" />
+      <workItem from="1557774160351" duration="11011000" />
     </task>
     <task id="LOCAL-00001" summary="class add">
       <created>1555279996880</created>
@@ -741,7 +637,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557781893634</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="class add">
+      <created>1557784868598</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1557784868598</updated>
+    </task>
+    <task id="LOCAL-00038" summary="class add">
+      <created>1557784996180</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1557784996180</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -777,11 +687,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145459000" />
+    <option name="totallyTimeSpent" value="145922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="1" />
