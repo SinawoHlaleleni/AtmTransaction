@@ -1,8 +1,6 @@
 package ATMtrans.controller.atmTransiesController;
 
-import ATMtrans.domain.atmInfor.Atm;
 import ATMtrans.domain.atmTransies.User;
-import ATMtrans.factory.factoryAtmInfor.AtmFactory;
 import ATMtrans.factory.factoryAtmTransies.UserFactory;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -18,7 +16,6 @@ import static org.junit.Assert.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
 public class UserControllerTest {
-
     @Autowired
     private TestRestTemplate restTemplate;
     private String baseURL="http://localhost:8080/User";
@@ -27,7 +24,7 @@ public class UserControllerTest {
     public void testGetAllUser() {
        HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-        ResponseEntity<String>response = restTemplate.exchange(baseURL + "all",
+        ResponseEntity<String>response = restTemplate.exchange(baseURL + "/read/all",
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }

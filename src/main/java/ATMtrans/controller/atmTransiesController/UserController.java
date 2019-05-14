@@ -1,7 +1,7 @@
 package ATMtrans.controller.atmTransiesController;
 
 import ATMtrans.domain.atmTransies.User;
-import ATMtrans.service.Implement.atmTransiesServiceImpl.UserServiceImpl;
+import ATMtrans.service.atmTransiesService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import java.util.Set;
 public class UserController {
     @Autowired
     @Qualifier("ServiceImp")
-    private UserServiceImpl service;
+    private UserService service;
 
     @PostMapping("/create")
     @ResponseBody
