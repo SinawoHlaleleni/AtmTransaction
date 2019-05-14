@@ -1,28 +1,46 @@
 package ATMtrans.controller.atmTransiesController;
 
 import ATMtrans.domain.atmTransies.User;
-import ATMtrans.factory.factoryAtmTransies.UserFactory;
 import ATMtrans.service.Implement.atmTransiesServiceImpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
 @RestController
-@RequestMapping("ATMtrans/user")
+@RequestMapping("/user")
 
 public class UserController {
     @Autowired
+    @Qualifier("ServiceImp")
     private UserServiceImpl service;
 
-    @GetMapping("/create/{userName}")
-    public @ResponseBody
-    User create (@PathVariable String userName, String userPassword){
-        User electricity = UserFactory.getUser(userName, userPassword);
-        return service.create(electricity);
-
+    @PostMapping("/create")
+    @ResponseBody
+    public User create (User user){
+        return service.create( user );
     }
-    @GetMapping ("/getall")
+
+    @PostMapping("/update")
+    @ResponseBody
+    public User update (User user){
+        return service.update( user );
+    }
+
+    @GetMapping("/delete/{id}")
+    @ResponseBody
+    public void delete(@PathVariable String id){
+        service.delete( id );
+    }
+
+    @GetMapping("/read/{id}")
+    @ResponseBody
+    public  User read(@PathVariable String id){
+        return service.read( id );
+    }
+
+    @GetMapping("read/all")
     @ResponseBody
     public Set<User> getAll(){
         return service.getAll();
