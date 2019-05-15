@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.orderImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.orders.StopOrder;
 import ATMtrans.repository.repositoryOrder.StopOrderRepository;
 
@@ -41,9 +40,9 @@ public class StopOrderRepositoryImpl implements StopOrderRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //StopOrderTable.remove(aDouble);
-        return this.delete(aDouble);
+    public void delete(Double aDouble) {
+        StopOrderTable.remove(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

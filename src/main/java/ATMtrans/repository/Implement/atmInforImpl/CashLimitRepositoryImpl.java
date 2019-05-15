@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.atmInforImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmInfor.CashLimit;
 import ATMtrans.repository.repositoryAtmInf.CashLimitRepository;
 
@@ -41,10 +40,10 @@ public class CashLimitRepositoryImpl implements CashLimitRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //CashLimitTable.remove(aDouble);
+    public void delete(Double aDouble) {
+        CashLimitTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

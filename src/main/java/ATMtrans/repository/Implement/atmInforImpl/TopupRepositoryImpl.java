@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.atmInforImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmInfor.Topup;
 import ATMtrans.repository.repositoryAtmInf.TopupRepository;
 
@@ -45,10 +44,10 @@ public class TopupRepositoryImpl implements TopupRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //TopupTable.remove(aDouble);
+    public void delete(Double aDouble) {
+        TopupTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

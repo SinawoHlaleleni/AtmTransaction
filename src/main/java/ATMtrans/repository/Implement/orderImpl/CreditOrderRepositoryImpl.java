@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.orderImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.orders.CreditOrder;
 import ATMtrans.repository.repositoryOrder.CreditOrderRepository;
 
@@ -45,10 +44,10 @@ public class CreditOrderRepositoryImpl implements CreditOrderRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //CreditOrderTable.remove(aDouble);
+    public void delete(Double aDouble) {
+        CreditOrderTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.bankInforImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.bankInfor.Branch;
 import ATMtrans.repository.repositoryBankInfor.BranchRepository;
 
@@ -43,9 +42,9 @@ public class BranchRepositoryImpl implements BranchRepository {
     }
 
     @Override
-    public Account delete(String s) {
-        //BranchTable.remove(s);
-        return this.delete(s);
+    public void delete(String s) {
+        BranchTable.remove(s);
+        //return this.delete(s);
     }
     @Override
     public Branch read(String s)

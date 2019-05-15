@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.cardlessImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.cardless.Ewallet;
 import ATMtrans.repository.repositoryCardless.EwalletRepository;
 
@@ -43,10 +42,10 @@ public class EwalletRepositoryImpl implements EwalletRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-       // EwalletTable.remove(aDouble);
+    public void delete(Double aDouble) {
+       EwalletTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

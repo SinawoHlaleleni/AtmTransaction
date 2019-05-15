@@ -43,9 +43,9 @@ public class FixedRepositoryImpl implements FixedRepository {
     }
 
     @Override
-    public Account delete(String s) {
-        //fixedTable.remove(s);
-        return this.delete(s);
+    public void delete(String s) {
+        fixedTable.remove(s);
+        //return this.delete(s);
     }
 
     @Override

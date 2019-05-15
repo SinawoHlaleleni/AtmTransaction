@@ -8,8 +8,8 @@ public class StatementFactoryTest {
 
     @Test
     public void getStatement() {
-        String type = "Monthly";
-        Statement a = StatementFactory.getType(type);
+       // String type = "Monthly";
+        Statement a = StatementFactory.getType("Monthly");
         System.out.println(a);
         Assert.assertNotNull(a.getId());
 

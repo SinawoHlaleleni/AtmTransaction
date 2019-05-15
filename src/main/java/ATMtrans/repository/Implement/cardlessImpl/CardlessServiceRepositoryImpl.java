@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.cardlessImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.cardless.CardlessService;
 import ATMtrans.repository.repositoryCardless.CardlessServiceRepository;
 
@@ -46,10 +45,10 @@ public class CardlessServiceRepositoryImpl implements CardlessServiceRepository 
     }
 
     @Override
-    public Account delete(Double aDouble) {
-       // CardlessServiceTable.remove(aDouble);
+    public void delete(Double aDouble) {
+       CardlessServiceTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

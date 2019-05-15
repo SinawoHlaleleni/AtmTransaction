@@ -1,19 +1,24 @@
 package ATMtrans.repository.Implement.atmTransiesImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmTransies.User;
 import ATMtrans.repository.repositoryAtmTransies.UserRepository;
 
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 public class UserRepositoryImpl implements UserRepository {
 
     public static UserRepositoryImpl repository = null;
-    private HashMap<String, User> UserTable;
+    private Set<User> users;
 
     private UserRepositoryImpl() {
-        UserTable = new HashMap<>();
+        users = new HashSet<>();
+    }
+    private User findUser(String userId){
+        return this.users.stream()
+                .filter( user -> user.getUserId().trim().equals( userId ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static UserRepository getRepository(){
@@ -28,31 +33,30 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User create(User user) {
+        this.users.add( user );
+        return user;
+    }
 
-        UserTable.put(User.getUserName(),user);
-        User user1 = UserTable.get(User.getUserName());
-        return user1;
-
+    @Override
+    public void delete(String userId) {
+        User user = findUser( userId );
+        if(user != null) this.users.remove( user );
     }
 
     @Override
     public User update(User user) {
-        UserTable.put(User.getUserName(),user);
-        User user1 = UserTable.get(User.getUserName());
-        return user1;
-
+        User toUpdate = findUser( user.getUserId() );
+        if (toUpdate != null){
+            this.users.remove( toUpdate );
+            return create(user);
+        }
+        return null;
     }
 
     @Override
-    public Account delete(String s) {
-        //UserTable.remove(s);
-        return this.delete(s);
-    }
-
-    @Override
-    public User read(String s)
+    public User read(final String userId)
     {
-        User user = UserTable.get(s);
+        User user = findUser( userId );
         return user;
     }
 }

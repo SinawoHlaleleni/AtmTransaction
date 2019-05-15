@@ -1,6 +1,5 @@
 package ATMtrans.repository.Implement.atmTransiesImpl;
 
-import ATMtrans.domain.account.Account;
 import ATMtrans.domain.atmTransies.Withdrawal;
 import ATMtrans.repository.repositoryAtmTransies.WithdrawalRepository;
 
@@ -45,10 +44,10 @@ public class WithdrawalRepositoryImpl implements WithdrawalRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //WithdrawalTable.remove(aDouble);
+    public void delete(Double aDouble) {
+        WithdrawalTable.remove(aDouble);
 
-        return this.delete(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

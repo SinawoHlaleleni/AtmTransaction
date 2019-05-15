@@ -5,11 +5,11 @@ import ATMtrans.util.Misc;
 
 public class StatementFactory {
 
-    public static Statement getType(String accType){
+    public static Statement getType(String Type){
 
         return new Statement.Builder()
                 .id(Misc.generateId())
-                .type(accType)
+                .type("3 Months")
                 .build();
     }
 }

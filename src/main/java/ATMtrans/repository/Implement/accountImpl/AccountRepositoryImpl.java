@@ -41,9 +41,9 @@ public class AccountRepositoryImpl implements AccountRepository {
     }
 
     @Override
-    public Account delete(Double aDouble) {
-        //accountTable.remove(aDouble);
-        return this.delete(aDouble);
+    public void delete(Double aDouble) {
+        accountTable.remove(aDouble);
+        //return this.delete(aDouble);
     }
 
     @Override

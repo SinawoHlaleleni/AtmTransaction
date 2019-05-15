@@ -16,8 +16,8 @@ public class UserRepositoryImplTest {
 
     private UserRepositoryImpl repository;
     private User user;
-
     private User getSaved(){
+        Set<User>saved = this.repository.getAll();
         return this.repository.getAll().iterator().next();
     }
 
