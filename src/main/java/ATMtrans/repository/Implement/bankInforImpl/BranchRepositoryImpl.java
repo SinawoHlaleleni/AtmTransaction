@@ -1,15 +1,10 @@
 package ATMtrans.repository.Implement.bankInforImpl;
 
-import ATMtrans.domain.bankInfor.Bank;
 import ATMtrans.domain.bankInfor.Branch;
 import ATMtrans.repository.repositoryBankInfor.BranchRepository;
-import jdk.jfr.Enabled;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 @Repository
 public class BranchRepositoryImpl implements BranchRepository {
