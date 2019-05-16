@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.orderImpl;
 
 import ATMtrans.domain.orders.CreditOrder;
 import ATMtrans.repository.repositoryOrder.CreditOrderRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class CreditOrderRepositoryImpl implements CreditOrderRepository {
 
     public static CreditOrderRepositoryImpl repository = null;

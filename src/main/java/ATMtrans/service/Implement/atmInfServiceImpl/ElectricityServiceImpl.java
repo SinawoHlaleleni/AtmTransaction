@@ -4,9 +4,10 @@ import ATMtrans.domain.atmInfor.Electricity;
 import ATMtrans.repository.Implement.atmInforImpl.ElectricityRepositoryImpl;
 import ATMtrans.repository.repositoryAtmInf.ElectricityRepository;
 import ATMtrans.service.atmInfService.ElectricityService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class ElectricityServiceImpl implements ElectricityService {
 
     public static ElectricityServiceImpl service = null;

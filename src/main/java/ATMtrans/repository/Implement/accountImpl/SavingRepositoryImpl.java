@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.accountImpl;
 
 import ATMtrans.domain.account.Savings;
 import ATMtrans.repository.repositoryAccount.SavingsRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class SavingRepositoryImpl implements SavingsRepository {
 
     public static SavingRepositoryImpl repository = null;

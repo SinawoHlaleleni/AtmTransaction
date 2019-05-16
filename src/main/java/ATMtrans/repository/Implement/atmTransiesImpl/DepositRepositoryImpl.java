@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.atmTransiesImpl;
 
 import ATMtrans.domain.atmTransies.Deposit;
 import ATMtrans.repository.repositoryAtmTransies.DepositRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class DepositRepositoryImpl implements DepositRepository {
     public static DepositRepositoryImpl repository = null;
     private Set<Deposit> deposits;

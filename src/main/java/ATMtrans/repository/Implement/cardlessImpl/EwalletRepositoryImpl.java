@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.cardlessImpl;
 
 import ATMtrans.domain.cardless.Ewallet;
 import ATMtrans.repository.repositoryCardless.EwalletRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class EwalletRepositoryImpl implements EwalletRepository {
 
     public static EwalletRepositoryImpl repository = null;

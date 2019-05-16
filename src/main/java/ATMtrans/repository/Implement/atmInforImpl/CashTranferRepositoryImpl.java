@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.atmInforImpl;
 
 import ATMtrans.domain.atmInfor.CashTransfer;
 import ATMtrans.repository.repositoryAtmInf.CashTranferRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class CashTranferRepositoryImpl implements CashTranferRepository {
     public static CashTranferRepositoryImpl repository = null;
     private Set<CashTransfer> cashTransfers;

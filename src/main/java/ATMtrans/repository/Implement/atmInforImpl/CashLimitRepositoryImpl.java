@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.atmInforImpl;
 
 import ATMtrans.domain.atmInfor.CashLimit;
 import ATMtrans.repository.repositoryAtmInf.CashLimitRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class CashLimitRepositoryImpl implements CashLimitRepository {
 
     public static CashLimitRepositoryImpl repository = null;

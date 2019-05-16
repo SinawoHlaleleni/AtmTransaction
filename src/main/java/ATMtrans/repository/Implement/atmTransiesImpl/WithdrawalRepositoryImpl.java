@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.atmTransiesImpl;
 
 import ATMtrans.domain.atmTransies.Withdrawal;
 import ATMtrans.repository.repositoryAtmTransies.WithdrawalRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class WithdrawalRepositoryImpl implements WithdrawalRepository {
 
     public static WithdrawalRepositoryImpl repository = null;

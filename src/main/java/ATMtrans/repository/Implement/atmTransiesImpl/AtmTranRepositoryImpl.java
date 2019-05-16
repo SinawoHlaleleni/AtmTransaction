@@ -2,11 +2,13 @@ package ATMtrans.repository.Implement.atmTransiesImpl;
 
 import ATMtrans.domain.atmTransies.AtmTran;
 import ATMtrans.repository.repositoryAtmTransies.AtmTranRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class AtmTranRepositoryImpl implements AtmTranRepository {
     public static AtmTranRepositoryImpl repository = null;
     private Map<Double, AtmTran> AtmTranTable;

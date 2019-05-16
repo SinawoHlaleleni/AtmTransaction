@@ -2,10 +2,12 @@ package ATMtrans.repository.Implement.atmTransiesImpl;
 
 import ATMtrans.domain.atmTransies.User;
 import ATMtrans.repository.repositoryAtmTransies.UserRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     public static UserRepositoryImpl repository = null;

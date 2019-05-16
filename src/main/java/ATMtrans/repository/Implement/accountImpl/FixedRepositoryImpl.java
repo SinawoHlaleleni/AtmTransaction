@@ -3,12 +3,14 @@ package ATMtrans.repository.Implement.accountImpl;
 import ATMtrans.domain.account.Account;
 import ATMtrans.domain.account.Fixed;
 import ATMtrans.repository.repositoryAccount.FixedRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class FixedRepositoryImpl implements FixedRepository {
 
     public static FixedRepositoryImpl repository = null;

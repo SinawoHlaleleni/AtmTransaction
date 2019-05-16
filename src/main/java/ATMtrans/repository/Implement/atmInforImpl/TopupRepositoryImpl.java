@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.atmInforImpl;
 
 import ATMtrans.domain.atmInfor.Topup;
 import ATMtrans.repository.repositoryAtmInf.TopupRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class TopupRepositoryImpl implements TopupRepository {
 
     public static TopupRepositoryImpl repository = null;

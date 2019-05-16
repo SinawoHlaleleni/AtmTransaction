@@ -2,12 +2,14 @@ package ATMtrans.repository.Implement.orderImpl;
 
 import ATMtrans.domain.orders.StopOrder;
 import ATMtrans.repository.repositoryOrder.StopOrderRepository;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+@Repository
 public class StopOrderRepositoryImpl implements StopOrderRepository {
     public static StopOrderRepositoryImpl repository = null;
     private Set< StopOrder > stopOrders;
