@@ -28,7 +28,7 @@ public class AtmServiceImplTest {
     }
 
     @Test
-    public void getAll() {
+    public void d_getAll() {
 
         Set<Atm> atm =this.repository.getAll();
         System.out.println("In getall,all = " + atm);
@@ -55,7 +55,7 @@ public class AtmServiceImplTest {
     public void delete() {
         Atm saved = getSaved();
         this.repository.delete(saved.getId());
-        getAll();
+        d_getAll();
 
     }
 
