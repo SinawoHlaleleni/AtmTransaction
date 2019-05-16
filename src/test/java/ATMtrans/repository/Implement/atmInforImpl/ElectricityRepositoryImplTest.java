@@ -1,0 +1,66 @@
+package ATMtrans.repository.Implement.atmInforImpl;
+
+import ATMtrans.domain.atmInfor.Electricity;
+import ATMtrans.factory.factoryAtmInfor.ElectricityFactory;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import java.util.Set;
+
+import static org.junit.Assert.*;
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class ElectricityRepositoryImplTest {
+
+    private ElectricityRepositoryImpl repository;
+    private Electricity electricity;
+
+    private Electricity getSaved(){
+        return this.repository.getAll().iterator().next();
+    }
+
+    @Before
+    public void setUp() throws Exception {
+        this.repository= (ElectricityRepositoryImpl) ElectricityRepositoryImpl.getRepository();
+        this.electricity = ElectricityFactory.getAmount( 200 );
+    }
+    @Test
+    public void d_getAll() {
+        Set<Electricity> electricity = this.repository.getAll();
+        System.out.println("In get all," + electricity);
+    }
+
+    @Test
+    public void create() {
+        Electricity created = this.repository.create(this.electricity);
+        System.out.println("the create, done =" + created);
+        Assert.assertNotNull(created);
+        Assert.assertNotSame(created, this.electricity);
+    }
+
+    @Test
+    public void update() {
+        String newElectrId = "002345";
+        Electricity updated = new Electricity.Builder().copy(getSaved()).Id(newElectrId).build();
+        System.out.println("the update, done = " + updated );
+        this.repository.update(updated);
+        Assert.assertSame(newElectrId,updated.getId());
+    }
+
+    @Test
+    public void delete() {
+        Electricity saved = getSaved();
+        this.repository.delete(saved.getId());
+        d_getAll();
+    }
+
+    @Test
+    public void read() {
+        Electricity saved = getSaved();
+        Electricity read = this.repository.read(saved.getId());
+        System.out.println("the read, read = " + read);
+        Assert.assertSame(read,saved);
+    }
+}
