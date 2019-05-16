@@ -4,16 +4,24 @@ import ATMtrans.domain.atmInfor.Topup;
 import ATMtrans.repository.repositoryAtmInf.TopupRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class TopupRepositoryImpl implements TopupRepository {
 
     public static TopupRepositoryImpl repository = null;
-    private Map<String, Topup> TopupTable;
+    private Set<Topup> topups;
 
     private TopupRepositoryImpl() {
-        TopupTable = new HashMap<>();
+        topups = new HashSet<>();
+    }
+
+    private Topup findTopup(String Id){
+        return this.topups.stream()
+                .filter( topup -> topup.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static TopupRepository getRepository(){
@@ -23,36 +31,43 @@ public class TopupRepositoryImpl implements TopupRepository {
 
     @Override
     public Set<Topup> getAll() {
-        return this.getAll();
+        return this.topups;
     }
 
     @Override
     public Topup create(Topup topup) {
-
-        TopupTable.put(Topup.getType(),topup);
-        Topup topup1 = TopupTable.get(Topup.getType());
-        return topup1;
+        this.topups.add( topup );
+        return topup;
 
     }
 
     @Override
     public Topup update(Topup topup) {
-        TopupTable.put(Topup.getType(),topup);
-        Topup topup1 = TopupTable.get(Topup.getType());
-        return topup1;
-
+        Topup toUpdate = findTopup( topup.getId() );
+        if(toUpdate != null){
+            this.topups.remove( toUpdate );
+            return create( topup );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        TopupTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public Topup read(Double aDouble) {
-        Topup topup = TopupTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        Topup topup = findTopup( Id );
+        if(topup != null) this.topups.remove( topup );
+    }
+
+    public Topup read(String Id) {
+        Topup topup = findTopup( Id );
         return topup;
     }
 }

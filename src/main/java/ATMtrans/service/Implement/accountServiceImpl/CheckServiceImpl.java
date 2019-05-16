@@ -38,11 +38,19 @@ public class CheckServiceImpl implements CheckService {
 
     @Override
     public void delete(String s) {
-        repository.delete(s);
+
     }
 
     @Override
     public Check read(String s) {
-        return this.repository.read(s);
+        return null;
+    }
+
+    public void delete(Double amount) {
+        repository.delete(amount);
+    }
+
+    public Check read(Double amount) {
+        return this.repository.read(amount);
     }
 }

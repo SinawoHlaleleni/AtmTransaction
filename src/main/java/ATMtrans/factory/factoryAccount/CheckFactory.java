@@ -1,13 +1,14 @@
 package ATMtrans.factory.factoryAccount;
 
 import ATMtrans.domain.account.Check;
+import ATMtrans.util.Misc;
 
 public class CheckFactory {
 
     public static Check getAmount(double amount) {
         return new Check.Builder()
                 .amount(amount)
-                //.amount(Misc.generateId())
+                .Id( Misc.generateId())
                 .build();
     }
 }

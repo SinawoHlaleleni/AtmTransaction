@@ -5,6 +5,6 @@ import ATMtrans.repository.IRepository.IRepository;
 
 import java.util.Set;
 
-public interface FlexibleRepository extends IRepository<Flexible,String> {
+public interface FlexibleRepository extends IRepository<Flexible,Double> {
     Set<Flexible> getAll();
 }

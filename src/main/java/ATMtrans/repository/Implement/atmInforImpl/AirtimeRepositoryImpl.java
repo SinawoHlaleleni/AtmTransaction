@@ -4,16 +4,24 @@ import ATMtrans.domain.atmInfor.Airtime;
 import ATMtrans.repository.repositoryAtmInf.AirtimeRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class AirtimeRepositoryImpl implements AirtimeRepository {
 
     public static AirtimeRepositoryImpl repository = null;
-    private Map<Double, Airtime> AirtimeTable;
+    private Set<Airtime> airtimes;
 
     private AirtimeRepositoryImpl() {
-        AirtimeTable = new HashMap<>();
+        airtimes = new HashSet<>();
+    }
+
+    private Airtime findAirtime(String Id){
+        return this.airtimes.stream()
+                .filter( airtime -> airtime.gettId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static AirtimeRepository getRepository(){
@@ -23,34 +31,43 @@ public class AirtimeRepositoryImpl implements AirtimeRepository {
 
     @Override
     public Set<Airtime> getAll() {
-        return this.getAll();
+        return this.airtimes;
     }
 
     @Override
     public Airtime create(Airtime airtime) {
-        AirtimeTable.put(Airtime.gettAmount(),airtime);
-        Airtime airtime1 = AirtimeTable.get(Airtime.gettAmount());
-        return airtime1;
+        this.airtimes.add( airtime );
+        return airtime;
     }
 
     @Override
     public Airtime update(Airtime airtime) {
-        AirtimeTable.put(Airtime.gettAmount(),airtime);
-        Airtime airtime1 = AirtimeTable.get(Airtime.gettAmount());
-        return airtime1;
+        Airtime toUpdate = findAirtime( airtime.gettId() );
+        if(toUpdate != null){
+            this.airtimes.remove( toUpdate );
+            return create( airtime );
+        }
+        return null;
 
     }
 
     @Override
     public void delete(Double aDouble) {
-       AirtimeTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public Airtime read(Double aDouble) {
-        Airtime airtime = AirtimeTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        Airtime airtime = findAirtime( Id );
+        if(airtime != null) this.airtimes.remove( airtime );
+    }
+
+    public Airtime read(String Id) {
+        Airtime airtime = findAirtime( Id );
         return airtime;
     }
 }

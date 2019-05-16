@@ -28,7 +28,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Set<User> getAll() {
-        return this.getAll();
+        return this.users;
     }
 
     @Override

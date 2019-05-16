@@ -4,18 +4,25 @@ import ATMtrans.domain.cardless.Ewallet;
 import ATMtrans.repository.repositoryCardless.EwalletRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class EwalletRepositoryImpl implements EwalletRepository {
 
     public static EwalletRepositoryImpl repository = null;
-    private Map<Double, Ewallet> EwalletTable;
+    private Set<Ewallet> ewallets;
 
     private EwalletRepositoryImpl() {
-        EwalletTable = new HashMap<>();
+        ewallets = new HashSet<>();
     }
 
+    private Ewallet findEwallet(String Id){
+        return this.ewallets.stream()
+                .filter( ewallet -> ewallet.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
     public static EwalletRepository getRepository(){
         if (repository == null) repository = new EwalletRepositoryImpl();
         return repository;
@@ -23,34 +30,42 @@ public class EwalletRepositoryImpl implements EwalletRepository {
 
     @Override
     public Set<Ewallet> getAll() {
-        return this.getAll();
+        return this.ewallets;
     }
 
     @Override
     public Ewallet create(Ewallet ewallet) {
-
-        EwalletTable.put(ewallet.getAmount(),ewallet);
-        Ewallet atmTran1 = EwalletTable.get(ewallet.getAmount());
-        return atmTran1;
+        this.ewallets.add( ewallet );
+        return ewallet;
     }
 
     @Override
     public Ewallet update(Ewallet ewallet) {
-        EwalletTable.put(ewallet.getAmount(),ewallet);
-        Ewallet atmTran1 = EwalletTable.get(ewallet.getAmount());
-        return atmTran1;
+        Ewallet toUpdate = findEwallet( ewallet.getId() );
+        if(toUpdate != null){
+            this.ewallets.remove( toUpdate );
+            return create(ewallet );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-       EwalletTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public Ewallet read(Double aDouble) {
-        Ewallet ewallet = EwalletTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        Ewallet ewallet = findEwallet( Id );
+        if(ewallet != null) this.ewallets.remove( ewallet );
+    }
+
+    public Ewallet read(String Id) {
+        Ewallet ewallet = findEwallet( Id );
         return ewallet;
     }
 }

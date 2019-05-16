@@ -4,56 +4,68 @@ import ATMtrans.domain.atmTransies.Withdrawal;
 import ATMtrans.repository.repositoryAtmTransies.WithdrawalRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class WithdrawalRepositoryImpl implements WithdrawalRepository {
 
     public static WithdrawalRepositoryImpl repository = null;
-    private Map<Double, Withdrawal> WithdrawalTable;
+    private Set<Withdrawal> withdrawals;
 
     private WithdrawalRepositoryImpl() {
-        WithdrawalTable = new HashMap<>();
+        withdrawals = new HashSet<>();
+    }
+
+    private Withdrawal findWithdrawal(String Id){
+        return this.withdrawals.stream()
+                .filter( withdrawal -> withdrawal.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static WithdrawalRepository getRepository(){
         if (repository == null) repository = new WithdrawalRepositoryImpl();
         return repository;
     }
-
     @Override
     public Set<Withdrawal> getAll() {
-        return this.getAll();
+        return this.withdrawals;
     }
 
     @Override
     public Withdrawal create(Withdrawal withdrawal) {
-        WithdrawalTable.put(withdrawal.getAmount(),withdrawal);
-        Withdrawal cashTransfer1 = WithdrawalTable.get(withdrawal.getAmount());
-        return cashTransfer1;
-
+        this.withdrawals.add( withdrawal );
+        return withdrawal;
     }
-
     @Override
     public Withdrawal update(Withdrawal withdrawal) {
 
-        WithdrawalTable.put(withdrawal.getAmount(),withdrawal);
-        Withdrawal cashTransfer1 = WithdrawalTable.get(withdrawal.getAmount());
-        return cashTransfer1;
-
+        Withdrawal toUpdate = findWithdrawal( withdrawal.getId() );
+        if(toUpdate != null){
+            this.withdrawals.remove( toUpdate );
+            return create(withdrawal );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        WithdrawalTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public Withdrawal read(Double aDouble) {
+        return null;
+    }
 
-        Withdrawal withdrawal = WithdrawalTable.get(aDouble);
+    public void delete(String Id) {
+        Withdrawal withdrawal = findWithdrawal( Id );
+        if(withdrawal != null) this.withdrawals.remove( withdrawal );
+    }
+
+    public Withdrawal read(String Id) {
+        Withdrawal withdrawal = findWithdrawal( Id );
         return withdrawal;
     }
 }

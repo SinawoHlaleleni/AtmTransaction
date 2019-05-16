@@ -4,16 +4,24 @@ import ATMtrans.domain.account.Flexible;
 import ATMtrans.repository.repositoryAccount.FlexibleRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class FlexibleRepositoryImpl implements FlexibleRepository {
 
     public static FlexibleRepositoryImpl repository = null;
-    private Map<Double, Flexible> FlexibleTable;
+    private Set<Flexible> flexibles;
 
     private FlexibleRepositoryImpl() {
-        FlexibleTable = new HashMap<>();
+        flexibles = new HashSet<>();
+    }
+
+    private Flexible findFlexible(String Id){
+        return this.flexibles.stream()
+                .filter( flexible -> flexible.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static FlexibleRepository getRepository(){
@@ -23,35 +31,45 @@ public class FlexibleRepositoryImpl implements FlexibleRepository {
 
     @Override
     public Set<Flexible> getAll() {
-        return this.getAll();
+        return this.flexibles;
     }
 
     @Override
     public Flexible create(Flexible flexible) {
-
-        FlexibleTable.put(flexible.getAmount(),flexible);
-        Flexible flexible1 = FlexibleTable.get(flexible.getAmount());
-        return flexible1;
+        this.flexibles.add( flexible );
+        return flexible;
 
     }
 
     @Override
     public Flexible update(Flexible flexible) {
-        FlexibleTable.put(flexible.getAmount(),flexible);
-        Flexible flexible1 = FlexibleTable.get(flexible.getAmount());
-        return flexible1;
+        Flexible toUpdate = findFlexible( flexible.getId() );
+        if(toUpdate != null){
+            this.flexibles.remove( toUpdate );
+            return create( flexible );
+        }
+        return null;
+    }
+
+    @Override
+    public void delete(Double aDouble) {
 
     }
 
     @Override
-    public void delete(String s) {
-        FlexibleTable.remove(s);
-        //return this.delete(s);
+    public Flexible read(Double aDouble) {
+        return null;
     }
 
-    @Override
-    public Flexible read(String s) {
-        Flexible flexible = FlexibleTable.get(s);
+
+    public void delete(String Id) {
+        Flexible flexible = findFlexible( Id );
+        if(flexible != null) this.flexibles.remove( flexible );
+    }
+
+
+    public Flexible read(String Id) {
+        Flexible flexible = findFlexible( Id );
         return flexible;
     }
 }

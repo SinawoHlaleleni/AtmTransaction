@@ -4,15 +4,23 @@ import ATMtrans.domain.atmTransies.Deposit;
 import ATMtrans.repository.repositoryAtmTransies.DepositRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class DepositRepositoryImpl implements DepositRepository {
     public static DepositRepositoryImpl repository = null;
-    private Map<Double, Deposit> depositTable;
+    private Set<Deposit> deposits;
 
     private DepositRepositoryImpl() {
-        depositTable = new HashMap<>();
+        deposits= new HashSet<>();
+    }
+
+    private Deposit findDeposit(String Id){
+        return this.deposits.stream()
+                .filter( deposit -> deposit.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static DepositRepository getRepository(){
@@ -22,34 +30,41 @@ public class DepositRepositoryImpl implements DepositRepository {
 
     @Override
     public Set<Deposit> getAll() {
-        return this.getAll();
+        return this.deposits;
     }
 
     @Override
     public Deposit create(Deposit deposit) {
-        depositTable.put(deposit.getAmount(),deposit);
-        Deposit deposit1 = depositTable.get(deposit.getAmount());
-        return deposit1;
+        this.deposits.add(deposit );
+        return deposit;
     }
-
     @Override
     public Deposit update(Deposit deposit) {
-        depositTable.put(deposit.getAmount(),deposit);
-        Deposit deposit1 = depositTable.get(deposit.getAmount());
-        return deposit1;
-
+        Deposit toUpdate = findDeposit( deposit.getId() );
+        if(toUpdate != null){
+            this.deposits.remove( toUpdate );
+            return create( deposit );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        depositTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public Deposit read(Double aDouble) {
-        Deposit deposit = depositTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        Deposit deposit = findDeposit( Id );
+        if(deposit != null) this.deposits.remove( deposit );
+    }
+
+    public Deposit read(String Id) {
+        Deposit deposit = findDeposit( Id );
         return deposit;
     }
 }

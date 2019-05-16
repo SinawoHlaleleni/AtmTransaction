@@ -7,31 +7,44 @@ import java.util.Objects;
 @EntityScan
 public class StopOrder implements DebitOrders {
 
-    private double amount = 0;
+    private String Id;
+    private static double amount =0;
 
-    private StopOrder() {
+    public String getId() {
+        return Id;
     }
 
-    private StopOrder(Builder builder) {
-        this.amount = builder.amount;
-    }
-
+    @Override
     public double getAmount() {
         return amount;
     }
 
-    public static class Builder {
 
+    private StopOrder(){}
+
+    private StopOrder (Builder builder){
+
+        this.Id= builder.Id;
+        this.amount=builder.amount;
+
+    }
+
+    public static class Builder {
+        private String Id;
         private double amount;
 
-
-        public Builder amount(double amount) {
-            this.amount = amount;
+        public Builder Id(String Id) {
+            this.Id = Id;
             return this;
         }
 
+        public Builder amount(Double amount) {
+            this.amount = amount;
+            return this;
+        }
         public Builder copy(StopOrder stopOrder){
-            this.amount = stopOrder.amount;
+            this.Id = stopOrder.Id;
+            this.amount = StopOrder.amount;
             return this;
         }
 
@@ -39,11 +52,11 @@ public class StopOrder implements DebitOrders {
             return new StopOrder(this);
         }
     }
-
     @Override
     public String toString() {
-        return "Deposit{" +
-                "amount=R" + amount +
+        return "Builder{" +
+                "Id='" + Id + '\'' +
+                ", amount='" + amount + '\'' +
                 '}';
     }
     @Override
@@ -51,10 +64,10 @@ public class StopOrder implements DebitOrders {
         if(this ==obj)return true;
         if(obj == null|| getClass() !=obj.getClass()) return false;
         StopOrder stopOrder = (StopOrder) obj;
-        return stopOrder.equals(stopOrder.amount);
-    }
+        return stopOrder.equals(stopOrder.Id);        }
 
     @Override
     public int hashCode() {
         return Objects.hash(amount);        }
 }
+

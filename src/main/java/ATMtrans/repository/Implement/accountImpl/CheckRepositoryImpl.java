@@ -4,16 +4,24 @@ import ATMtrans.domain.account.Check;
 import ATMtrans.repository.repositoryAccount.CheckRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class CheckRepositoryImpl implements CheckRepository {
 
     public static CheckRepositoryImpl repository = null;
-    private Map<Double, Check> checkTable;
+    private Set<Check> checks;
 
     private CheckRepositoryImpl() {
-        checkTable = new HashMap<>();
+       this.checks = new HashSet<>();
+    }
+
+    private Check findCheck(String Id){
+        return this.checks.stream()
+                .filter( check -> check.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static CheckRepository getRepository(){
@@ -22,33 +30,41 @@ public class CheckRepositoryImpl implements CheckRepository {
     }
     @Override
     public Set<Check> getAll() {
-        return this.getAll();
+        return this.checks;
     }
 
     @Override
     public Check create(Check check) {
-        checkTable.put(check.getAmount(),check);
-        Check check1 = checkTable.get(check.getAmount());
-        return check1;
+       this.checks.add( check );
+        return check;
     }
-
     @Override
     public Check update(Check check) {
-
-        checkTable.put(check.getAmount(),check);
-        Check check1 = checkTable.get(check.getAmount());
-        return check1;
+        Check toUpdate = findCheck( check.getId() );
+        if(toUpdate != null){
+            this.checks.remove( toUpdate );
+            return create( check );
+        }
+        return null;
     }
 
     @Override
-    public void delete(String s) {
-        checkTable.remove(s);
-        //return this.delete(s);
+    public void delete(Double aDouble) {
+
     }
 
     @Override
-    public Check read(String s) {
-        Check check = checkTable.get(s);
+    public Check read(Double aDouble) {
+        return null;
+    }
+
+    public void delete(String Id ) {
+        Check check = findCheck( Id );
+        if(check != null) this.checks.remove( check );
+    }
+
+    public Check read( final String Id) {
+        Check check = findCheck( Id );
         return check;
     }
 }

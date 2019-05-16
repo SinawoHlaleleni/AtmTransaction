@@ -4,17 +4,24 @@ import ATMtrans.domain.atmInfor.Electricity;
 import ATMtrans.repository.repositoryAtmInf.ElectricityRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class ElectricityRepositoryImpl implements ElectricityRepository {
     public static ElectricityRepositoryImpl repository = null;
-    private Map<Double,Electricity> ElectricityTable;
+    private Set<Electricity> electricitys;
 
     private ElectricityRepositoryImpl() {
-        ElectricityTable = new HashMap<>();
+        electricitys = new HashSet<>();
     }
 
+    private Electricity findElectricity(String Id){
+        return this.electricitys.stream()
+                .filter( electricity -> electricity.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
     public static ElectricityRepository getRepository() {
         if (repository == null) repository = new ElectricityRepositoryImpl();
         return repository;
@@ -22,37 +29,35 @@ public class ElectricityRepositoryImpl implements ElectricityRepository {
 
     @Override
     public Set<Electricity> getAll() {
-        return this.getAll();
+        return this.electricitys;
     }
 
     @Override
     public Electricity create(Electricity electricity) {
-
-        ElectricityTable.put(Electricity.getAmount(),electricity);
-        Electricity electricity1 = ElectricityTable.get(Electricity.getAmount());
-        return electricity1;
+        this.electricitys.add( electricity );
+        return electricity;
 
     }
 
     @Override
     public Electricity update(Electricity electricity) {
 
-        ElectricityTable.put(Electricity.getAmount(),electricity);
-        Electricity electricity1 = ElectricityTable.get(Electricity.getAmount());
-        return electricity1;
-
+        Electricity toUpdate = findElectricity( electricity.getId() );
+        if(toUpdate != null){
+            this.electricitys.remove( toUpdate );
+            return create(electricity );
+        }
+        return null;
+    }
+    @Override
+    public void delete(String Id) {
+        Electricity electricity = findElectricity( Id );
+        if(electricity != null) this.electricitys.remove( electricity );
     }
 
     @Override
-    public void delete(String s) {
-        ElectricityTable.remove(s);
-
-        //return this.delete(s);
-    }
-
-    @Override
-    public Electricity read(String s) {
-        Electricity electricity = ElectricityTable.get(s);
+    public Electricity read(String Id) {
+        Electricity electricity = findElectricity( Id );
         return electricity;
     }
 }

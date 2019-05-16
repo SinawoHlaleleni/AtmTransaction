@@ -5,16 +5,24 @@ import ATMtrans.domain.account.Fixed;
 import ATMtrans.repository.repositoryAccount.FixedRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class FixedRepositoryImpl implements FixedRepository {
 
     public static FixedRepositoryImpl repository = null;
-    private Map<Double, Fixed> fixedTable;
+    private Set<Fixed> fixeds;
 
     private FixedRepositoryImpl() {
-        fixedTable = new HashMap<>();
+        fixeds = new HashSet<>();
+    }
+
+    private Fixed findFixed (String Id){
+        return this.fixeds.stream()
+                .filter( fixed -> fixed.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static FixedRepository getRepository(){
@@ -24,33 +32,40 @@ public class FixedRepositoryImpl implements FixedRepository {
 
     @Override
     public Set<Fixed> getAll() {
-        return this.getAll();
+        return this.fixeds;
     }
-
     @Override
     public Fixed create(Fixed fixed) {
-
-        fixedTable.put(fixed.getAmount(),fixed);
-        Fixed check1 = fixedTable.get(fixed.getAmount());
-        return check1;
+        this.fixeds.add( fixed );
+        return fixed;
     }
-
     @Override
     public Fixed update(Fixed fixed) {
-        fixedTable.put(fixed.getAmount(),fixed);
-        Fixed check1 = fixedTable.get(fixed.getAmount());
-        return check1;
+        Fixed toUpdate = findFixed( fixed.getId() );
+        if(toUpdate != null){
+            this.fixeds.remove( toUpdate );
+            return create( fixed );
+        }
+        return null;
     }
 
     @Override
-    public void delete(String s) {
-        fixedTable.remove(s);
-        //return this.delete(s);
+    public void delete(Double aDouble) {
+
     }
 
     @Override
-    public Fixed read(String s) {
-        Fixed fixed = fixedTable.get(s);
+    public Fixed read(Double aDouble) {
+        return null;
+    }
+
+    public void delete(String Id) {
+        Fixed fixed = findFixed( Id );
+        if(fixed != null) this.fixeds.remove( fixed );
+    }
+
+    public Fixed read(String Id) {
+        Fixed fixed = findFixed( Id );
         return fixed;
     }
 }

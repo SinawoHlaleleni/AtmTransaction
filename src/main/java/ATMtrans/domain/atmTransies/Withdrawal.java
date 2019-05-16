@@ -7,51 +7,67 @@ import java.util.Objects;
 @EntityScan
 public class Withdrawal implements AtmTran {
 
-    private static double amount = 0;
+    private String Id;
+    private static double amount =0;
 
-    private Withdrawal() {
-    }
-    private Withdrawal(Builder builder) {
-        this.amount = builder.amount;
+    public String getId() {
+        return Id;
     }
 
+    @Override
     public double getAmount() {
         return amount;
     }
 
-    public static class Builder {
 
+    private Withdrawal(){}
+
+    private Withdrawal (Builder builder){
+
+        this.Id= builder.Id;
+        this.amount=builder.amount;
+
+    }
+
+    public static class Builder {
+        private String Id;
         private double amount;
 
-        public Builder amount(double amount) {
+        public Builder Id(String Id) {
+            this.Id = Id;
+            return this;
+        }
+
+        public Builder amount(Double amount) {
             this.amount = amount;
             return this;
         }
-
         public Builder copy(Withdrawal withdrawal){
-            this.amount = withdrawal.amount;
+            this.Id = withdrawal.Id;
+            this.amount = Withdrawal.amount;
             return this;
         }
+
         public Withdrawal build() {
             return new Withdrawal(this);
         }
     }
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "amount=R" + amount +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if(this ==obj)return true;
-            if(obj == null|| getClass() !=obj.getClass()) return false;
-            Withdrawal withdrawal = (Withdrawal) obj;
-            return withdrawal.equals(withdrawal.getAmount());
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(amount);        }
+    @Override
+    public String toString() {
+        return "Builder{" +
+                "Id='" + Id + '\'' +
+                ", Type='" + amount + '\'' +
+                '}';
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        Withdrawal withdrawal = (Withdrawal) obj;
+        return withdrawal.equals(withdrawal.Id);        }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
+}
+

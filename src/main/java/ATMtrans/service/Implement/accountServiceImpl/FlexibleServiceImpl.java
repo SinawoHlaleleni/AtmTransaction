@@ -39,11 +39,19 @@ public class FlexibleServiceImpl implements FlexibleService {
 
     @Override
     public void delete(String s) {
-    repository.delete(s);
+
     }
 
     @Override
     public Flexible read(String s) {
-        return this.repository.read(s);
+        return null;
+    }
+
+    public void delete(Double amount) {
+    repository.delete(amount);
+    }
+
+    public Flexible read(Double amount) {
+        return this.repository.read(amount);
     }
 }

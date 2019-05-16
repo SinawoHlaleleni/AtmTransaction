@@ -4,50 +4,68 @@ import ATMtrans.domain.orders.StopOrder;
 import ATMtrans.repository.repositoryOrder.StopOrderRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class StopOrderRepositoryImpl implements StopOrderRepository {
     public static StopOrderRepositoryImpl repository = null;
-    private Map<Double, StopOrder> StopOrderTable;
+    private Set< StopOrder > stopOrders;
 
     private StopOrderRepositoryImpl() {
-        StopOrderTable = new HashMap<>();
+        stopOrders = new HashSet<>();
     }
 
-    public static StopOrderRepository getRepository(){
+    private StopOrder findStopOrder(String Id) {
+        return this.stopOrders.stream()
+                .filter( stopOrder -> stopOrder.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
+
+    public static StopOrderRepository getRepository() {
         if (repository == null) repository = new StopOrderRepositoryImpl();
         return repository;
     }
 
     @Override
-    public Set<StopOrder> getAll() {
-        return this.getAll();
+    public Set< StopOrder > getAll() {
+        return this.stopOrders;
     }
 
     @Override
     public StopOrder create(StopOrder stopOrder) {
-        StopOrderTable.put(stopOrder.getAmount(),stopOrder);
-        StopOrder creditOrder1 = StopOrderTable.get(stopOrder.getAmount());
-        return creditOrder1;
+        this.stopOrders.add( stopOrder );
+        return stopOrder;
     }
-
-    @Override
-    public StopOrder update(StopOrder stopOrder) {
-        StopOrderTable.put(stopOrder.getAmount(),stopOrder);
-        StopOrder creditOrder1 = StopOrderTable.get(stopOrder.getAmount());
-        return creditOrder1;
+    public StopOrder update(StopOrder stopOrder)
+    {
+        StopOrder toUpdate = findStopOrder( stopOrder.getId() );
+        if(toUpdate != null){
+            this.stopOrders.remove( toUpdate );
+            return create(stopOrder );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        StopOrderTable.remove(aDouble);
-        //return this.delete(aDouble);
+
     }
 
     @Override
     public StopOrder read(Double aDouble) {
-        StopOrder  stopOrder = StopOrderTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        StopOrder stopOrder = findStopOrder( Id );
+        if(stopOrder != null) this.stopOrders.remove( stopOrder );
+    }
+
+    public StopOrder read(String Id) {
+        StopOrder stopOrder = findStopOrder( Id );
         return stopOrder;
     }
+
 }

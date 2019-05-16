@@ -4,18 +4,25 @@ import ATMtrans.domain.atmInfor.CashLimit;
 import ATMtrans.repository.repositoryAtmInf.CashLimitRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class CashLimitRepositoryImpl implements CashLimitRepository {
 
     public static CashLimitRepositoryImpl repository = null;
-    private Map<Double, CashLimit> CashLimitTable;
+    private Set<CashLimit> cashLimitc;
 
     private CashLimitRepositoryImpl() {
-        CashLimitTable = new HashMap<>();
+        cashLimitc = new HashSet<>();
     }
 
+    private CashLimit findCashLimit(String Id){
+        return this.cashLimitc.stream()
+                .filter( cashLimit -> cashLimit.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
     public static CashLimitRepository getRepository(){
         if (repository == null) repository = new CashLimitRepositoryImpl();
         return repository;
@@ -24,37 +31,43 @@ public class CashLimitRepositoryImpl implements CashLimitRepository {
 
     @Override
     public CashLimit create(CashLimit cashLimit) {
-
-        CashLimitTable.put(CashLimit.getAmount(),cashLimit);
-        CashLimit statement1 = CashLimitTable.get(CashLimit.getAmount());
-        return statement1;
-
+        this.cashLimitc.add( cashLimit );
+        return cashLimit;
     }
 
     @Override
     public CashLimit update(CashLimit cashLimit) {
-        CashLimitTable.put(CashLimit.getAmount(),cashLimit);
-        CashLimit statement1 = CashLimitTable.get(CashLimit.getAmount());
-        return statement1;
-
+        CashLimit toUpdate = findCashLimit( cashLimit.getId() );
+        if(toUpdate != null){
+            this.cashLimitc.remove( toUpdate );
+            return create( cashLimit );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        CashLimitTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public CashLimit read(Double aDouble) {
-        CashLimit cashLimit = CashLimitTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        CashLimit cashLimit = findCashLimit( Id );
+        if(cashLimit != null) this.cashLimitc.remove( cashLimit );
+    }
+
+    public CashLimit read(String Id) {
+        CashLimit cashLimit = findCashLimit( Id );
         return cashLimit;
     }
 
     @Override
     public Set<CashLimit> getAll()
     {
-        return this.getAll();
+        return this.cashLimitc;
     }
 }

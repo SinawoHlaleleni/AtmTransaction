@@ -4,15 +4,23 @@ import ATMtrans.domain.cardless.CardlessWithdrawal;
 import ATMtrans.repository.repositoryCardless.CardlessWithdrawalRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepository {
     public static CardlessWithdrawalRepositoryImpl repository = null;
-    private Map<Double, CardlessWithdrawal> CardlessWithdrawalTable;
+    private Set<CardlessWithdrawal> cardlessWithdrawals;
 
     private CardlessWithdrawalRepositoryImpl() {
-        CardlessWithdrawalTable = new HashMap<>();
+        cardlessWithdrawals = new HashSet<>();
+    }
+
+    private CardlessWithdrawal findCardlessWithdrawal(String Id){
+        return this.cardlessWithdrawals.stream()
+                .filter( cardlessWithdrawal -> cardlessWithdrawal.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static CardlessWithdrawalRepository getRepository(){
@@ -22,32 +30,42 @@ public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepos
 
     @Override
     public Set<CardlessWithdrawal> getAll() {
-        return this.getAll();
+        return this.cardlessWithdrawals;
     }
 
     @Override
     public CardlessWithdrawal create(CardlessWithdrawal cardlessWithdrawal) {
-        CardlessWithdrawalTable.put(cardlessWithdrawal.getAmount(),cardlessWithdrawal);
-        CardlessWithdrawal cardlessWithdrawal1 = CardlessWithdrawalTable.get(cardlessWithdrawal.getAmount());
-        return cardlessWithdrawal1;
+        this.cardlessWithdrawals.add( cardlessWithdrawal );
+        return cardlessWithdrawal;
     }
 
     @Override
     public CardlessWithdrawal update(CardlessWithdrawal cardlessWithdrawal) {
-        CardlessWithdrawalTable.put(cardlessWithdrawal.getAmount(),cardlessWithdrawal);
-        CardlessWithdrawal cardlessWithdrawal1 = CardlessWithdrawalTable.get(cardlessWithdrawal.getAmount());
-        return cardlessWithdrawal1;
+        CardlessWithdrawal toUpdate = findCardlessWithdrawal( cardlessWithdrawal.getId() );
+        if(toUpdate != null){
+            this.cardlessWithdrawals.remove( toUpdate );
+            return create(cardlessWithdrawal );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-       CardlessWithdrawalTable.remove(aDouble);
-        //return this.delete(aDouble);
+
     }
 
     @Override
     public CardlessWithdrawal read(Double aDouble) {
-        CardlessWithdrawal cardlessWithdrawal= CardlessWithdrawalTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        CardlessWithdrawal cardlessWithdrawal = findCardlessWithdrawal( Id );
+        if(cardlessWithdrawal != null) this.cardlessWithdrawals.remove( cardlessWithdrawal);
+    }
+
+    public CardlessWithdrawal read(String Id) {
+        CardlessWithdrawal cardlessWithdrawal = findCardlessWithdrawal( Id );
         return cardlessWithdrawal;
     }
 }

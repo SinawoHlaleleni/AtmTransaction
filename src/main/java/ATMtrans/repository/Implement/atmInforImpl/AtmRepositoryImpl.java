@@ -4,17 +4,26 @@ import ATMtrans.domain.atmInfor.Atm;
 import ATMtrans.repository.repositoryAtmInf.AtmRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class AtmRepositoryImpl implements AtmRepository {
 
     public static AtmRepositoryImpl repository = null;
-    private Map<String, Atm> AtmTable;
+    private Set<Atm> atms;
 
     private AtmRepositoryImpl() {
-        AtmTable = new HashMap<>();
+        atms = new HashSet<>();
     }
+
+    private Atm findAtm(String Id){
+        return this.atms.stream()
+                .filter( atm -> atm.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
+
 
     public static AtmRepository getRepository(){
         if (repository == null) repository = new AtmRepositoryImpl();
@@ -23,33 +32,34 @@ public class AtmRepositoryImpl implements AtmRepository {
 
     @Override
     public Set<Atm> getAll() {
-        return this.getAll();
+        return this.atms;
     }
 
     @Override
     public Atm create(Atm atm) {
-        AtmTable.put(Atm.getType(),atm);
-        Atm atm1 = AtmTable.get(Atm.getType());
-        return atm1;
+        this.atms.add( atm );
+        return atm;
     }
 
     @Override
     public Atm update(Atm atm) {
-        AtmTable.put(Atm.getType(),atm);
-        Atm atm1 = AtmTable.get(Atm.getType());
-        return atm1;
+        Atm toUpdate = findAtm( atm.getId() );
+        if(toUpdate != null){
+            this.atms.remove( toUpdate );
+            return create( atm );
+        }
+        return null;
     }
 
     @Override
-    public void delete(String s) {
-        AtmTable.remove(s);
-
-        //return this.delete(s);
+    public void delete(String Id) {
+        Atm atm = findAtm( Id );
+        if(atm != null) this.atms.remove( atm );
     }
 
     @Override
-    public Atm read(String s) {
-        Atm atm = AtmTable.get(s);
+    public Atm read(String Id) {
+        Atm atm = findAtm( Id );
         return atm;
     }
 }

@@ -38,11 +38,19 @@ public class FixedServiceImpl implements FixedService {
 
     @Override
     public void delete(String s) {
-        repository.delete(s);
+
     }
 
     @Override
     public Fixed read(String s) {
-        return this.repository.read(s);
+        return null;
+    }
+
+    public void delete(Double amount) {
+        repository.delete(amount);
+    }
+
+    public Fixed read(Double amount) {
+        return this.repository.read(amount);
     }
 }

@@ -38,11 +38,19 @@ public class SavingsServiceImpl implements SavingsService {
 
     @Override
     public void delete(String s) {
-    repository.delete(s);
+
     }
 
     @Override
     public Savings read(String s) {
-        return this.repository.read(s);
+        return null;
+    }
+
+    public void delete(Double amount) {
+    repository.delete(amount);
+    }
+
+    public Savings read(Double amount) {
+        return this.repository.read(amount);
     }
 }

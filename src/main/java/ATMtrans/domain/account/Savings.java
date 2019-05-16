@@ -7,30 +7,44 @@ import java.util.Objects;
 @EntityScan
 public class Savings implements Account {
 
-    private double amount = 5000;
+    private String Id;
+    private static double amount =5000;
 
-    private Savings() {
+    public String getId() {
+        return Id;
     }
 
-    private Savings(Builder builder) {
-        this.amount = builder.amount;
-    }
-
+    @Override
     public double getAmount() {
         return amount;
     }
 
-    public static class Builder {
 
+    private Savings(){}
+
+    private Savings (Builder builder){
+
+        this.Id= builder.Id;
+        this.amount=builder.amount;
+
+    }
+
+    public static class Builder {
+        private String Id;
         private double amount;
 
+        public Builder Id(String Id) {
+            this.Id = Id;
+            return this;
+        }
 
-        public Builder amount(double amount) {
+        public Builder amount(Double amount) {
             this.amount = amount;
             return this;
         }
         public Builder copy(Savings savings){
-            this.amount = savings.amount;
+            this.Id = savings.Id;
+            this.amount = Savings.amount;
             return this;
         }
 
@@ -38,23 +52,22 @@ public class Savings implements Account {
             return new Savings(this);
         }
     }
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "amount=R" + amount +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if(this ==obj)return true;
-            if(obj == null|| getClass() !=obj.getClass()) return false;
-            Savings savings = (Savings) obj;
-            return savings.equals(savings.amount);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(amount);
-        }
+    @Override
+    public String toString() {
+        return "Builder{" +
+                "Id='" + Id + '\'' +
+                ", Amount='" + amount + '\'' +
+                '}';
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        Savings savings = (Savings) obj;
+        return savings.equals(savings.Id);        }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
+}
+

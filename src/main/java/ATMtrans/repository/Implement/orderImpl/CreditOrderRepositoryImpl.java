@@ -4,55 +4,69 @@ import ATMtrans.domain.orders.CreditOrder;
 import ATMtrans.repository.repositoryOrder.CreditOrderRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class CreditOrderRepositoryImpl implements CreditOrderRepository {
 
     public static CreditOrderRepositoryImpl repository = null;
-    private Map<Double, CreditOrder> CreditOrderTable;
+    private Set<CreditOrder> creditOrders;
 
     private CreditOrderRepositoryImpl() {
-        CreditOrderTable = new HashMap<>();
+        creditOrders = new HashSet<>();
     }
 
+    private CreditOrder findCreditOrder(String Id){
+        return this.creditOrders.stream()
+                .filter( creditOrder -> creditOrder.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
     public static CreditOrderRepository getRepository(){
         if (repository == null) repository = new CreditOrderRepositoryImpl();
         return repository;
     }
 
-
     @Override
     public Set<CreditOrder> getAll() {
-        return this.getAll();
+        return this.creditOrders;
     }
 
     @Override
     public CreditOrder create(CreditOrder creditOrder) {
-
-        CreditOrderTable.put(creditOrder.getAmount(),creditOrder);
-        CreditOrder creditOrder1 = CreditOrderTable.get(creditOrder.getAmount());
-        return creditOrder1;
+        this.creditOrders.add( creditOrder );
+        return creditOrder;
 
     }
 
     @Override
     public CreditOrder update(CreditOrder creditOrder) {
-        CreditOrderTable.put(creditOrder.getAmount(),creditOrder);
-        CreditOrder creditOrder1 = CreditOrderTable.get(creditOrder.getAmount());
-        return creditOrder1;
+        CreditOrder toUpdate = findCreditOrder( creditOrder.getId() );
+        if(toUpdate != null){
+            this.creditOrders.remove( toUpdate );
+            return create(creditOrder );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        CreditOrderTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public CreditOrder read(Double aDouble) {
-        CreditOrder creditOrder = CreditOrderTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        CreditOrder creditOrder = findCreditOrder( Id );
+        if(creditOrder != null) this.creditOrders.remove( creditOrder );
+    }
+
+    public CreditOrder read(String Id) {
+        CreditOrder creditOrder = findCreditOrder( Id );
         return creditOrder;
     }
 }

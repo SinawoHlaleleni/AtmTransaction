@@ -4,16 +4,24 @@ import ATMtrans.domain.atmTransies.Balance;
 import ATMtrans.repository.repositoryAtmTransies.BalanceRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class BalanceRepositoryImpl implements BalanceRepository {
 
     public static BalanceRepositoryImpl repository = null;
-    private Map<Double, Balance> BalanceTable;
+    private Set<Balance> balances;
 
     private BalanceRepositoryImpl() {
-        BalanceTable = new HashMap<>();
+        balances = new HashSet<>();
+    }
+
+    private Balance findBalance(String Id){
+        return this.balances.stream()
+                .filter( balance -> balance.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
     }
 
     public static BalanceRepository getRepository(){
@@ -23,34 +31,43 @@ public class BalanceRepositoryImpl implements BalanceRepository {
 
     @Override
     public Set<Balance> getAll() {
-        return this.getAll();
+        return this.balances;
     }
 
     @Override
     public Balance create(Balance balance) {
-        BalanceTable.put(balance.getAmount(),balance);
-        Balance balance1 = BalanceTable.get(balance.getAmount());
-        return balance1;
+        this.balances.add( balance );
+        return balance;
 
     }
 
     @Override
     public Balance update(Balance balance) {
-        BalanceTable.put(balance.getAmount(),balance);
-        Balance balance1 = BalanceTable.get(balance.getAmount());
-        return balance1;
+        Balance toUpdate = findBalance( balance.getId() );
+        if(toUpdate != null){
+            this.balances.remove( toUpdate );
+            return create( balance );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
 
-       BalanceTable.remove(aDouble);
-        //return this.delete(aDouble);
     }
 
     @Override
     public Balance read(Double aDouble) {
-        Balance balance = BalanceTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        Balance balance = findBalance( Id );
+        if(balance != null) this.balances.remove( balance );
+    }
+
+    public Balance read(String Id) {
+        Balance balance = findBalance( Id );
         return balance;
     }
 }

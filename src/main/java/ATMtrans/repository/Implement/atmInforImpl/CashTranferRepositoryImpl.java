@@ -4,17 +4,24 @@ import ATMtrans.domain.atmInfor.CashTransfer;
 import ATMtrans.repository.repositoryAtmInf.CashTranferRepository;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class CashTranferRepositoryImpl implements CashTranferRepository {
     public static CashTranferRepositoryImpl repository = null;
-    private Map<Double, CashTransfer> CashTransferTable;
+    private Set<CashTransfer> cashTransfers;
 
     private CashTranferRepositoryImpl() {
-        CashTransferTable = new HashMap<>();
+        cashTransfers = new HashSet<>();
     }
 
+    private CashTransfer findCashTransfer(String Id){
+        return this.cashTransfers.stream()
+                .filter( cashTransfer -> cashTransfer.getId().trim().equals( Id ) )
+                .findAny()
+                .orElse( null );
+    }
     public static CashTranferRepository getRepository(){
         if (repository == null) repository = new CashTranferRepositoryImpl();
         return repository;
@@ -22,35 +29,42 @@ public class CashTranferRepositoryImpl implements CashTranferRepository {
 
     @Override
     public Set<CashTransfer> getAll() {
-        return this.getAll();
+        return this.cashTransfers;
     }
-
     @Override
     public CashTransfer create(CashTransfer cashTransfer) {
-
-        CashTransferTable.put(CashTransfer.getAmount(),cashTransfer);
-        CashTransfer cashTransfer1 = CashTransferTable.get(CashTransfer.getAmount());
-        return cashTransfer1;
+        this.cashTransfers.add( cashTransfer );
+        return cashTransfer;
     }
 
     @Override
     public CashTransfer update(CashTransfer cashTransfer) {
 
-        CashTransferTable.put(CashTransfer.getAmount(),cashTransfer);
-        CashTransfer cashTransfer1 = CashTransferTable.get(CashTransfer.getAmount());
-        return cashTransfer1;
+        CashTransfer toUpdate = findCashTransfer( cashTransfer.getId() );
+        if(toUpdate != null){
+            this.cashTransfers.remove( toUpdate );
+            return create( cashTransfer );
+        }
+        return null;
     }
 
     @Override
     public void delete(Double aDouble) {
-        CashTransferTable.remove(aDouble);
 
-        //return this.delete(aDouble);
     }
 
     @Override
     public CashTransfer read(Double aDouble) {
-        CashTransfer cashTransfer = CashTransferTable.get(aDouble);
+        return null;
+    }
+
+    public void delete(String Id) {
+        CashTransfer cashTransfer = findCashTransfer( Id );
+        if(cashTransfer != null) this.cashTransfers.remove( cashTransfer );
+    }
+
+    public CashTransfer read(String Id ) {
+        CashTransfer cashTransfer = findCashTransfer( Id );
         return cashTransfer;
     }
 }

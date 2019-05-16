@@ -7,31 +7,44 @@ import java.util.Objects;
 @EntityScan
 public class Flexible {
 
-    private double amount = 0;
+    private String Id;
+    private static double amount =0;
 
-    private Flexible() {
+    public String getId() {
+        return Id;
     }
 
-    private Flexible(Builder builder) {
-        this.amount = builder.amount;
-    }
 
     public double getAmount() {
         return amount;
     }
 
-    public static class Builder {
 
+    private Flexible(){}
+
+    private Flexible (Builder builder){
+
+        this.Id= builder.Id;
+        this.amount=builder.amount;
+
+    }
+
+    public static class Builder {
+        private String Id;
         private double amount;
 
-
-        public Builder amount(double amount) {
-            this.amount = amount;
+        public Builder Id(String Id) {
+            this.Id = Id;
             return this;
         }
 
+        public Builder amount(Double amount) {
+            this.amount = amount;
+            return this;
+        }
         public Builder copy(Flexible flexible){
-            this.amount = flexible.amount;
+            this.Id = flexible.Id;
+            this.amount = Flexible.amount;
             return this;
         }
 
@@ -39,25 +52,22 @@ public class Flexible {
             return new Flexible(this);
         }
     }
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "amount=R" + amount +
-                    '}';
-        }
-        @Override
-        public boolean equals(Object obj) {
-            if(this ==obj)return true;
-            if(obj == null|| getClass() !=obj.getClass()) return false;
-            Flexible flexible = (Flexible) obj;
-            return flexible.equals(flexible.amount);
-        }
-
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(amount);
-        }
-
-
+    @Override
+    public String toString() {
+        return "Builder{" +
+                "Id='" + Id + '\'' +
+                ", Amount='" + amount + '\'' +
+                '}';
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(this ==obj)return true;
+        if(obj == null|| getClass() !=obj.getClass()) return false;
+        Flexible flexible = (Flexible) obj;
+        return flexible.equals(flexible.Id);        }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amount);        }
+}
+

@@ -6,41 +6,56 @@ import java.util.Objects;
 
 @EntityScan
 public class Deposit implements AtmTran {
-    private double amount = 0;
-    private Deposit() {
+    private String Id;
+    private static double amount =0;
+
+    public String getId() {
+        return Id;
     }
 
-    private Deposit(Builder builder) {
-        this.amount = builder.amount;
-    }
-
+    @Override
     public double getAmount() {
         return amount;
     }
 
-    public static class Builder {
 
+    private Deposit(){}
+
+    private Deposit (Builder builder){
+
+        this.Id= builder.Id;
+        this.amount=builder.amount;
+
+    }
+
+    public static class Builder {
+        private String Id;
         private double amount;
 
+        public Builder Id(String Id) {
+            this.Id = Id;
+            return this;
+        }
 
-        public Builder amount(double amount) {
+        public Builder amount(Double amount) {
             this.amount = amount;
             return this;
         }
-
         public Builder copy(Deposit deposit){
-            this.amount = deposit.amount;
+            this.Id = deposit.Id;
+            this.amount = Deposit.amount;
             return this;
         }
+
         public Deposit build() {
             return new Deposit(this);
         }
     }
-
     @Override
     public String toString() {
-        return "Deposit{" +
-                "amount=" + amount +
+        return "Builder{" +
+                "Id='" + Id + '\'' +
+                ", Type='" + amount + '\'' +
                 '}';
     }
     @Override
@@ -48,11 +63,10 @@ public class Deposit implements AtmTran {
         if(this ==obj)return true;
         if(obj == null|| getClass() !=obj.getClass()) return false;
         Deposit deposit = (Deposit) obj;
-        return deposit.equals(deposit.amount);
-    }
+        return deposit.equals(deposit.Id);        }
 
     @Override
     public int hashCode() {
         return Objects.hash(amount);        }
-
 }
+

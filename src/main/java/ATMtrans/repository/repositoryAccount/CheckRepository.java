@@ -5,6 +5,6 @@ import ATMtrans.repository.IRepository.IRepository;
 
 import java.util.Set;
 
-public interface CheckRepository extends IRepository<Check,String> {
+public interface CheckRepository extends IRepository<Check,Double> {
     Set<Check>getAll();
 }
