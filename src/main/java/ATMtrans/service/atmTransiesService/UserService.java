@@ -2,6 +2,7 @@ package ATMtrans.service.atmTransiesService;
 
 import ATMtrans.domain.atmTransies.User;
 import ATMtrans.service.IService.IService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 

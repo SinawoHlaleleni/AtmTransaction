@@ -13,7 +13,6 @@ import java.util.Set;
 
 public class UserController {
     @Autowired
-    @Qualifier("ServiceImp")
     private UserService service;
 
     @PostMapping("/create")
