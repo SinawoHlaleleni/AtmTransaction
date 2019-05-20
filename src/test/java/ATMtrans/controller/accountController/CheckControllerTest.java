@@ -21,7 +21,7 @@ public class CheckControllerTest {
     private String baseURL="http://localhost:8080/Bank";
 
     @Test
-    public void testGetAllBanks() {
+    public void testGetAllCheck() {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
         ResponseEntity<String> respense = restTemplate.exchange(baseURL + "all",

@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14278174-e492-4e99-8d1c-32026e1878c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/FixedControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/FlexibleControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/SavingsControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/StatementControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/AirtimeControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/CashLimitControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/CashTransferControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/ElectricityControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/TopupControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/BalanceControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/DepositControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/WithdrawalControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BranchControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/cardlessController/CardlessServiceControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/cardlessController/CardlessWithdrawalControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/cardlessController/EwalletControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/ordersController/CreditOrderControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/ordersController/StopOrderControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/accountServiceImpl/AccountServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/accountServiceImpl/CheckServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/accountServiceImpl/FixedServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/accountServiceImpl/FlexibleServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/accountServiceImpl/StatementServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/AirtimeServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/CashLimitServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/CashTransferServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/ElectricityServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmInfServiceImpl/TopupServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmTransiesServiceImpl/AtmTranServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmTransiesServiceImpl/BalanceServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmTransiesServiceImpl/DepositServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/atmTransiesServiceImpl/WithdrawalServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/bankServiceImpl/BranchServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/cardlessInforServiceImpl/CardlessServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/cardlessInforServiceImpl/CardlessWithdrawalServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/orderServiceImpl/CreditOrderServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/orderServiceImpl/DebitOrderServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ATMtrans/ATMApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ATMtrans/ATMApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BankControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BankControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,15 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/ATMApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
                 <element signature="e#242#243#0" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -103,7 +73,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/SavingsControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/FlexibleControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/FixedControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/ElectricityControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BranchControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/WithdrawalControllerTest.java" />
@@ -134,6 +103,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/orderServiceImpl/DebitOrderServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ATMtrans/service/Implement/orderServiceImpl/CreditOrderServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ATMtrans/ATMApplication.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java" />
       </list>
     </option>
   </component>
@@ -208,53 +178,41 @@
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="bankServiceImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="cardlessInforServiceImpl" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SinawoHlal" type="b2602c69:ProjectViewProjectNode" />
               <item name="SinawoHlal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ATMtrans" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="orderServiceImpl" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="accountController" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -265,7 +223,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558341585627" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558343072768" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -304,7 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ATMApplication">
+  <component name="RunManager" selected="JUnit.CheckControllerTest.testGetAllBanks">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -345,23 +303,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AtmRepositoryImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SinawoHlal" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ATMtrans.repository.Implement.atmInforImpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ATMtrans.repository.Implement.atmInforImpl" />
-      <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.Implement.atmInforImpl.AtmRepositoryImplTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BankRepositoryImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SinawoHlal" />
       <extension name="coverage">
@@ -373,6 +314,23 @@
       <option name="PACKAGE_NAME" value="ATMtrans.repository.Implement.bankInforImpl" />
       <option name="MAIN_CLASS_NAME" value="ATMtrans.repository.Implement.bankInforImpl.BankRepositoryImplTest" />
       <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckControllerTest.testGetAllBanks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SinawoHlal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ATMtrans.controller.accountController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ATMtrans.controller.accountController" />
+      <option name="MAIN_CLASS_NAME" value="ATMtrans.controller.accountController.CheckControllerTest" />
+      <option name="METHOD_NAME" value="testGetAllBanks" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -440,11 +398,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckControllerTest.testGetAllBanks" />
         <item itemvalue="Application.ATMApplication" />
         <item itemvalue="JUnit.SavingsServiceImplTest.create" />
         <item itemvalue="JUnit.BankRepositoryImplTest.create" />
         <item itemvalue="JUnit.UserRepositoryImplTest.create" />
-        <item itemvalue="JUnit.AtmRepositoryImplTest.create" />
       </list>
     </recent_temporary>
   </component>
@@ -496,14 +454,7 @@
       <workItem from="1557935484272" duration="12246000" />
       <workItem from="1557955208291" duration="14008000" />
       <workItem from="1558007998994" duration="15665000" />
-      <workItem from="1558288093368" duration="25869000" />
-    </task>
-    <task id="LOCAL-00003" summary="class add">
-      <created>1555281071019</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1555281071019</updated>
+      <workItem from="1558288093368" duration="26642000" />
     </task>
     <task id="LOCAL-00004" summary="class add">
       <created>1555281178700</created>
@@ -841,13 +792,17 @@
       <option name="project" value="LOCAL" />
       <updated>1558300551302</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="class add">
+      <created>1558342827017</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1558342827017</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BankRepositoryImplTest_create - 2019.05.16 at 03h 08m 55s.xml">
-      <configuration name="BankRepositoryImplTest.create" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BankServiceImplTest_create - 2019.05.16 at 03h 09m 47s.xml">
       <configuration name="BankServiceImplTest.create" configurationId="JUnit" />
     </history-entry>
@@ -875,9 +830,12 @@
     <history-entry file="SavingsServiceImplTest_create - 2019.05.16 at 18h 06m 52s.xml">
       <configuration name="SavingsServiceImplTest.create" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CheckControllerTest_testGetAllBanks - 2019.05.20 at 10h 11m 44s.xml">
+      <configuration name="CheckControllerTest.testGetAllBanks" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214823000" />
+    <option name="totallyTimeSpent" value="215596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1010,20 +968,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmTransiesController/UserControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/atmInforController/ElectricityControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="62" column="102" selection-start-line="62" selection-start-column="102" selection-end-line="62" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/bankInforController/BranchControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -1363,11 +1307,25 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ATMtrans/ATMApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="e#242#243#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="447" selection-start-line="447" selection-end-line="447" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ATMtrans/controller/accountController/CheckControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>
