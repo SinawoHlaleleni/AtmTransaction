@@ -1,9 +1,7 @@
-package ATMtrans.controller.bankInforController;
+package ATMtrans.controller.accountController;
 
-import ATMtrans.domain.atmTransies.User;
-import ATMtrans.domain.bankInfor.Bank;
-import ATMtrans.factory.factoryAtmTransies.UserFactory;
-import ATMtrans.factory.factoryBankInfor.BankFactory;
+import ATMtrans.domain.account.Check;
+import ATMtrans.factory.factoryAccount.CheckFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import static org.junit.Assert.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
-public class BankControllerTest {
+public class CheckControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -26,22 +24,22 @@ public class BankControllerTest {
     public void testGetAllBanks() {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-        ResponseEntity<String>respense = restTemplate.exchange(baseURL + "all",
+        ResponseEntity<String> respense = restTemplate.exchange(baseURL + "all",
                 HttpMethod.GET,entity,String.class);
         assertNotNull(respense.getBody());
     }
     @Test
-    public void testGetBankNames(){
-        Bank bank = restTemplate.getForObject( baseURL + "/bank/1",
-                Bank.class);
-        System.out.println(bank.getId());
-        assertNotNull( bank );
+    public void testGetCheckashAmount(){
+        Check check = restTemplate.getForObject( baseURL + "/check/1",
+                Check.class);
+        System.out.println(check.getId());
+        assertNotNull( check );
     }
 
     @Test
     public void testCreateBank(){
-        Bank bank = BankFactory.getName( "Standard Bank" );
-        ResponseEntity<Bank> postResponse = restTemplate.postForEntity( baseURL +"/create",bank,Bank.class );
+        Check check = CheckFactory.getAmount( 150);
+        ResponseEntity<Check> postResponse = restTemplate.postForEntity( baseURL +"/create",check,Check.class );
         assertNotNull( postResponse );
         assertNotNull( postResponse.getBody() );
     }
@@ -49,9 +47,9 @@ public class BankControllerTest {
     @Test
     public void testUpdatedBank(){
         int id = 1;
-        Bank bank = restTemplate.getForObject( baseURL + "/bank/" + id, Bank.class );
-        restTemplate.put( baseURL + "/AnotherBankName" + id, bank );
-        Bank updatedBank = restTemplate.getForObject( baseURL + "/bank/" + id, Bank.class );
+        Check check = restTemplate.getForObject( baseURL + "/check/" + id, Check.class );
+        restTemplate.put( baseURL + "/AnotherCheckAmount" + id, check );
+        Check updatedBank = restTemplate.getForObject( baseURL + "/check/" + id, Check.class );
         assertNotNull( updatedBank );
     }
 
@@ -59,11 +57,11 @@ public class BankControllerTest {
     @Test
     public void testDeleteBankDetails(){
         int id = 2;
-        Bank bank = restTemplate.getForObject( baseURL + "/BankId/" + id, Bank.class );
-        assertNotNull( bank );
-        restTemplate.delete( baseURL + "/bank/" + id );
+        Check check = restTemplate.getForObject( baseURL + "/CheckId/" + id, Check.class );
+        assertNotNull( check );
+        restTemplate.delete( baseURL + "/check/" + id );
         try{
-            bank = restTemplate.getForObject( baseURL + "/BankDetails/"+ id, Bank.class);
+            check = restTemplate.getForObject( baseURL + "/CheckDetails/"+ id, Check.class);
         }catch (final HttpClientErrorException e){
             assertEquals( e.getStatusCode(), HttpStatus.NOT_FOUND );
         }
