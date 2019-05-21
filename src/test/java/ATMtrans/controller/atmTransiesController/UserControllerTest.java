@@ -23,7 +23,7 @@ public class UserControllerTest {
     @Test
     public void testGetAllUser() {
        HttpHeaders headers = new HttpHeaders();
-        HttpEntity<String> entity = new HttpEntity<String>(null, headers);
+        HttpEntity<String> entity = new HttpEntity<String>("User", headers);
         ResponseEntity<String>response = restTemplate.exchange(baseURL + "/read/all",
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
