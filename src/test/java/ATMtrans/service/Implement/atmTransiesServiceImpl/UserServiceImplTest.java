@@ -18,52 +18,51 @@ public class UserServiceImplTest {
     private UserRepositoryImpl repository;
     private User user;
 
-    private User getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-
     @Before
     public void setUp() throws Exception {
+        this.repository= (UserRepositoryImpl) UserRepositoryImpl.getRepository();
         this.user= UserFactory.getUser("Sinawo", "000458g");
     }
 
     @Test
-    public void getAll() {
-        Set<User> user =this.repository.getAll();
-        System.out.println("In getall,all = " + user);
+    public void d_getAll() {
+        Set<User> all =this.repository.getAll();
+        System.out.println("In getall,all = " + all);
     }
 
     @Test
     public void create() {
         User created = this.repository.create(this.user);
-        System.out.println("the create, done =" + created);
+        System.out.println("the create, to be done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.user);
+        Assert.assertSame(created, this.user);
     }
 
     @Test
     public void update() {
-        String newUserName = "ABSAs";
-        User updated = new User.Builder().copy(getSaved()).userId(newUserName).build();
-        System.out.println("the update, done = " + updated );
-        this.repository.update(updated);
-        Assert.assertSame(newUserName,updated.getUserId());
+        String newUserName = "Unused user name";
+        User user = new User.Builder().userId(newUserName).build();
+        System.out.println("the updates,to be done = " + user );
+        User updated= this.repository.update(user);
+        System.out.println("the updates, done = " + updated );
+        Assert.assertEquals(newUserName,updated.getUserId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        User saved = getSaved();
-        this.repository.delete(saved.getUserId());
-        getAll();
+
+        this.repository.delete(user.getUserId());
+        d_getAll();
 
     }
 
     @Test
     public void read() {
-
-        User saved = getSaved();
-        User read = this.repository.read(saved.getUserId());
+        System.out.println("the read, done = " + user.getUserId() );
+        User read = this.repository.read(user.getUserId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(user,read);
     }
 }

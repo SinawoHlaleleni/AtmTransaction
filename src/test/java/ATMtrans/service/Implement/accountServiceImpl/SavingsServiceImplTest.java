@@ -16,23 +16,19 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SavingsServiceImplTest {
 
-private SavingRepositoryImpl repository;
-private Savings savings;
-
-private Savings getSaved(){
-    return this.repository.getAll().iterator().next();
-}
+    private SavingRepositoryImpl repository;
+    private Savings savings;
 
 
     @Before
     public void setUp() throws Exception {
-    this.repository = SavingRepositoryImpl.getRepository();
-    this.savings = SavingsFactory.getAmount( 300 );
+        this.repository= SavingRepositoryImpl.getRepository();
+        this.savings = SavingsFactory.getAmount( 500 );
     }
 
     @Test
     public void d_getAll() {
-        Set<Savings>savings = this.repository.getAll();
+        Set<Savings> savings = this.repository.getAll();
         System.out.println("In get all," + savings);
     }
 
@@ -41,31 +37,32 @@ private Savings getSaved(){
         Savings created = this.repository.create(this.savings);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.savings);
+        Assert.assertSame(created, this.savings);
     }
 
     @Test
     public void update() {
-        String newSavingsId = "002345";
-       Savings updated = new Savings.Builder().copy(getSaved()).Id(newSavingsId).build();
+        String newSavingId = "002345";
+        Savings updated = new Savings.Builder().Id(newSavingId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newSavingsId,updated.getId());
+        Assert.assertEquals(newSavingId,updated.getId());
+        d_getAll();
     }
+
     @Test
     public void delete() {
-    Savings saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(savings.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Savings saved = getSaved();
-        Savings read = this.repository.read(saved.getId());
-        System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
 
+        Savings read = this.repository.read(savings.getId());
+        System.out.println("the read, read = " + read);
+        d_getAll();
+        assertNotSame(read,savings);
     }
 
     @Test

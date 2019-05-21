@@ -18,19 +18,16 @@ public class BankServiceImplTest {
     private BankRepositoryImpl repository;
     private Bank bank;
 
-    private Bank getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-
     @Before
     public void setUp() throws Exception {
+        this.repository= BankRepositoryImpl.getRepository();
         this.bank= BankFactory.getName("ABSAS");
     }
 
     @Test
-    public void getAll() {
-        Set<Bank> bank =this.repository.getAll();
-        System.out.println("In getall,all = " + bank);
+    public void d_getAll() {
+        Set<Bank> all =this.repository.getAll();
+        System.out.println("In getall,all = " + all);
     }
 
     @Test
@@ -38,33 +35,32 @@ public class BankServiceImplTest {
         Bank created = this.repository.create(this.bank);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.bank);
+        Assert.assertSame(created, this.bank);
     }
 
     @Test
     public void update() {
 
-        String newBankName = "ABSAs";
-        Bank updated = new Bank.Builder().copy(getSaved()).Id(newBankName).build();
-        System.out.println("the update, done = " + updated );
-        this.repository.update(updated);
-        Assert.assertSame(newBankName,updated.getId());
+        String newBankName = "Unused bank name";
+        Bank bank = new Bank.Builder().Id(newBankName).build();
+        System.out.println("the update,to be done = " + bank );
+        Bank updated = this.repository.update(bank);
+        System.out.println("the updates, done = " + updated );
+        Assert.assertEquals(newBankName,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-
-        Bank saved = getSaved();
-        this.repository.delete(saved.getId());
-        getAll();
+        this.repository.delete(bank.getId());
+        d_getAll();
     }
 
     @Test
     public void read() {
-
-        Bank saved = getSaved();
-        Bank read = this.repository.read(saved.getId());
+        Bank read = this.repository.read(bank.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,bank);
     }
 }

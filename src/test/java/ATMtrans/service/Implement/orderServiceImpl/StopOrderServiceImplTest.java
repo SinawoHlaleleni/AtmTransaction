@@ -18,19 +18,15 @@ public  class StopOrderServiceImplTest {
     private StopOrderRepositoryImpl repository;
     private StopOrder stopOrder;
 
-    private StopOrder getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-
     @Before
     public void setUp() throws Exception {
-        this.stopOrder= StopOrderFactory.getAmount(50);
+        this.repository= (StopOrderRepositoryImpl) StopOrderRepositoryImpl.getRepository();
+        this.stopOrder = StopOrderFactory.getAmount( 1000 );
     }
-
     @Test
-    public void getAll() {
-        Set<StopOrder> stopOrder =this.repository.getAll();
-        System.out.println("In getall,all = " + stopOrder);
+    public void d_getAll() {
+        Set<StopOrder> stopOrder = this.repository.getAll();
+        System.out.println("In get all," + stopOrder);
     }
 
     @Test
@@ -38,33 +34,32 @@ public  class StopOrderServiceImplTest {
         StopOrder created = this.repository.create(this.stopOrder);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.stopOrder);
+        Assert.assertSame(created, this.stopOrder);
     }
 
     @Test
     public void update() {
-
-        String newBankName = "ABSAs";
-        StopOrder updated = new StopOrder.Builder().copy(getSaved()).Id(newBankName).build();
+        String newCashLimiteId = "002345";
+        StopOrder updated = new StopOrder.Builder().Id(newCashLimiteId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newBankName,updated.getId());
+        Assert.assertEquals(newCashLimiteId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
 
-        StopOrder saved = getSaved();
-        this.repository.delete(saved.getId());
-        getAll();
+        this.repository.delete(stopOrder.getId());
+        d_getAll();
     }
 
     @Test
     public void read() {
-
-        StopOrder saved = getSaved();
-        StopOrder read = this.repository.read(saved.getId());
+        StopOrder read = this.repository.read(stopOrder.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,stopOrder);
     }
+
 }

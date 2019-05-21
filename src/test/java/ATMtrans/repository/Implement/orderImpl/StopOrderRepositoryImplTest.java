@@ -16,11 +16,7 @@ public class StopOrderRepositoryImplTest {
 
     private StopOrderRepositoryImpl repository;
     private StopOrder stopOrder;
-/*
-    private StopOrder getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (StopOrderRepositoryImpl) StopOrderRepositoryImpl.getRepository();

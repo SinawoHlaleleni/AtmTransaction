@@ -17,9 +17,6 @@ public class CashTranferRepositoryImplTest {
     private CashTranferRepositoryImpl repository;
     private CashTransfer cashTransfer;
 
-   /* private CashTransfer getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {

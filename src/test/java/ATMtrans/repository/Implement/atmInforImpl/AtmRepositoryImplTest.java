@@ -18,11 +18,6 @@ public class AtmRepositoryImplTest {
     private AtmRepository repository;
     private Atm atm;
 
-   /* private Atm getSaved(){
-        Set<Atm> savedAtm=this.repository.getAll();
-        return savedAtm.iterator().next();
-    }
-*/
     @Before
     public void setUp() throws Exception {
         this.repository= AtmRepositoryImpl.getRepository();

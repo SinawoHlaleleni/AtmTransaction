@@ -16,11 +16,7 @@ public class TopupRepositoryImplTest {
 
     private TopupRepositoryImpl repository;
     private Topup topup;
-/*
-    private Topup getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (TopupRepositoryImpl) TopupRepositoryImpl.getRepository();

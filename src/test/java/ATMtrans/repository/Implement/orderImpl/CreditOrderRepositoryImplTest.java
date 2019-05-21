@@ -4,21 +4,19 @@ import ATMtrans.domain.orders.CreditOrder;
 import ATMtrans.factory.factoryOrders.CreditOrderFactory;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.Set;
 
 import static org.junit.Assert.*;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CreditOrderRepositoryImplTest {
 
     private CreditOrderRepositoryImpl repository;
     private CreditOrder creditOrder;
-   /* private CreditOrder getSaved() {
-        Set<CreditOrder> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
 
-    }*/
     @Before
     public void setUp() throws Exception {
         this.repository= (CreditOrderRepositoryImpl) CreditOrderRepositoryImpl.getRepository();

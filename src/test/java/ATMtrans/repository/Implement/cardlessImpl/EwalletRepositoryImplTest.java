@@ -16,11 +16,7 @@ public class EwalletRepositoryImplTest {
 
     private EwalletRepositoryImpl repository;
     private Ewallet ewallet;
-/*
-    private Ewallet getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (EwalletRepositoryImpl) EwalletRepositoryImpl.getRepository();

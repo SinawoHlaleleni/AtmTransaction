@@ -17,9 +17,6 @@ public class CashLimitRepositoryImplTest {
     private CashLimitRepositoryImpl repository;
     private CashLimit cashLimit;
 
-    /*private CashLimit getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -52,14 +49,12 @@ public class CashLimitRepositoryImplTest {
 
     @Test
     public void delete() {
-       // CashLimit saved = getSaved();
         this.repository.delete(cashLimit.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        //CashLimit saved = getSaved();
         CashLimit read = this.repository.read(cashLimit.getId());
         System.out.println("the read, read = " + read);
         d_getAll();

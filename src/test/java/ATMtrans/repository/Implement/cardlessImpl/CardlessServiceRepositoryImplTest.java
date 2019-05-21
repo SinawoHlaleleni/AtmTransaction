@@ -16,11 +16,7 @@ public class CardlessServiceRepositoryImplTest {
 
     private CardlessServiceRepositoryImpl repository;
     private CardlessService cardlessService;
-/*
-    private CardlessService getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= CardlessServiceRepositoryImpl.getRepository();

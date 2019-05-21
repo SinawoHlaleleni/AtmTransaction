@@ -17,9 +17,6 @@ public class StatementRepositoryImplTest {
     private StatementRepositoryImpl repository;
     private Statement statement;
 
-   /* private Statement getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {

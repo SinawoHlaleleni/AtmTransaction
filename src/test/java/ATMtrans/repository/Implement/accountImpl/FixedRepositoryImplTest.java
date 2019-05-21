@@ -17,10 +17,6 @@ public class FixedRepositoryImplTest {
     private FixedRepositoryImpl repository;
     private Fixed fixed;
 
-   /* private Fixed getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
     @Before
     public void setUp() throws Exception {
         this.repository= (FixedRepositoryImpl) FixedRepositoryImpl.getRepository();

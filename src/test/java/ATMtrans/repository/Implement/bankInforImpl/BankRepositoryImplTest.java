@@ -16,11 +16,7 @@ public class BankRepositoryImplTest {
 
     private BankRepositoryImpl repository;
     private Bank bank;
-/*
-    private Bank getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= BankRepositoryImpl.getRepository();

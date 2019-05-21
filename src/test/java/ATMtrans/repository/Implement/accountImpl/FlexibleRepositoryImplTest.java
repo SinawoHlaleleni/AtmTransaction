@@ -15,10 +15,6 @@ public class FlexibleRepositoryImplTest {
     private FlexibleRepositoryImpl repository;
     private Flexible flexible;
 
-   /* private Flexible getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
     @Before
     public void setUp() throws Exception {
         this.repository = (FlexibleRepositoryImpl) FlexibleRepositoryImpl.getRepository();

@@ -17,11 +17,7 @@ public class CheckRepositoryImplTest {
 
     private CheckRepositoryImpl repository;
     private Check check;
-/*
-    private Check getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (CheckRepositoryImpl) CheckRepositoryImpl.getRepository();

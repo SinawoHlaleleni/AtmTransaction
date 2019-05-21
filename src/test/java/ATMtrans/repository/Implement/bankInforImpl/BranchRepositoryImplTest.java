@@ -14,11 +14,7 @@ public class BranchRepositoryImplTest {
 
     private BranchRepositoryImpl repository;
     private Branch branch;
-  /*  private Branch getSaved() {
-        Set<Branch> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (BranchRepositoryImpl) BranchRepositoryImpl.getRepository();

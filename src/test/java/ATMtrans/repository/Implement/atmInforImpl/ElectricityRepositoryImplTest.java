@@ -17,9 +17,6 @@ public class ElectricityRepositoryImplTest {
     private ElectricityRepositoryImpl repository;
     private Electricity electricity;
 
-   /* private Electricity getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {

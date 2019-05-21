@@ -4,20 +4,19 @@ import ATMtrans.domain.atmTransies.Balance;
 import ATMtrans.factory.factoryAtmTransies.BalanceFactory;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.Set;
 
 import static org.junit.Assert.*;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class BalanceRepositoryImplTest {
 
     private BalanceRepositoryImpl repository;
     private Balance balance;
-    /*private Balance getSaved() {
-        Set<Balance> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
-    }*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= (BalanceRepositoryImpl) BalanceRepositoryImpl.getRepository();

@@ -4,23 +4,19 @@ import ATMtrans.domain.atmTransies.Deposit;
 import ATMtrans.factory.factoryAtmTransies.DepositFactory;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.Set;
 
 import static org.junit.Assert.*;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DepositRepositoryImplTest {
 
     private DepositRepositoryImpl repository;
     private Deposit deposit;
 
-    /*private Deposit getSaved() {
-
-        Set<Deposit> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
-
-    }*/
     @Before
     public void setUp() throws Exception {
         this.repository= (DepositRepositoryImpl) DepositRepositoryImpl.getRepository();

@@ -17,9 +17,6 @@ public class SavingRepositoryImplTest {
     private SavingRepositoryImpl repository;
     private Savings savings;
 
-   /* private Savings getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -53,14 +50,13 @@ public class SavingRepositoryImplTest {
 
     @Test
     public void delete() {
-        //Savings saved = getSaved();
         this.repository.delete(savings.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        //Savings saved = getSaved();
+
         Savings read = this.repository.read(savings.getId());
         System.out.println("the read, read = " + read);
         d_getAll();

@@ -17,10 +17,6 @@ public class AirtimeRepositoryImplTest {
     private AirtimeRepositoryImpl repository;
     private Airtime airtime;
 
-    /*private Airtime getSaved(){
-        return this.repository.getAll().iterator().next();
-    }*/
-
     @Before
     public void setUp() throws Exception {
         this.repository= (AirtimeRepositoryImpl) AirtimeRepositoryImpl.getRepository();
@@ -52,14 +48,12 @@ public class AirtimeRepositoryImplTest {
 
     @Test
     public void delete() {
-        //Airtime saved = getSaved();
         this.repository.delete(airtime.gettId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        //Airtime saved = getSaved();
         Airtime read = this.repository.read(airtime.gettId());
         System.out.println("the read, read = " + read);
         d_getAll();

@@ -2,24 +2,21 @@ package ATMtrans.repository.Implement.cardlessImpl;
 
 import ATMtrans.domain.cardless.CardlessWithdrawal;
 import ATMtrans.factory.factoryCardless.CardlessWithdrawalFactory;
-import ATMtrans.repository.repositoryCardless.CardlessWithdrawalRepository;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.Set;
 
 import static org.junit.Assert.*;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CardlessWithdrawalRepositoryImplTest {
 
     private CardlessWithdrawalRepositoryImpl repository;
     private CardlessWithdrawal cardlessWithdrawal;
-   /* private CardlessWithdrawal getSaved() {
-        Set<CardlessWithdrawal> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
-    }
-*/
+
     @Before
     public void setUp() throws Exception {
         this.repository= CardlessWithdrawalRepositoryImpl.getRepository();

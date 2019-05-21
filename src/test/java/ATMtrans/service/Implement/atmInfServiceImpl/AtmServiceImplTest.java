@@ -3,6 +3,7 @@ package ATMtrans.service.Implement.atmInfServiceImpl;
 import ATMtrans.domain.atmInfor.Atm;
 import ATMtrans.factory.factoryAtmInfor.AtmFactory;
 import ATMtrans.repository.Implement.atmInforImpl.AtmRepositoryImpl;
+import ATMtrans.repository.repositoryAtmInf.AtmRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -15,23 +16,20 @@ import static org.junit.Assert.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AtmServiceImplTest {
 
-    private AtmRepositoryImpl repository;
+    private AtmRepository repository;
     private Atm atm;
 
-    private Atm getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
     @Before
-    public  void setUp()throws Exception{
-        this.repository= (AtmRepositoryImpl) AtmRepositoryImpl.getRepository();
+    public void setUp() throws Exception {
+        this.repository= AtmRepositoryImpl.getRepository();
         this.atm= AtmFactory.getType("ABSAS");
     }
 
     @Test
     public void d_getAll() {
 
-        Set<Atm> atm =this.repository.getAll();
-        System.out.println("In getall,all = " + atm);
+        Set<Atm> all =this.repository.getAll();
+        System.out.println("In getall,all = " + all);
     }
 
     @Test
@@ -39,32 +37,34 @@ public class AtmServiceImplTest {
         Atm created = this.repository.create(this.atm);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.atm);
+        Assert.assertSame(created, this.atm);
     }
 
     @Test
     public void update() {
-        String newAtmName = "ABSAs";
-        Atm updated = new Atm.Builder().copy(getSaved()).Id(newAtmName).build();
-        System.out.println("the update, done = " + updated );
-        this.repository.update(updated);
-        Assert.assertSame(newAtmName,updated.getId());
+        String newAtmName = "Unused Test name";
+        Atm atm = new Atm.Builder().Id(newAtmName).build();
+        System.out.println("the update, to be done = " + atm );
+        Atm update = this.repository.update(atm);
+        System.out.println("the update, done = " + update );
+        Assert.assertEquals(newAtmName,atm.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Atm saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(atm.getId());
         d_getAll();
 
     }
 
     @Test
     public void read() {
-        Atm saved = getSaved();
-        Atm read = this.repository.read(saved.getId());
+        System.out.println("the read, Atm read = " + atm.getId());
+        Atm read = this.repository.read(atm.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotEquals(atm,read);
 
     }
 }

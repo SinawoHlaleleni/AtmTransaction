@@ -4,20 +4,18 @@ import ATMtrans.domain.atmTransies.Withdrawal;
 import ATMtrans.factory.factoryAtmTransies.WithdrawalFactory;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import java.util.Set;
 
 import static org.junit.Assert.*;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class WithdrawalRepositoryImplTest {
 
     private WithdrawalRepositoryImpl repository;
     private Withdrawal withdrawal;
-   /* private Withdrawal getSaved() {
-        Set<Withdrawal> saved = this.repository.getAll();
-        return this.repository.getAll().iterator().next();
-    }*/
 
     @Before
     public void setUp() throws Exception {
