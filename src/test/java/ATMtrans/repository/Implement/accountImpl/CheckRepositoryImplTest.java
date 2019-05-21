@@ -50,14 +50,14 @@ public class CheckRepositoryImplTest {
 
     @Test
     public void delete() {
-        //Check saved = getSaved();
+
         this.repository.delete(check.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        //Check saved = getSaved();
+
         Check read = this.repository.read(check.getId());
         System.out.println("the read, read = " + read);
         d_getAll();
