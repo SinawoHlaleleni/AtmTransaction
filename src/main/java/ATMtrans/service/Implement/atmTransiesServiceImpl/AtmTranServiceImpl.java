@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
-public class AtmTranServiceImpl implements AtmTranService {
-
+public class AtmTranServiceImpl  {
+/*
     public static AtmTranServiceImpl service = null;
     private AtmTranRepository repository;
 
@@ -44,5 +44,5 @@ public class AtmTranServiceImpl implements AtmTranService {
     @Override
     public AtmTran read(Double aDouble) {
         return this.repository.read(aDouble);
-    }
+    }*/
 }

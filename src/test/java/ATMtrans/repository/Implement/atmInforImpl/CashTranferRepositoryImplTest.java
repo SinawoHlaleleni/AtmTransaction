@@ -17,9 +17,9 @@ public class CashTranferRepositoryImplTest {
     private CashTranferRepositoryImpl repository;
     private CashTransfer cashTransfer;
 
-    private CashTransfer getSaved(){
+   /* private CashTransfer getSaved(){
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -37,31 +37,31 @@ public class CashTranferRepositoryImplTest {
         CashTransfer created = this.repository.create(this.cashTransfer);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.cashTransfer);
+        Assert.assertSame(created, this.cashTransfer);
     }
 
     @Test
     public void update() {
         String newCashLimiteId = "002345";
-        CashTransfer updated = new CashTransfer.Builder().copy(getSaved()).Id(newCashLimiteId).build();
+        CashTransfer updated = new CashTransfer.Builder().Id(newCashLimiteId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newCashLimiteId,updated.getId());
+        Assert.assertEquals(newCashLimiteId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        CashTransfer saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(cashTransfer.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        CashTransfer saved = getSaved();
-        CashTransfer read = this.repository.read(saved.getId());
+        CashTransfer read = this.repository.read(cashTransfer.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,cashTransfer);
     }
 
     @Test

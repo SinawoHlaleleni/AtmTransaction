@@ -17,9 +17,9 @@ public class SavingRepositoryImplTest {
     private SavingRepositoryImpl repository;
     private Savings savings;
 
-    private Savings getSaved(){
+   /* private Savings getSaved(){
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -38,31 +38,33 @@ public class SavingRepositoryImplTest {
         Savings created = this.repository.create(this.savings);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.savings);
+        Assert.assertSame(created, this.savings);
     }
 
     @Test
     public void update() {
         String newSavingId = "002345";
-        Savings updated = new Savings.Builder().copy(getSaved()).Id(newSavingId).build();
+        Savings updated = new Savings.Builder().Id(newSavingId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newSavingId,updated.getId());
+        Assert.assertEquals(newSavingId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Savings saved = getSaved();
-        this.repository.delete(saved.getId());
+        //Savings saved = getSaved();
+        this.repository.delete(savings.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Savings saved = getSaved();
-        Savings read = this.repository.read(saved.getId());
+        //Savings saved = getSaved();
+        Savings read = this.repository.read(savings.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,savings);
     }
 
     @Test

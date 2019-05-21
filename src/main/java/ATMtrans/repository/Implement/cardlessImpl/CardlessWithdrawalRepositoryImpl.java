@@ -2,12 +2,9 @@ package ATMtrans.repository.Implement.cardlessImpl;
 
 import ATMtrans.domain.cardless.CardlessWithdrawal;
 import ATMtrans.repository.repositoryCardless.CardlessWithdrawalRepository;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 @Repository
 public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepository {
@@ -25,7 +22,7 @@ public class CardlessWithdrawalRepositoryImpl implements CardlessWithdrawalRepos
                 .orElse( null );
     }
 
-    public static CardlessWithdrawalRepository getRepository(){
+    public static CardlessWithdrawalRepositoryImpl getRepository(){
         if (repository == null) repository = new CardlessWithdrawalRepositoryImpl();
         return repository;
     }

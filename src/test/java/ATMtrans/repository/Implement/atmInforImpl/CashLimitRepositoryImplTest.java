@@ -17,9 +17,9 @@ public class CashLimitRepositoryImplTest {
     private CashLimitRepositoryImpl repository;
     private CashLimit cashLimit;
 
-    private CashLimit getSaved(){
+    /*private CashLimit getSaved(){
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -37,31 +37,33 @@ public class CashLimitRepositoryImplTest {
         CashLimit created = this.repository.create(this.cashLimit);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.cashLimit);
+        Assert.assertSame(created, this.cashLimit);
     }
 
     @Test
     public void update() {
         String newCashLimiteId = "002345";
-        CashLimit updated = new CashLimit.Builder().copy(getSaved()).Id(newCashLimiteId).build();
+        CashLimit updated = new CashLimit.Builder().Id(newCashLimiteId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newCashLimiteId,updated.getId());
+        Assert.assertEquals(newCashLimiteId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        CashLimit saved = getSaved();
-        this.repository.delete(saved.getId());
+       // CashLimit saved = getSaved();
+        this.repository.delete(cashLimit.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        CashLimit saved = getSaved();
-        CashLimit read = this.repository.read(saved.getId());
+        //CashLimit saved = getSaved();
+        CashLimit read = this.repository.read(cashLimit.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,cashLimit);
     }
 
 

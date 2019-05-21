@@ -16,14 +16,14 @@ public class CardlessServiceRepositoryImplTest {
 
     private CardlessServiceRepositoryImpl repository;
     private CardlessService cardlessService;
-
+/*
     private CardlessService getSaved(){
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
-        this.repository= (CardlessServiceRepositoryImpl) CardlessServiceRepositoryImpl.getRepository();
+        this.repository= CardlessServiceRepositoryImpl.getRepository();
         this.cardlessService = CardlessServiceFactory.getType( "..." );
     }
     @Test
@@ -37,31 +37,31 @@ public class CardlessServiceRepositoryImplTest {
         CardlessService created = this.repository.create(this.cardlessService);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.cardlessService);
+        Assert.assertSame(created, this.cardlessService);
     }
 
     @Test
     public void update() {
         String newCardlId = "002345";
-        CardlessService updated = new CardlessService.Builder().copy(getSaved()).Id(newCardlId).build();
+        CardlessService updated = new CardlessService.Builder().Id(newCardlId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newCardlId,updated.getId());
+        Assert.assertEquals(newCardlId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        CardlessService saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(cardlessService.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        CardlessService saved = getSaved();
-        CardlessService read = this.repository.read(saved.getId());
+        CardlessService read = this.repository.read(cardlessService.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,cardlessService);
     }
 
     @Test

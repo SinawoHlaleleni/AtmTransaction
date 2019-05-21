@@ -17,9 +17,9 @@ public class ElectricityRepositoryImplTest {
     private ElectricityRepositoryImpl repository;
     private Electricity electricity;
 
-    private Electricity getSaved(){
+   /* private Electricity getSaved(){
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -37,30 +37,30 @@ public class ElectricityRepositoryImplTest {
         Electricity created = this.repository.create(this.electricity);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.electricity);
+        Assert.assertSame(created, this.electricity);
     }
 
     @Test
     public void update() {
         String newElectrId = "002345";
-        Electricity updated = new Electricity.Builder().copy(getSaved()).Id(newElectrId).build();
+        Electricity updated = new Electricity.Builder().Id(newElectrId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newElectrId,updated.getId());
+        Assert.assertEquals(newElectrId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Electricity saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(electricity.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Electricity saved = getSaved();
-        Electricity read = this.repository.read(saved.getId());
+        Electricity read = this.repository.read(electricity.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,electricity);
     }
 }

@@ -15,15 +15,15 @@ public class DepositRepositoryImplTest {
     private DepositRepositoryImpl repository;
     private Deposit deposit;
 
-    private Deposit getSaved() {
+    /*private Deposit getSaved() {
 
         Set<Deposit> saved = this.repository.getAll();
         return this.repository.getAll().iterator().next();
 
-    }
+    }*/
     @Before
     public void setUp() throws Exception {
-
+        this.repository= (DepositRepositoryImpl) DepositRepositoryImpl.getRepository();
         this.deposit= DepositFactory.getAmount(1500);
     }
 
@@ -38,7 +38,7 @@ public class DepositRepositoryImplTest {
     public void create() {
         Deposit created = this.repository.create(this.deposit);
         System.out.println("the create, to be done =" + created);
-        d_getAll();
+        Assert.assertNotNull(created);
         Assert.assertSame(created, this.deposit);
 
     }
@@ -47,30 +47,27 @@ public class DepositRepositoryImplTest {
     public void update() {
 
         String newUserName = "Unused user name";
-        Deposit deposit = new Deposit.Builder().copy(getSaved()).Id(newUserName).build();
+        Deposit deposit = new Deposit.Builder().Id(newUserName).build();
         System.out.println("the updates,to be done = " + deposit );
         Deposit updated= this.repository.update(deposit);
         System.out.println("the updates, done = " + updated );
-        Assert.assertSame(newUserName,updated.getId());
+        Assert.assertEquals(newUserName,updated.getId());
         d_getAll();
     }
 
     @Test
     public void delete() {
-        Deposit saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(deposit.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-
-        Deposit saved = getSaved();
-        System.out.println("the read, done = " + saved.getId() );
-        Deposit read = this.repository.read(saved.getId());
+        System.out.println("the read, done = " + deposit.getId() );
+        Deposit read = this.repository.read(deposit.getId());
         System.out.println("the read, read = " + read);
         d_getAll();
-        Assert.assertEquals(saved,read);
+        assertNotSame(deposit,read);
 
     }
 

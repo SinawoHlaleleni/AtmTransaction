@@ -17,9 +17,9 @@ public class AirtimeRepositoryImplTest {
     private AirtimeRepositoryImpl repository;
     private Airtime airtime;
 
-    private Airtime getSaved(){
+    /*private Airtime getSaved(){
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
@@ -37,29 +37,31 @@ public class AirtimeRepositoryImplTest {
         Airtime created = this.repository.create(this.airtime);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.airtime);
+        Assert.assertSame(created, this.airtime);
     }
 
     @Test
     public void update() {
         String newEtymId = "002345";
-        Airtime updated = new Airtime.Builder().copy(getSaved()).tId(newEtymId).build();
+        Airtime updated = new Airtime.Builder().tId(newEtymId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newEtymId,updated.gettId());
+        Assert.assertEquals(newEtymId,updated.gettId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Airtime saved = getSaved();
-        this.repository.delete(saved.gettId());
+        //Airtime saved = getSaved();
+        this.repository.delete(airtime.gettId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Airtime saved = getSaved();
-        Airtime read = this.repository.read(saved.gettId());
+        //Airtime saved = getSaved();
+        Airtime read = this.repository.read(airtime.gettId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,airtime);
     }}

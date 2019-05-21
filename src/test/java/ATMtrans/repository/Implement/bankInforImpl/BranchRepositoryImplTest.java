@@ -14,14 +14,14 @@ public class BranchRepositoryImplTest {
 
     private BranchRepositoryImpl repository;
     private Branch branch;
-    private Branch getSaved() {
+  /*  private Branch getSaved() {
         Set<Branch> saved = this.repository.getAll();
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
-
+        this.repository= (BranchRepositoryImpl) BranchRepositoryImpl.getRepository();
         this.branch= BranchFactory.getName("Cnr cpt Absa");
     }
 
@@ -36,7 +36,7 @@ public class BranchRepositoryImplTest {
 
         Branch created = this.repository.create(this.branch);
         System.out.println("the create, to be done =" + created);
-        d_getAll();
+        Assert.assertNotNull(created);
         Assert.assertSame(created, this.branch);
 
     }
@@ -45,32 +45,29 @@ public class BranchRepositoryImplTest {
     public void update() {
 
         String newUserName = "Unused user name";
-        Branch branch = new Branch.Builder().copy(getSaved()).Id(newUserName).build();
+        Branch branch = new Branch.Builder().Id(newUserName).build();
         System.out.println("the updates,to be done = " + branch );
         Branch updated= this.repository.update(branch);
         System.out.println("the updates, done = " + updated );
-        Assert.assertSame(newUserName,updated.getId());
+        Assert.assertEquals(newUserName,updated.getId());
         d_getAll();
 
     }
 
     @Test
     public void delete() {
-        Branch saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(branch.getId());
         d_getAll();
 
     }
 
     @Test
     public void read() {
-
-        Branch saved = getSaved();
-        System.out.println("the read, done = " + saved.getId() );
-        Branch read = this.repository.read(saved.getId());
+        System.out.println("the read, done = " + branch.getId() );
+        Branch read = this.repository.read(branch.getId());
         System.out.println("the read, read = " + read);
         d_getAll();
-        Assert.assertEquals(saved,read);
+        assertNotSame(branch,read);
 
     }
 }

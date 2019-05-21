@@ -16,13 +16,14 @@ public class UserRepositoryImplTest {
 
     private UserRepositoryImpl repository;
     private User user;
-    private User getSaved(){
+    /*private User getSaved(){
         Set<User>saved = this.repository.getAll();
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
+        this.repository= (UserRepositoryImpl) UserRepositoryImpl.getRepository();
         this.user= UserFactory.getUser("Sinawo", "000458g");
     }
 
@@ -36,37 +37,35 @@ public class UserRepositoryImplTest {
     public void create() {
         User created = this.repository.create(this.user);
         System.out.println("the create, to be done =" + created);
-        d_getAll();
+        Assert.assertNotNull(created);
         Assert.assertSame(created, this.user);
     }
 
     @Test
     public void update() {
         String newUserName = "Unused user name";
-        User user = new User.Builder().copy(getSaved()).userId(newUserName).build();
+        User user = new User.Builder().userId(newUserName).build();
         System.out.println("the updates,to be done = " + user );
         User updated= this.repository.update(user);
         System.out.println("the updates, done = " + updated );
-        Assert.assertSame(newUserName,updated.getUserId());
+        Assert.assertEquals(newUserName,updated.getUserId());
         d_getAll();
     }
 
     @Test
     public void delete() {
-        User saved = getSaved();
-        this.repository.delete(saved.getUserId());
+
+        this.repository.delete(user.getUserId());
         d_getAll();
 
     }
 
     @Test
     public void read() {
-
-        User saved = getSaved();
-        System.out.println("the read, done = " + saved.getUserId() );
-        User read = this.repository.read(saved.getUserId());
+        System.out.println("the read, done = " + user.getUserId() );
+        User read = this.repository.read(user.getUserId());
         System.out.println("the read, read = " + read);
         d_getAll();
-        Assert.assertEquals(saved,read);
+        assertNotSame(user,read);
     }
 }

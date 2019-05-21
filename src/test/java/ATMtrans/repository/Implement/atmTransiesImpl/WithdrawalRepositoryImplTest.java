@@ -14,13 +14,14 @@ public class WithdrawalRepositoryImplTest {
 
     private WithdrawalRepositoryImpl repository;
     private Withdrawal withdrawal;
-    private Withdrawal getSaved() {
+   /* private Withdrawal getSaved() {
         Set<Withdrawal> saved = this.repository.getAll();
         return this.repository.getAll().iterator().next();
-    }
+    }*/
 
     @Before
     public void setUp() throws Exception {
+        this.repository= (WithdrawalRepositoryImpl) WithdrawalRepositoryImpl.getRepository();
         this.withdrawal= WithdrawalFactory.getAmount(1500);
     }
 
@@ -34,7 +35,7 @@ public class WithdrawalRepositoryImplTest {
     public void create() {
         Withdrawal created = this.repository.create(this.withdrawal);
         System.out.println("the create, to be done =" + created);
-        d_getAll();
+        Assert.assertNotNull(created);
         Assert.assertSame(created, this.withdrawal);
     }
 
@@ -42,31 +43,28 @@ public class WithdrawalRepositoryImplTest {
     public void update() {
 
         String newUserName = "Unused user name";
-        Withdrawal withdrawal = new Withdrawal.Builder().copy(getSaved()).Id(newUserName).build();
+        Withdrawal withdrawal = new Withdrawal.Builder().Id(newUserName).build();
         System.out.println("the updates,to be done = " + withdrawal );
         Withdrawal updated= this.repository.update(withdrawal);
         System.out.println("the updates, done = " + updated );
-        Assert.assertSame(newUserName,updated.getId());
+        Assert.assertEquals(newUserName,updated.getId());
         d_getAll();
     }
 
     @Test
     public void delete() {
-
-        Withdrawal saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(withdrawal.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
 
-        Withdrawal saved = getSaved();
-        System.out.println("the read, done = " + saved.getId() );
-        Withdrawal read = this.repository.read(saved.getId());
+        System.out.println("the read, done = " + withdrawal.getId() );
+        Withdrawal read = this.repository.read(withdrawal.getId());
         System.out.println("the read, read = " + read);
         d_getAll();
-        Assert.assertEquals(saved,read);
+        assertNotSame(withdrawal,read);
     }
 
     @Test

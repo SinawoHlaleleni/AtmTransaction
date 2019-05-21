@@ -15,13 +15,13 @@ public class FlexibleRepositoryImplTest {
     private FlexibleRepositoryImpl repository;
     private Flexible flexible;
 
-    private Flexible getSaved(){
+   /* private Flexible getSaved(){
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
-        this.flexible = (Flexible) FlexibleRepositoryImpl.getRepository();
+        this.repository = (FlexibleRepositoryImpl) FlexibleRepositoryImpl.getRepository();
         this.flexible = FlexibleFactory.getAmount( 800 );
     }
 
@@ -36,31 +36,33 @@ public class FlexibleRepositoryImplTest {
         Flexible created = this.repository.create(this.flexible);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.flexible);
+        Assert.assertSame(created, this.flexible);
     }
 
     @Test
     public void update() {
         String newFlexibleId = "002345";
-        Flexible updated = new Flexible.Builder().copy(getSaved()).Id(newFlexibleId).build();
+        Flexible updated = new Flexible.Builder().Id(newFlexibleId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newFlexibleId,updated.getId());
+        Assert.assertEquals(newFlexibleId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Flexible saved = getSaved();
-        this.repository.delete(saved.getId());
+        //Flexible saved = getSaved();
+        this.repository.delete(flexible.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Flexible saved = getSaved();
-        Flexible read = this.repository.read(saved.getId());
+        //Flexible saved = getSaved();
+        Flexible read = this.repository.read(flexible.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+       assertNotSame(read,flexible);
     }
 
     @Test

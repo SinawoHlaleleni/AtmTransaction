@@ -2,7 +2,6 @@ package ATMtrans.repository.Implement.orderImpl;
 
 import ATMtrans.domain.orders.StopOrder;
 import ATMtrans.factory.factoryOrders.StopOrderFactory;
-import ATMtrans.repository.Implement.accountImpl.SavingRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -16,16 +15,16 @@ import static org.junit.Assert.*;
 public class StopOrderRepositoryImplTest {
 
     private StopOrderRepositoryImpl repository;
-    private StopOrder cashLimit;
-
+    private StopOrder stopOrder;
+/*
     private StopOrder getSaved(){
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
         this.repository= (StopOrderRepositoryImpl) StopOrderRepositoryImpl.getRepository();
-        this.cashLimit = StopOrderFactory.getAmount( 1000 );
+        this.stopOrder = StopOrderFactory.getAmount( 1000 );
     }
     @Test
     public void d_getAll() {
@@ -35,34 +34,35 @@ public class StopOrderRepositoryImplTest {
 
     @Test
     public void create() {
-        StopOrder created = this.repository.create(this.cashLimit);
+        StopOrder created = this.repository.create(this.stopOrder);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.cashLimit);
+        Assert.assertSame(created, this.stopOrder);
     }
 
     @Test
     public void update() {
         String newCashLimiteId = "002345";
-        StopOrder updated = new StopOrder.Builder().copy(getSaved()).Id(newCashLimiteId).build();
+        StopOrder updated = new StopOrder.Builder().Id(newCashLimiteId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newCashLimiteId,updated.getId());
+        Assert.assertEquals(newCashLimiteId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        StopOrder saved = getSaved();
-        this.repository.delete(saved.getId());
+
+        this.repository.delete(stopOrder.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        StopOrder saved = getSaved();
-        StopOrder read = this.repository.read(saved.getId());
+        StopOrder read = this.repository.read(stopOrder.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,stopOrder);
     }
 
     @Test

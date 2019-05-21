@@ -16,11 +16,11 @@ public class TopupRepositoryImplTest {
 
     private TopupRepositoryImpl repository;
     private Topup topup;
-
+/*
     private Topup getSaved(){
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
         this.repository= (TopupRepositoryImpl) TopupRepositoryImpl.getRepository();
@@ -37,31 +37,31 @@ public class TopupRepositoryImplTest {
         Topup created = this.repository.create(this.topup);
         System.out.println("the create, done =" + created);
         Assert.assertNotNull(created);
-        Assert.assertNotSame(created, this.topup);
+        Assert.assertSame(created, this.topup);
     }
 
     @Test
     public void update() {
         String newTopId = "002345";
-        Topup updated = new Topup.Builder().copy(getSaved()).Id(newTopId).build();
+        Topup updated = new Topup.Builder().Id(newTopId).build();
         System.out.println("the update, done = " + updated );
         this.repository.update(updated);
-        Assert.assertSame(newTopId,updated.getId());
+        Assert.assertEquals(newTopId,updated.getId());
+        d_getAll();
     }
 
     @Test
     public void delete() {
-        Topup saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(topup.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-        Topup saved = getSaved();
-        Topup read = this.repository.read(saved.getId());
+        Topup read = this.repository.read(topup.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,topup);
     }
 
     @Test

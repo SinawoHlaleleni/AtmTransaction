@@ -16,13 +16,14 @@ public class BankRepositoryImplTest {
 
     private BankRepositoryImpl repository;
     private Bank bank;
-
+/*
     private Bank getSaved(){
         return this.repository.getAll().iterator().next();
     }
-
+*/
     @Before
     public void setUp() throws Exception {
+        this.repository= BankRepositoryImpl.getRepository();
         this.bank= BankFactory.getName("ABSAS");
     }
 
@@ -36,7 +37,7 @@ public class BankRepositoryImplTest {
     public void create() {
         Bank created = this.repository.create(this.bank);
         System.out.println("the create, done =" + created);
-        d_getAll();
+        Assert.assertNotNull(created);
         Assert.assertSame(created, this.bank);
     }
 
@@ -44,28 +45,25 @@ public class BankRepositoryImplTest {
     public void update() {
 
         String newBankName = "Unused bank name";
-        Bank bank = new Bank.Builder().copy(getSaved()).Id(newBankName).build();
+        Bank bank = new Bank.Builder().Id(newBankName).build();
         System.out.println("the update,to be done = " + bank );
         Bank updated = this.repository.update(bank);
         System.out.println("the updates, done = " + updated );
-        Assert.assertSame(newBankName,updated.getId());
+        Assert.assertEquals(newBankName,updated.getId());
         d_getAll();
     }
 
     @Test
     public void delete() {
-
-        Bank saved = getSaved();
-        this.repository.delete(saved.getId());
+        this.repository.delete(bank.getId());
         d_getAll();
     }
 
     @Test
     public void read() {
-
-        Bank saved = getSaved();
-        Bank read = this.repository.read(saved.getId());
+        Bank read = this.repository.read(bank.getId());
         System.out.println("the read, read = " + read);
-        Assert.assertSame(read,saved);
+        d_getAll();
+        assertNotSame(read,bank);
     }
 }
