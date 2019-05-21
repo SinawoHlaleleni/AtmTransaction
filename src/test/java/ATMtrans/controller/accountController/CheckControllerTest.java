@@ -29,15 +29,15 @@ public class CheckControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Test
-    public void testGetCheckAmount(){
+    @Ignore
+    public void testGetCheckashAmount(){
         Check check = restTemplate.getForObject( baseURL + "/check/1",
                 Check.class);
         System.out.println(check.getId());
         assertNotNull( check );
     }
 
-    @Test
+    @Ignore
     public void testCreateBank(){
         Check check = CheckFactory.getAmount( 150);
         ResponseEntity<Check> postResponse = restTemplate.postForEntity( baseURL +"/create",check,Check.class );
@@ -45,7 +45,7 @@ public class CheckControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Test
+    @Ignore
     public void testUpdatedBank(){
         int id = 1;
         Check check = restTemplate.getForObject( baseURL + "/check/" + id, Check.class );
@@ -55,7 +55,7 @@ public class CheckControllerTest {
     }
 
 
-    @Test
+    @Ignore
     public void testDeleteBankDetails(){
         int id = 2;
         Check check = restTemplate.getForObject( baseURL + "/CheckId/" + id, Check.class );
