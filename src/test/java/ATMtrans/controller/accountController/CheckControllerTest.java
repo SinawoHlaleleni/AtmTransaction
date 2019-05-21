@@ -19,18 +19,18 @@ public class CheckControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private String baseURL="http://localhost:8080/Bank";
+    private String baseURL="http://localhost:8080/Check";
 
     @Test
     public void testGetAllCheck() {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-        ResponseEntity<String> respense = restTemplate.exchange(baseURL + "all",
+        ResponseEntity<String> response = restTemplate.exchange(baseURL + "all",
                 HttpMethod.GET,entity,String.class);
-        assertNotNull(respense.getBody());
+        assertNotNull(response.getBody());
     }
-    @Ignore
-    public void testGetCheckashAmount(){
+    @Test
+    public void testGetCheckAmount(){
         Check check = restTemplate.getForObject( baseURL + "/check/1",
                 Check.class);
         System.out.println(check.getId());
@@ -45,7 +45,7 @@ public class CheckControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedBank(){
         int id = 1;
         Check check = restTemplate.getForObject( baseURL + "/check/" + id, Check.class );
@@ -55,7 +55,7 @@ public class CheckControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testDeleteBankDetails(){
         int id = 2;
         Check check = restTemplate.getForObject( baseURL + "/CheckId/" + id, Check.class );
