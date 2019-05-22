@@ -29,14 +29,14 @@ public class ElectricityControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetElectricById(){
         Electricity electricity = restTemplate.getForObject( baseURL + "/electricity/1", Electricity.class);
         System.out.println(electricity.getId());
         assertNotNull( electricity );
     }
 
-    @Ignore
+    @Test
     public void testCreateElectricity(){
         Electricity electricity = ElectricityFactory.getAmount( 70);
         ResponseEntity<Electricity> postResponse = restTemplate.postForEntity( baseURL +"/create",electricity,Electricity.class );
@@ -44,7 +44,7 @@ public class ElectricityControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedElectricity(){
         int id = 1;
         Electricity electricity = restTemplate.getForObject( baseURL + "/electricity/" + id, Electricity.class );
@@ -53,7 +53,7 @@ public class ElectricityControllerTest {
         assertNotNull( updatedElectr );
     }
 
-    @Ignore
+    @Test
     public void testDeleteElectricityDetails(){
         int id = 2;
         Electricity electricity = restTemplate.getForObject( baseURL + "/ElectricityId/" + id, Electricity.class );

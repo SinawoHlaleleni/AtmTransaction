@@ -29,7 +29,7 @@ public class FixedControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(respense.getBody());
     }
-    @Ignore
+    @Test
     public void testGetFixedAmount(){
         Fixed fixed = restTemplate.getForObject( baseURL + "/fixed/1",
                 Fixed.class);

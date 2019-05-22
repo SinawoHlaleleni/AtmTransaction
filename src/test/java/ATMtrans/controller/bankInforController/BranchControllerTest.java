@@ -29,14 +29,14 @@ public class BranchControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetBranchById(){
         Branch branch = restTemplate.getForObject( baseURL + "/branch/1", Branch.class);
         System.out.println(branch.getId());
         assertNotNull( branch );
     }
 
-    @Ignore
+    @Test
     public void testCreateBranch(){
         Branch branch = BranchFactory.getName( "Blvl main road " );
         ResponseEntity<Branch> postResponse = restTemplate.postForEntity( baseURL +"/create",branch,Branch.class );
@@ -44,7 +44,7 @@ public class BranchControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedBranch(){
         int id = 1;
         Branch branch = restTemplate.getForObject( baseURL + "/branch/" + id, Branch.class );
@@ -54,7 +54,7 @@ public class BranchControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testDeleteUserDetails(){
         int id = 2;
         Branch branch = restTemplate.getForObject( baseURL + "/BranchId/" + id, Branch.class );

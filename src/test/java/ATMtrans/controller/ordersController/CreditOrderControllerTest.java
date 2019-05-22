@@ -30,14 +30,14 @@ public class CreditOrderControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetCreditOrderById(){
         CreditOrder creditOrder = restTemplate.getForObject( baseURL + "/creditOrder/1", CreditOrder.class);
         System.out.println(creditOrder.getId());
         assertNotNull( creditOrder );
     }
 
-    @Ignore
+    @Test
     public void testCreateCreditOrder(){
         CreditOrder creditOrder= CreditOrderFactory.getAmount(25 );
         ResponseEntity<CreditOrder> postResponse = restTemplate.postForEntity( baseURL +"/create",creditOrder,CreditOrder.class );
@@ -45,7 +45,7 @@ public class CreditOrderControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedCreditOrder(){
         int id = 1;
         CreditOrder creditOrder = restTemplate.getForObject( baseURL + "/creditOrder/" + id, CreditOrder.class );
@@ -53,7 +53,7 @@ public class CreditOrderControllerTest {
         CreditOrder updatedCreditOrder = restTemplate.getForObject( baseURL + "/creditOrder/" + id, CreditOrder.class );
         assertNotNull( updatedCreditOrder );
     }
-    @Ignore
+    @Test
     public void testDeleteCreditOrderDetails(){
         int id = 2;
         CreditOrder creditOrder = restTemplate.getForObject( baseURL + "/CreditOrderId/" + id, CreditOrder.class );

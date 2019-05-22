@@ -29,14 +29,14 @@ public class BalanceControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetBalanceById(){
         Balance balance = restTemplate.getForObject( baseURL + "/user/1", Balance.class);
         System.out.println(balance.getId());
         assertNotNull( balance );
     }
 
-    @Ignore
+    @Test
     public void testCreateUser(){
         Balance balance= BalanceFactory.getAmount(25 );
         ResponseEntity<Balance> postResponse = restTemplate.postForEntity( baseURL +"/create",balance,Balance.class );
@@ -44,7 +44,7 @@ public class BalanceControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedBalance(){
         int id = 1;
         Balance balance = restTemplate.getForObject( baseURL + "/balance/" + id, Balance.class );
@@ -52,7 +52,7 @@ public class BalanceControllerTest {
         Balance updatedBalance = restTemplate.getForObject( baseURL + "/balance/" + id, Balance.class );
         assertNotNull( updatedBalance );
     }
-    @Ignore
+    @Test
     public void testDeleteBalanceDetails(){
         int id = 2;
         Balance balance = restTemplate.getForObject( baseURL + "/BalanceId/" + id, Balance.class );

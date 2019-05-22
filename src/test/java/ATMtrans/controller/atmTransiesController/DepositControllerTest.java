@@ -29,14 +29,14 @@ public class DepositControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetDepositById(){
         Deposit deposit = restTemplate.getForObject( baseURL + "/deposit/1", Deposit.class);
         System.out.println(deposit.getId());
         assertNotNull( deposit );
     }
 
-    @Ignore
+    @Test
     public void testCreateDeposit(){
         Deposit deposit = DepositFactory.getAmount( 270 );
         ResponseEntity<Deposit> postResponse = restTemplate.postForEntity( baseURL +"/create",deposit,Deposit.class );
@@ -44,7 +44,7 @@ public class DepositControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedUserDeposit(){
         int id = 1;
         Deposit deposit= restTemplate.getForObject( baseURL + "/deposit/" + id, Deposit.class );
@@ -54,7 +54,7 @@ public class DepositControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testDeleteDepositDetails(){
         int id = 2;
        Deposit deposit = restTemplate.getForObject( baseURL + "/DepositId/" + id, Deposit.class );

@@ -30,14 +30,14 @@ public class CardlessWithdrawalControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetCardlessWithdrawalById(){
         CardlessWithdrawal cardlessWithdrawal = restTemplate.getForObject( baseURL + "/cardlessWithdrawal/1", CardlessWithdrawal.class);
         System.out.println(cardlessWithdrawal.getId());
         assertNotNull( cardlessWithdrawal );
     }
 
-    @Ignore
+    @Test
     public void testCreateCardlessWithdrawal(){
         CardlessWithdrawal cardlessWithdrawal= CardlessWithdrawalFactory.getAmount(25 );
         ResponseEntity<CardlessWithdrawal> postResponse = restTemplate.postForEntity( baseURL +"/create",cardlessWithdrawal
@@ -46,7 +46,7 @@ public class CardlessWithdrawalControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedCardlessWithdrawal(){
         int id = 1;
         CardlessWithdrawal cardlessWithdrawal = restTemplate.getForObject( baseURL + "/cardlessWithdrawal/" + id, CardlessWithdrawal.class );
@@ -55,7 +55,7 @@ public class CardlessWithdrawalControllerTest {
                 CardlessWithdrawal.class );
         assertNotNull( updatedBalance );
     }
-    @Ignore
+    @Test
     public void testDeleteCardlessWithdrawalDetails(){
         int id = 2;
         CardlessWithdrawal cardlessWithdrawal = restTemplate.getForObject( baseURL + "/BalanceId/" + id, CardlessWithdrawal.class );

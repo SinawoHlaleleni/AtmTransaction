@@ -30,14 +30,14 @@ public class CardlessServiceControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetCardlessServiceById(){
         CardlessService cardlessService = restTemplate.getForObject( baseURL + "/cardlessService/1", CardlessService.class);
         System.out.println(cardlessService.getId());
         assertNotNull( cardlessService );
     }
 
-    @Ignore
+    @Test
     public void testCreateCardlessService(){
         CardlessService cardlessService= CardlessServiceFactory.getType("..." );
         ResponseEntity<CardlessService> postResponse = restTemplate.postForEntity( baseURL +"/create",cardlessService,
@@ -46,7 +46,7 @@ public class CardlessServiceControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedCardlessService(){
         int id = 1;
         CardlessService cardlessService = restTemplate.getForObject( baseURL + "/cardlessService/" + id, CardlessService.class );
@@ -54,7 +54,7 @@ public class CardlessServiceControllerTest {
         CardlessService updatedCardlessService = restTemplate.getForObject( baseURL + "/cardlessService/" + id, CardlessService.class );
         assertNotNull( updatedCardlessService );
     }
-    @Ignore
+    @Test
     public void testDeleteCardlessServiceDetails(){
         int id = 2;
         CardlessService cardlessService = restTemplate.getForObject( baseURL + "/CardlessServiceId/" + id, CardlessService.class );

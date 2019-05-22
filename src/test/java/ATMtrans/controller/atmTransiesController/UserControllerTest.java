@@ -28,14 +28,14 @@ public class UserControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetUserById(){
         User user = restTemplate.getForObject( baseURL + "/user/1", User.class);
         System.out.println(user.getUserId());
         assertNotNull( user );
     }
 
-    @Ignore
+    @Test
     public void testCreateUser(){
         User user = UserFactory.getUser( "Sinawo94", "Snw974" );
         ResponseEntity<User> postResponse = restTemplate.postForEntity( baseURL +"/create",user,User.class );
@@ -43,7 +43,7 @@ public class UserControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedUser(){
         int id = 1;
         User user = restTemplate.getForObject( baseURL + "/user/" + id, User.class );
@@ -53,7 +53,7 @@ public class UserControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testDeleteUserDetails(){
         int id = 2;
         User user = restTemplate.getForObject( baseURL + "/UserId/" + id, User.class );

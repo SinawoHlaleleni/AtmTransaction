@@ -29,14 +29,14 @@ public class WithdrawalControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetWithdrawalById(){
         Withdrawal withdrawal = restTemplate.getForObject( baseURL + "/ withdrawal/1", Withdrawal.class);
         System.out.println( withdrawal.getId());
         assertNotNull(  withdrawal );
     }
 
-    @Ignore
+    @Test
     public void testCreateWithdrawal(){
         Withdrawal withdrawal = WithdrawalFactory.getAmount( 450 );
         ResponseEntity<Withdrawal> postResponse = restTemplate.postForEntity( baseURL +"/create", withdrawal,Withdrawal.class );
@@ -44,7 +44,7 @@ public class WithdrawalControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedUser(){
         int id = 1;
         Withdrawal withdrawal = restTemplate.getForObject( baseURL + "/ withdrawal/" + id, Withdrawal.class );
@@ -54,7 +54,7 @@ public class WithdrawalControllerTest {
     }
 
 
-    @Ignore
+    @Test
     public void testDeleteUserDetails(){
         int id = 2;
         Withdrawal withdrawal = restTemplate.getForObject( baseURL + "/ WithdrawalId/" + id, Withdrawal.class );

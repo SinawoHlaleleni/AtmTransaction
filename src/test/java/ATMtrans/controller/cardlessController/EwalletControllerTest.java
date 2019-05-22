@@ -30,14 +30,14 @@ public class EwalletControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetEwalletById(){
         Ewallet ewallet = restTemplate.getForObject( baseURL + "/ewallet/1", Ewallet.class);
         System.out.println(ewallet.getId());
         assertNotNull( ewallet );
     }
 
-    @Ignore
+    @Test
     public void testCreateEwallet(){
         Ewallet ewallet= EwalletFactory.getAmount(25 );
         ResponseEntity<Ewallet> postResponse = restTemplate.postForEntity( baseURL +"/create",ewallet,Ewallet.class );
@@ -45,7 +45,7 @@ public class EwalletControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedEwallet(){
         int id = 1;
         Ewallet ewallet = restTemplate.getForObject( baseURL + "/ewallet/" + id, Ewallet.class );
@@ -53,7 +53,7 @@ public class EwalletControllerTest {
         Ewallet updatedEwallet = restTemplate.getForObject( baseURL + "/ewallet/" + id, Ewallet.class );
         assertNotNull( updatedEwallet );
     }
-    @Ignore
+    @Test
     public void testDeleteEwalletDetails(){
         int id = 2;
         Ewallet ewallet = restTemplate.getForObject( baseURL + "/EwalletId/" + id, Ewallet.class );

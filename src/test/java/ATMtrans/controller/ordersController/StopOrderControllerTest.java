@@ -30,14 +30,14 @@ public class StopOrderControllerTest {
                 HttpMethod.GET,entity,String.class);
         assertNotNull(response.getBody());
     }
-    @Ignore
+    @Test
     public void testGetStopOrderById(){
         StopOrder stopOrder = restTemplate.getForObject( baseURL + "/stopOrder/1", StopOrder.class);
         System.out.println(stopOrder.getId());
         assertNotNull( stopOrder );
     }
 
-    @Ignore
+    @Test
     public void testCreateStopOrder(){
         StopOrder stopOrder= StopOrderFactory.getAmount(25 );
         ResponseEntity<StopOrder> postResponse = restTemplate.postForEntity( baseURL +"/create",stopOrder,StopOrder.class );
@@ -45,7 +45,7 @@ public class StopOrderControllerTest {
         assertNotNull( postResponse.getBody() );
     }
 
-    @Ignore
+    @Test
     public void testUpdatedStopOrder(){
         int id = 1;
         StopOrder stopOrder = restTemplate.getForObject( baseURL + "/stopOrder/" + id, StopOrder.class );
@@ -53,7 +53,7 @@ public class StopOrderControllerTest {
         StopOrder updatedBalance = restTemplate.getForObject( baseURL + "/stopOrder/" + id, StopOrder.class );
         assertNotNull( updatedBalance );
     }
-    @Ignore
+    @Test
     public void testDeleteStopOrderDetails(){
         int id = 2;
         StopOrder stopOrder = restTemplate.getForObject( baseURL + "/StopOrderId/" + id, StopOrder.class );
